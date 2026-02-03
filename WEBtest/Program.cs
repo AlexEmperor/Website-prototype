@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileSystemGlobbing.Internal;
 using Serilog;
 using System.Globalization;
 using WEBtest.Db.Interfaces;
@@ -29,8 +28,8 @@ builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
 
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
-
+//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(connection));
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]

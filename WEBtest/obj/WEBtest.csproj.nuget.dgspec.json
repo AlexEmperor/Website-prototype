@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBtest\\WEBtest.csproj": {}
+    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest\\WEBtest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBTest.Db\\WEBTest.Db.csproj": {
+    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\WEBTest.Db.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBTest.Db\\WEBTest.Db.csproj",
+        "projectUniqueName": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\WEBTest.Db.csproj",
         "projectName": "WEBTest.Db",
-        "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBTest.Db\\WEBTest.Db.csproj",
+        "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\WEBTest.Db.csproj",
         "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBTest.Db\\obj\\",
+        "outputPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[8.0.22, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -86,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBtest\\WEBtest.csproj": {
+    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest\\WEBtest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBtest\\WEBtest.csproj",
+        "projectUniqueName": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest\\WEBtest.csproj",
         "projectName": "WEBtest",
-        "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBtest\\WEBtest.csproj",
+        "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest\\WEBtest.csproj",
         "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBtest\\obj\\",
+        "outputPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,8 +119,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBTest.Db\\WEBTest.Db.csproj": {
-                "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\WEBTest.Db\\WEBTest.Db.csproj"
+              "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\WEBTest.Db.csproj": {
+                "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\WEBTest.Db.csproj"
               }
             }
           }
