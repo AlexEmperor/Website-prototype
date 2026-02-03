@@ -1,16 +1,12 @@
 # Dockerfile для ASP.NET Core MVC (.NET 8)
 
-# ----------------------
-# 1️⃣ Базовый образ для выполнения приложения
-# ----------------------
+# Базовый образ для выполнения
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-# ----------------------
-# 2️⃣ Базовый образ для сборки
-# ----------------------
+# Базовый образ для сборки
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
@@ -18,11 +14,9 @@ WORKDIR /src
 COPY . .
 
 # Сборка проекта и публикация в папку /app/publish
-RUN dotnet publish "WebsitePrototype.csproj" -c Release -o /app/publish
+RUN dotnet publish "WEBtest.csproj" -c Release -o /app/publish
 
-# ----------------------
-# 3️⃣ Финальный образ
-# ----------------------
+# Финальный образ
 FROM base AS final
 WORKDIR /app
 
@@ -30,4 +24,4 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 # Запуск приложения
-ENTRYPOINT ["dotnet", "WebsitePrototype.dll"]
+ENTRYPOINT ["dotnet", "WEBtest.dll"]
