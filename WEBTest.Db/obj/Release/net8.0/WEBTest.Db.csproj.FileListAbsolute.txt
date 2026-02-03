@@ -1,0 +1,14 @@
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\bin\Release\net8.0\WEBTest.Db.deps.json
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\bin\Release\net8.0\WEBTest.Db.runtimeconfig.json
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\bin\Release\net8.0\WEBTest.Db.dll
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\bin\Release\net8.0\WEBTest.Db.pdb
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.csproj.AssemblyReference.cache
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.AssemblyInfoInputs.cache
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.AssemblyInfo.cs
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.csproj.CoreCompileInputs.cache
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.dll
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\refint\WEBTest.Db.dll
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.pdb
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\WEBTest.Db.genruntimeconfig.cache
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBTest.Db\obj\Release\net8.0\ref\WEBTest.Db.dll
