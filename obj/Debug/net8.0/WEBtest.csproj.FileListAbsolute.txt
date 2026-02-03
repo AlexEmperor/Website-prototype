@@ -109,3 +109,5 @@ C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WE
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBtest\bin\Debug\net8.0\WEBTest.Db.pdb
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBtest\bin\Debug\net8.0\Logs\log20260105.json
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBtest\bin\Debug\net8.0\Logs\log20260106.json
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBtest\bin\Debug\net8.0\Logs\log20260122.json
+C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\WEBtest\obj\Debug\net8.0\WEBtest.sourcelink.json
