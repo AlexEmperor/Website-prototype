@@ -12,7 +12,7 @@ COPY . .
 RUN dotnet restore
 
 # публикуем основной проект
-RUN dotnet publish WEBTest/WEBtest.csproj -c Release -o /app/publish
+RUN dotnet publish WEBtest/WEBtest.csproj -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
