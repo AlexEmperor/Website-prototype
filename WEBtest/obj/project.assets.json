@@ -5176,8 +5176,8 @@
     },
     "WEBtest.Db/1.0.0": {
       "type": "project",
-      "path": "../WEBTest.Db/WEBtest.Db.csproj",
-      "msbuildProject": "../WEBTest.Db/WEBtest.Db.csproj"
+      "path": "../WEBtest.Db/WEBtest.Db.csproj",
+      "msbuildProject": "../WEBtest.Db/WEBtest.Db.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QG0AR9UZyOY=",
+  "dgSpecHash": "gOnBLI1QKSU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBTest.Db\\WEBtest.Db.csproj",
+  "projectFilePath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sasha\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Sasha\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
