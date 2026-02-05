@@ -27,3 +27,18 @@ C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\We
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\Website-prototype\WEBTest.Db\obj\Debug\net8.0\WEBTest.Db.pdb
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\Website-prototype\WEBTest.Db\obj\Debug\net8.0\WEBTest.Db.genruntimeconfig.cache
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\Website-prototype\WEBTest.Db\obj\Debug\net8.0\ref\WEBTest.Db.dll
+C:\Git\Website-prototype\WEBtest.Db\bin\Debug\net8.0\WEBtest.Db.deps.json
+C:\Git\Website-prototype\WEBtest.Db\bin\Debug\net8.0\WEBtest.Db.runtimeconfig.json
+C:\Git\Website-prototype\WEBtest.Db\bin\Debug\net8.0\WEBtest.Db.dll
+C:\Git\Website-prototype\WEBtest.Db\bin\Debug\net8.0\WEBtest.Db.pdb
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.csproj.AssemblyReference.cache
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.AssemblyInfoInputs.cache
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.AssemblyInfo.cs
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.csproj.CoreCompileInputs.cache
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.sourcelink.json
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.dll
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\refint\WEBtest.Db.dll
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.pdb
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\WEBtest.Db.genruntimeconfig.cache
+C:\Git\Website-prototype\WEBtest.Db\obj\Debug\net8.0\ref\WEBtest.Db.dll
