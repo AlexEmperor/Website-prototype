@@ -3,14 +3,14 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Копируем только solution и проекты для оптимизации кеша restore
-COPY ["Webtest.sln", "./"]
-COPY ["Webtest/", "Webtest/"]
+COPY ["WEBtest.sln", "./"]
+COPY ["WEBtest/", "WEBtest/"]
 
 # Восстанавливаем зависимости по solution
-RUN dotnet restore "Webtest/Webtest.sln"
+RUN dotnet restore "WEBtest/WEBtest.sln"
 
 # Публикуем основной веб-проект в папку /app/publish
-RUN dotnet publish "Webtest/Webtest.csproj" -c Release -o /app/publish
+RUN dotnet publish "WEBtest/WEBtest.csproj" -c Release -o /app/publish
 
 # ---------- RUNTIME STAGE ----------
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
@@ -24,4 +24,4 @@ ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
 # Запуск приложения
-ENTRYPOINT ["dotnet", "Webtest.dll"]
+ENTRYPOINT ["dotnet", "WEBtest.dll"]
