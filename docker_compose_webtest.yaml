@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  webtest:
+    build: .
+    ports:
+      - "5000:80"
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__WebTestConnection=Host=db;Port=5432;Database=WebTest_Alex;Username=postgres;Password=welcomehome1
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: WebTest_Alex
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: welcomehome1
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
