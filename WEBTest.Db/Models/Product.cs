@@ -14,14 +14,22 @@
 
         public List<CartItem>? CartItems { get; set; }
 
-        /* public Product() { }
+        //public List<Image> Images { get; set; }
 
-         public Product(int id, string name, decimal cost, string? description)
-         {
-             Id = id;
-             Name = name;
-             Cost = cost;
-             Description = description;
-         }*/
+        /*public Product() { }
+
+        public Product(int id, string name, decimal cost, string? description)
+        {
+            Id = id;
+            Name = name;
+            Cost = cost;
+            Description = description;
+        }
+
+        public Product()
+        {
+            CartItems = [];
+            Images = [];
+        }*/
     }
 }

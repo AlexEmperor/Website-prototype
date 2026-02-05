@@ -8,6 +8,7 @@ namespace WEBTest.Db
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             //Database.EnsureDeleted();
+            Database.Migrate();
         }
 
         //Доступ к таблицам
@@ -18,7 +19,6 @@ namespace WEBTest.Db
         public DbSet<Comparison> Comparisons { get; set; } = null!;
         public DbSet<Order> Orders { get; set; } = null!;
         public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;
-
 
     }
 }
