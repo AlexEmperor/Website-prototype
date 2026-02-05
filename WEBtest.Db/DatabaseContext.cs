@@ -8,7 +8,7 @@ namespace WEBTest.Db
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             //Database.EnsureDeleted();
-            Database.Migrate();
+            //Database.Migrate();
         }
 
         //Доступ к таблицам
