@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBtest", "WEBtest.csproj", "{62ABC325-146A-4F28-97A3-2ED6017AF265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBTest.Db", "..\WEBTest.Db\WEBTest.Db.csproj", "{1DA1C820-1674-408B-903E-7976A36A7E41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBtest.Db", "..\WEBTest.Db\WEBtest.Db.csproj", "{1DA1C820-1674-408B-903E-7976A36A7E41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

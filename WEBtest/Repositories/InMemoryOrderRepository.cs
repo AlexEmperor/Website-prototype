@@ -5,8 +5,8 @@ namespace WEBtest.Repositories
 {
     public class InMemoryOrderRepository : IOrderRepository
     {
-        public readonly List<Order> _orders = [];
-        public void Add(Order order)
+        public readonly List<OrderViewModel> _orders = [];
+        public void Add(OrderViewModel order)
         {
             order.Id = Guid.NewGuid();
             order.CreationDateTime = DateTime.Now;
@@ -14,10 +14,10 @@ namespace WEBtest.Repositories
             _orders.Add(order);
         }
 
-        public List<Order> GetAll() => _orders;
+        public List<OrderViewModel> GetAll() => _orders;
 
-        public Order? TryGetById(Guid orderId) => _orders.FirstOrDefault(order => order.Id == orderId);
-        public void UpdateStatus(Guid orderId, OrderStatus newStatus)
+        public OrderViewModel? TryGetById(Guid orderId) => _orders.FirstOrDefault(order => order.Id == orderId);
+        public void UpdateStatus(Guid orderId, OrderStatusViewModel newStatus)
         {
             var existingOrder = TryGetById(orderId);
 

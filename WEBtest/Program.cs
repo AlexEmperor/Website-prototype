@@ -20,7 +20,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
-builder.Services.AddSingleton<IOrderRepository, InMemoryOrderRepository>();
+builder.Services.AddTransient<IOrdersRepository, OrdersDbRepository>();
 builder.Services.AddTransient<IFavouritesRepository, FavouritesDbRepository>();
 builder.Services.AddTransient<IComparisonsRepository, ComparisonsDbRepository>();
 builder.Services.AddSingleton<IRoleRepository, InMemoryRoleRepository>();
@@ -29,7 +29,8 @@ builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
 
 //builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(connection));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(connection));
+//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(connection));
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
@@ -41,6 +42,12 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedUICultures = supportedCultures;
 });
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+    context.Database.Migrate();
+}
 
 app.UseHttpsRedirection();
 app.UseRequestLocalization();

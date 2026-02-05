@@ -1,10 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WEBtest.Db.Models;
 
 namespace WEBTest.Db
@@ -13,7 +7,7 @@ namespace WEBTest.Db
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
         }
 
         //Доступ к таблицам
@@ -22,5 +16,9 @@ namespace WEBTest.Db
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Favourite> Favorites { get; set; } = null!;
         public DbSet<Comparison> Comparisons { get; set; } = null!;
+        public DbSet<Order> Orders { get; set; } = null!;
+        public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;
+
+
     }
 }

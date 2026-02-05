@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("WEBTest.Db")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("WEBtest.Db")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f5100fb4e5c7f424092e8a47771dce8359e7cc5")]
-[assembly: System.Reflection.AssemblyProductAttribute("WEBTest.Db")]
-[assembly: System.Reflection.AssemblyTitleAttribute("WEBTest.Db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78f3344431e13a8d070b327fe300a9c06eacc4b3")]
+[assembly: System.Reflection.AssemblyProductAttribute("WEBtest.Db")]
+[assembly: System.Reflection.AssemblyTitleAttribute("WEBtest.Db")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WEBtest.Interfaces;
+using WEBtest.Db.Interfaces;
+using WEBtest.Db.Models;
+using WEBtest.Helpers;
 using WEBtest.Models;
 
 namespace WEBtest.Areas.Admin.Controllers
@@ -7,10 +9,10 @@ namespace WEBtest.Areas.Admin.Controllers
     [Area("Admin")]
     public class OrderController : Controller
     {
-        private readonly IOrderRepository _ordersRepository;
+        private readonly IOrdersRepository _ordersRepository;
 
 
-        public OrderController(IOrderRepository ordersRepository)
+        public OrderController(IOrdersRepository ordersRepository)
         {
             _ordersRepository = ordersRepository;
 
@@ -21,7 +23,7 @@ namespace WEBtest.Areas.Admin.Controllers
         {
             var orders = _ordersRepository.GetAll();
 
-            return View(orders);
+            return View(orders.ToOrderViewModels());
         }
 
 
@@ -29,14 +31,14 @@ namespace WEBtest.Areas.Admin.Controllers
         {
             var order = _ordersRepository.TryGetById(orderId);
 
-            return View(order);
+            return View(order?.ToOrderViewModel());
         }
 
 
         [HttpPost]
-        public IActionResult UpdateStatus(Guid orderId, OrderStatus status)
+        public IActionResult UpdateStatus(Guid orderId, OrderStatusViewModel status)
         {
-            _ordersRepository.UpdateStatus(orderId, status);
+            _ordersRepository.UpdateStatus(orderId, (OrderStatus)status);
 
             return RedirectToAction(nameof(Index));
         }

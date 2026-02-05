@@ -4,9 +4,9 @@ namespace WEBtest.Interfaces
 {
     public interface IOrderRepository
     {
-        void Add(Order order);
-        List<Order> GetAll();
-        Order? TryGetById(Guid orderId);
-        void UpdateStatus(Guid orderId, OrderStatus status);
+        void Add(OrderViewModel order);
+        List<OrderViewModel> GetAll();
+        OrderViewModel? TryGetById(Guid orderId);
+        void UpdateStatus(Guid orderId, OrderStatusViewModel status);
     }
 }

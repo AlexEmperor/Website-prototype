@@ -23,7 +23,7 @@ namespace WEBtest.Models
         public string? Description { get; set; }
 
         [Required]
-        public string? PhotoPath { get; set; } = "/img/anyProduct.png";
+        public string? PhotoPath { get; set; } = "/img/product.png";
 
         public ProductViewModel() { }
 

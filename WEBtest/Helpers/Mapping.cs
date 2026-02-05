@@ -68,51 +68,94 @@ namespace WEBtest.Helpers
 
         public static CartViewModel? ToCartViewModel(this Cart? cartDb)
         {
-            if (cartDb == null)
-            {
-                return null;
-            }
-
-            return new CartViewModel()
-            {
-                Id = cartDb.Id,
-                UserId = cartDb.UserId,
-                Items = cartDb.Items.ToCartItemViewModels(),
-            };
+            return cartDb == null
+                ? null
+                : new CartViewModel()
+                {
+                    Id = cartDb.Id,
+                    UserId = cartDb.UserId,
+                    Items = cartDb.Items.ToCartItemViewModels(),
+                };
         }
         #endregion
-
 
         #region Comparison
         public static ComparisonViewModel? ToComparisonViewModel(this Comparison? comparisonDb)
         {
-            if (comparisonDb == null)
-            {
-                return null;
-            }
-
-            return new ComparisonViewModel()
-            {
-                Id = comparisonDb.Id,
-                UserId = comparisonDb.UserId,
-                Items = comparisonDb.Items.ToProductViewModels()
-            };
+            return comparisonDb == null
+                ? null
+                : new ComparisonViewModel()
+                {
+                    Id = comparisonDb.Id,
+                    UserId = comparisonDb.UserId,
+                    Items = comparisonDb.Items.ToProductViewModels()
+                };
         }
         #endregion
 
         #region Favorite
         public static FavouriteViewModel? ToFavoriteViewModel(this Favourite? favoriteDb)
         {
-            if (favoriteDb == null)
+            return favoriteDb == null
+                ? null
+                : new FavouriteViewModel()
+                {
+                    Id = favoriteDb.Id,
+                    UserId = favoriteDb.UserId,
+                    Items = favoriteDb.Items.ToProductViewModels()
+                };
+        }
+        #endregion
+
+        #region Order
+        public static List<OrderViewModel> ToOrderViewModels(this List<Order> ordersDb)
+        {
+            var ordersViewModel = new List<OrderViewModel>();
+
+            foreach (var orderDb in ordersDb)
             {
-                return null;
+                ordersViewModel.Add(orderDb.ToOrderViewModel());
             }
 
-            return new FavouriteViewModel()
+            return ordersViewModel;
+        }
+
+        public static OrderViewModel ToOrderViewModel(this Order orderDb)
+        {
+            return new OrderViewModel()
             {
-                Id = favoriteDb.Id,
-                UserId = favoriteDb.UserId,
-                Items = favoriteDb.Items.ToProductViewModels()
+                Id = orderDb.Id,
+                UserId = orderDb.UserId,
+                Items = orderDb.Items.ToCartItemViewModels(),
+                DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
+                CreationDateTime = orderDb.CreationDateTime,
+                Status = (OrderStatusViewModel)orderDb.Status,
+            };
+        }
+
+        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
+        {
+            return new DeliveryUserViewModel()
+            {
+                Id = deliveryUserDb.Id,
+                Name = deliveryUserDb.Name,
+                Address = deliveryUserDb.Address,
+                Phone = deliveryUserDb.Phone,
+                Date = DateTime.SpecifyKind(deliveryUserDb.Date, DateTimeKind.Utc),
+                Comment = deliveryUserDb.Comment
+            };
+        }
+
+        public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)
+        {
+            return new DeliveryUser()
+            {
+                Id = deliveryUser.Id,
+                Name = deliveryUser.Name,
+                Address = deliveryUser.Address,
+                Phone = deliveryUser.Phone,
+                Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),
+                Comment = deliveryUser.Comment
             };
         }
         #endregion

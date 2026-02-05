@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WEBtest.Db.Models;
 using WEBtest.Db.Interfaces;
+using WEBtest.Db.Models;
 using WEBTest.Db;
 
 namespace WEBtest.Db.Repositories
@@ -29,11 +29,12 @@ namespace WEBtest.Db.Repositories
                 existingCart = new Cart()
                 {
                     UserId = userId,
-                    Items = new List<CartItem>()
+                    Items = [],
+                    CreationDateTime = DateTime.UtcNow
                 };
 
-                existingCart.Items = new List<CartItem>()
-                    {
+                existingCart.Items =
+                    [
                         new CartItem()
                         {
                             Product = product,
@@ -41,7 +42,7 @@ namespace WEBtest.Db.Repositories
                             Cart = existingCart
                         }
 
-                };
+                ];
                 _databaseContext.Carts.Add(existingCart);
             }
             else

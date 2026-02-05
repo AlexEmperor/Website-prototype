@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WEBtest.Interfaces;
-using WEBtest.Models;
-using WEBtest.Helpers;
 using WEBtest.Db.Interfaces;
+using WEBtest.Db.Models;
+using WEBtest.Helpers;
+using WEBtest.Models;
 
 namespace WEBtest.Controllers
 {
     public class OrderController : Controller
     {
         private readonly ICartsRepository _cartRepository;
-        private readonly IOrderRepository _orderRepository;
-        public OrderController(ICartsRepository cartRepository, IOrderRepository orderRepository)
+        private readonly IOrdersRepository _orderRepository;
+        public OrderController(ICartsRepository cartRepository, IOrdersRepository orderRepository)
         {
             _cartRepository = cartRepository;
             _orderRepository = orderRepository;
@@ -20,30 +20,43 @@ namespace WEBtest.Controllers
         {
             var cart = _cartRepository.TryGetByUserId(Constants.UserId);
 
-            var order = new Order()
+            var order = new OrderViewModel()
             {
-                Items = cart?.ToCartViewModel()?.Items
+                Items = cart?.Items.ToCartItemViewModels()
             };
 
             return View(order);
         }
 
-        public IActionResult Buy(Order order)
+        [HttpPost]
+        public IActionResult Buy(OrderViewModel order)
         {
             var cart = _cartRepository.TryGetByUserId(Constants.UserId);
 
-            if (cart is null)
+            if (cart == null)
             {
                 return View(nameof(Index), order);
             }
-            order.Items = cart?.ToCartViewModel()?.Items;
+
+            order.Items = cart.Items.ToCartItemViewModels();
             order.UserId = Constants.UserId;
 
             if (!ModelState.IsValid)
             {
                 return View(nameof(Index), order);
             }
-            _orderRepository.Add(order);
+
+            var orderDb = new Order()
+            {
+                Id = order.Id,
+                UserId = order.UserId,
+                Items = cart.Items,
+                DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
+                CreationDateTime = order.CreationDateTime,
+                Status = (OrderStatus)order.Status,
+            };
+
+            _orderRepository.Add(orderDb);
 
             _cartRepository.Clear(Constants.UserId);
 
