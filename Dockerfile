@@ -3,8 +3,9 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Копируем только solution и проекты для оптимизации кеша restore
-COPY ["WEBtest.sln", "./"]
+COPY ["WEBtest/WEBtest.sln", "./"]
 COPY ["WEBtest/", "WEBtest/"]
+COPY ["WEBtest.Db/", "WEBtest.Db/"]
 
 # Восстанавливаем зависимости по solution
 RUN dotnet restore "WEBtest/WEBtest.sln"
