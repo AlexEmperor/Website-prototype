@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WEBTest.Db\WEBtest.Db.csproj" />
+    <ProjectReference Include="..\WEBtest.Db\WEBtest.Db.csproj" />
   </ItemGroup>
 
 </Project>

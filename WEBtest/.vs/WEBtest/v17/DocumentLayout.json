@@ -3,6 +3,17 @@
   "WorkspaceRootPath": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\webtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:webtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBTest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\webtest.db.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBTest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\interfaces\\icartsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +32,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\helpers\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:helpers\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +81,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WEBtest.Db",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBTest.Db\\WEBtest.Db.csproj",
+              "RelativeDocumentMoniker": "..\\WEBTest.Db\\WEBtest.Db.csproj",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBTest.Db\\WEBtest.Db.csproj",
+              "RelativeToolTip": "..\\WEBTest.Db\\WEBtest.Db.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-05T08:51:14.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WEBtest",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\WEBtest.csproj",
+              "RelativeDocumentMoniker": "WEBtest.csproj",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\WEBtest.csproj",
+              "RelativeToolTip": "WEBtest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-05T08:51:06.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ICartsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Interfaces\\ICartsRepository.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Interfaces\\ICartsRepository.cs",
@@ -87,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Image.cs",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Image.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Image.cs",
@@ -99,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Product.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Product.cs",
@@ -111,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Mapping.cs",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Helpers\\Mapping.cs",
               "RelativeDocumentMoniker": "Helpers\\Mapping.cs",
@@ -123,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "DatabaseContext.cs",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\DatabaseContext.cs",
@@ -135,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -143,11 +176,12 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-03T14:00:21.099Z"
+              "WhenOpened": "2026-02-03T14:00:21.099Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
