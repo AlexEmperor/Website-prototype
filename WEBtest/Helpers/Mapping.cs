@@ -26,11 +26,13 @@ namespace WEBtest.Helpers
                 Name = productDb.Name,
                 Cost = productDb.Cost,
                 Description = productDb.Description,
-                PhotoPath = productDb.PhotoPath
+
+               //PhotoPath = productDb.PhotoPath,
+               // jpeg = productDb.jpeg,
             };
         }
 
-        public static Product ToProductDb(this ProductViewModel product)
+        public static Product ToProductDb(this ProductViewModel product)  // передача в БД  Product
         {
             return new Product()
             {
@@ -39,6 +41,7 @@ namespace WEBtest.Helpers
                 Cost = product.Cost,
                 Description = product.Description,
                 PhotoPath = product.PhotoPath,
+                jpeg = product.japeg,
             };
         }
         #endregion

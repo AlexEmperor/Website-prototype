@@ -26,6 +26,62 @@
                 <textarea class="form-control" asp-for="Description"></textarea>
                 <span asp-validation-for="Description"></span>
             </p>
+
+
+            <!-- Фотография -->
+            <p>
+                <label class="form-label" asp-for="japeg"></label><br />
+
+                <div class="input-group">
+                    <input type="text" class="form-control" id="fileName" placeholder="Файл не выбран" readonly />
+                    <input type="file" class="form-control d-none" accept="image/*" id="imageUpload" />
+
+                    <!-- Нажатие на кнопку -->
+                    <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('imageUpload').click()">
+                        📷 Выбрать фото
+                    </button>
+                </div>
+
+                <span asp-validation-for="japeg" class="text-danger"></span>
+
+                <small class="text-muted">Допустимые форматы: JPG, PNG, GIF</small>
+            </p>
+
+            <!--            <script>
+                // Отображение имени файла в текстовом поле
+                document.getElementById('imageUpload').addEventListener('change', function (e) 
+                {
+                    const fileName = e.target.files[0] ? e.target.files[0].name : 'Файл не выбран';
+
+                    document.getElementById('fileName').value = fileName;
+                });
+            </script>
+
+            -->
+
+            <script>
+                // Скрипт предпросмотра
+                document.getElementById('imageUpload').addEventListener('change', function (e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            document.getElementById('previewImg').src = e.target.result;
+                            document.getElementById('imagePreview').style.display = 'block';
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            </script>
+            <!--Окончание Фотографи -->
+
+
+
+
+
+
+
+
         </div>
     </div>
     <div class="text-center m-3">

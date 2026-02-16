@@ -25,6 +25,13 @@ namespace WEBtest.Models
         [Required]
         public string? PhotoPath { get; set; } = "/img/product.png";
 
+        [Required]
+        public Byte[]? japeg { get; set; } = { };
+        
+
+
+
+
         public ProductViewModel() { }
 
         public ProductViewModel(int id, string name, decimal cost, string? description)
@@ -33,6 +40,7 @@ namespace WEBtest.Models
             Name = name;
             Cost = cost;
             Description = description;
+            
         }
     }
 }
