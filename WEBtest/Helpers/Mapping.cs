@@ -46,7 +46,7 @@ namespace WEBtest.Helpers
         }
         #endregion
 
-        #region Cart
+        #region Cart   // Корзина
         public static List<CartItemViewModel> ToCartItemViewModels(this List<CartItem> cartDbItems)
         {
             var cartItemsViewModel = new List<CartItemViewModel>();
@@ -82,7 +82,7 @@ namespace WEBtest.Helpers
         }
         #endregion
 
-        #region Comparison
+        #region Comparison  // Сравнение
         public static ComparisonViewModel? ToComparisonViewModel(this Comparison? comparisonDb)
         {
             return comparisonDb == null
@@ -96,7 +96,7 @@ namespace WEBtest.Helpers
         }
         #endregion
 
-        #region Favorite
+        #region Favorite // Избранное
         public static FavouriteViewModel? ToFavoriteViewModel(this Favourite? favoriteDb)
         {
             return favoriteDb == null
@@ -123,7 +123,7 @@ namespace WEBtest.Helpers
             return ordersViewModel;
         }
 
-        public static OrderViewModel ToOrderViewModel(this Order orderDb)
+        public static OrderViewModel ToOrderViewModel(this Order orderDb) // !!!!передача 
         {
             return new OrderViewModel()
             {
@@ -136,7 +136,7 @@ namespace WEBtest.Helpers
             };
         }
 
-        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
+        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)  
         {
             return new DeliveryUserViewModel()
             {
@@ -149,7 +149,7 @@ namespace WEBtest.Helpers
             };
         }
 
-        public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)
+        public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)  // получение данных при "Оформление заказа"
         {
             return new DeliveryUser()
             {

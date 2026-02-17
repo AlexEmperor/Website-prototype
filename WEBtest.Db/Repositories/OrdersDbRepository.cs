@@ -14,16 +14,24 @@ namespace WEBtest.Db.Repositories
             _databaseContext = databaseContext;
         }
 
-        public void Add(Order order)
+        public void Add(Order order)  // передаем полученные данные об заказе  в Таблицу "Order"!!!
         {
-            order.Id = Guid.NewGuid();
-            order.CreationDateTime = DateTime.UtcNow;
-            order.DeliveryUser.Id = Guid.NewGuid();
-            order.Status = OrderStatus.Created;
+            try
+            {
+                order.Id = Guid.NewGuid();
+                order.CreationDateTime = DateTime.UtcNow;
+                order.DeliveryUser.Id = Guid.NewGuid();
+                order.Status = OrderStatus.Created;
+               // order.Address = string.Address;
 
-            _databaseContext.Orders.Add(order);
+                _databaseContext.Orders.Add(order);
 
-            _databaseContext.SaveChanges();
+                _databaseContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка: " + ex.Message);
+            }
         }
 
         public List<Order> GetAll() => _databaseContext.Orders.Include(x => x.DeliveryUser).Include(x => x.Items).ThenInclude(x => x.Product).ToList();

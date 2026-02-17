@@ -46,7 +46,7 @@ namespace WEBtest.Controllers
                 return View(nameof(Index), order);
             }
 
-            var orderDb = new Order()
+            var orderDb = new Order()    // !!Создаем новый заказ
             {
                 Id = order.Id,
                 UserId = order.UserId,
@@ -54,6 +54,9 @@ namespace WEBtest.Controllers
                 DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
                 CreationDateTime = order.CreationDateTime,
                 Status = (OrderStatus)order.Status,
+                
+                Address =order.DeliveryUser.Address,   //""
+                
             };
 
             _orderRepository.Add(orderDb);

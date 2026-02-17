@@ -23,18 +23,28 @@
                             <td class="w-50 p-4">
                                 <div class="text-danger fw-bold text-uppercase"
                                      asp-validation-summary="All"></div>
+                                <!--
                                 <p>
-                                    <label class="form-label" asp-for="DeliveryUser.Name"></label>
-                                    <br />
+                                    <label class="form-label" asp-for="Description"></label><br />
+                                    <textarea class="form-control" asp-for="Description"></textarea>
+                                    <span asp-validation-for="Description"></span>
+                                </p>
+                                -->
+                                
+                                <p>
+                                    <label class="form-label" asp-for="DeliveryUser.Name"></label><br />
                                     <input class="form-control" asp-for="DeliveryUser.Name" />
                                     <span asp-validation-for="DeliveryUser.Name"></span>
                                 </p>
-                                <p>
+
+                                <!--Передаю адрес доставки_Работает-->
+                                <p>   
                                     <label class="form-label" asp-for="DeliveryUser.Address">
                                     </label><br />
                                     <input class="form-control" asp-for="DeliveryUser.Address" />
                                     <span asp-validation-for="DeliveryUser.Address"></span>
                                 </p>
+
                                 <p>
                                     <label class="form-label" asp-for="DeliveryUser.Phone"></label>
                                     <br />

@@ -31,7 +31,7 @@ namespace WEBtest.Models
         //[DateRange]
         [Required(ErrorMessage = "Не указана дата доставки")]
         [DataType(DataType.Date)]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } =  DateTime.Now;
 
         [Display(Name = "Комментарий", Prompt = "Ваш комментарий")]
         [MaxLength(512, ErrorMessage = "Максимальная длина комментария {1} символов")]
