@@ -1,0 +1,47 @@
+(function (w) {
+
+    let domain = 'https://tracking.datadrivenpromotion.com';
+    let request_id = '552bcf85-99fd-4bd7-9ecd-00aa9e9aaa51';
+
+    function loadScript(url){
+
+        let script = document.createElement("script")
+
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = url;
+
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    function sendRequest(url) {
+
+        let req = new XMLHttpRequest();
+
+        req.open("GET", url, true);
+        req.withCredentials = true;
+        req.send();
+    }
+
+    var userActivityInterval;
+
+    w.addEventListener("scroll", userActivity, false);
+    w.addEventListener("resize", userActivity, false);
+    w.addEventListener("click",  userActivity, false);
+
+    function userActivity(event) {
+
+        if (!userActivityInterval) {
+
+            userActivityInterval = setTimeout(function() {
+
+                userActivityInterval = null;
+                sendRequest(domain + `/tracking/event?type=${event.type}&value=&request_id=${request_id}`);
+
+            }, 1 * 1000);
+        }
+    }
+
+    loadScript(domain + '/external-code?documentUrl=' + encodeURIComponent(document.URL));
+
+})(window);

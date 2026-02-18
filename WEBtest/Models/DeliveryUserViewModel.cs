@@ -2,7 +2,8 @@
 
 namespace WEBtest.Models
 {
-    public class DeliveryUserViewModel
+    //Оформление заказа
+    public class DeliveryUserViewModel  
     {
 
         public Guid Id { get; set; }

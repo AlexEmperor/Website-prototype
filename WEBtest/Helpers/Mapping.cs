@@ -5,7 +5,7 @@ namespace WEBtest.Helpers
 {
     public static class Mapping
     {
-        #region Product
+        #region Productм // Товар
         public static List<ProductViewModel> ToProductViewModels(this List<Product> productsDb)
         {
             var productsViewModel = new List<ProductViewModel>();
@@ -110,14 +110,14 @@ namespace WEBtest.Helpers
         }
         #endregion
 
-        #region Order
+        #region Order  //Заказы
         public static List<OrderViewModel> ToOrderViewModels(this List<Order> ordersDb)
         {
             var ordersViewModel = new List<OrderViewModel>();
 
-            foreach (var orderDb in ordersDb)
+            foreach (var orderDb in ordersDb)  // Вывод на панель Администратора текущие заказы
             {
-                ordersViewModel.Add(orderDb.ToOrderViewModel());
+                ordersViewModel.Add(orderDb.ToOrderViewModel());   // добавляем 
             }
 
             return ordersViewModel;
@@ -130,7 +130,7 @@ namespace WEBtest.Helpers
                 Id = orderDb.Id,
                 UserId = orderDb.UserId,
                 Items = orderDb.Items.ToCartItemViewModels(),
-                DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
+             //   DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
                 CreationDateTime = orderDb.CreationDateTime,
                 Status = (OrderStatusViewModel)orderDb.Status,
             };

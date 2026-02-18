@@ -1,0 +1,162 @@
+!(function (i, o) {
+  function r(e) {
+    return "[object Array]" === Object.prototype.toString.call(e);
+  }
+  function n(e, t) {
+    var n = new Date();
+    n.setTime(n.getTime() + 31536e7),
+      (n = "expires=" + n.toUTCString()),
+      (o.cookie =
+        e +
+        "=" +
+        t +
+        ";" +
+        n +
+        ";domain=" +
+        ((n = location.hostname),
+        2 < location.hostname.split(".").length &&
+          ((n = location.hostname
+            .split(".")
+            .reverse()
+            .slice(0, 2)
+            .reverse()
+            .join(".")),
+          ~c.indexOf(n) &&
+            (n = location.hostname
+              .split(".")
+              .reverse()
+              .slice(0, 3)
+              .reverse()
+              .join("."))),
+        n) +
+        ";path=/");
+  }
+  var a = {},
+    s = { isInitialized: !1, apiUrl: null },
+    c = ["msk.ru", "com.br"];
+  function p() {
+    if (s.customUserId)
+      return (e = (function (e, t) {
+        for (var n = e; n.length < t; ) n += "0";
+        return n;
+      })(s.customUserId.replace(/\D/g, ""), 32));
+    var e,
+      t = "iap.uid";
+    return (
+      ((e = (function (e) {
+        for (
+          var t = e + "=", n = o.cookie.split(";"), r = 0;
+          r < n.length;
+          r++
+        ) {
+          for (var i = n[r]; " " == i.charAt(0); ) i = i.substring(1);
+          if (0 == i.indexOf(t)) return i.substring(t.length, i.length);
+        }
+        return "";
+      })(t)) &&
+        32 === e.length) ||
+        ((e = ("" + 1e7 + -1e3 + -4e3 + -8e3 + -1e11)
+          .replace(/1|0/g, function () {
+            return (0 | (16 * Math.random())).toString(16);
+          })
+          .replace(/-/g, "")),
+        n(t, e)),
+      e
+    );
+  }
+  function d(e, t, n) {
+    t.push("uid=" + p());
+    var r,
+      t = [s.apiUrl, e, "?", t.join("&")].join("");
+    i.navigator.sendBeacon
+      ? ((r = new Blob([JSON.stringify(n || {})], { type: "text/plain" })),
+        i.navigator.sendBeacon(t, r))
+      : ((r = new XMLHttpRequest()).open("POST", t, !0),
+        r.setRequestHeader("Content-Type", "application/json"),
+        (r.withCredentials = !0),
+        (n = JSON.stringify(n)),
+        r.send(n));
+  }
+  if (
+    ((a.push = function (e) {
+      try {
+        if (!r(e)) throw new TypeError("iapSDK: Push item is not array");
+        var t = e[0],
+          n = e[1];
+        if ("function" != typeof a[t] || "push" === t)
+          throw new ReferenceError("iapSDK: Not found method " + t);
+        a[t](n);
+      } catch (e) {
+        console.error(e.message);
+      }
+    }),
+    (a.init = function (e) {
+      if (!(e = e || {}).apiUrl)
+        throw new TypeError("iapSDK: Init must set api url");
+      if (s.isInitialized) throw new Error("iapSDK: SDK already init");
+      (s.isInitialized = !0),
+        (s.apiUrl = e.apiUrl),
+        (s.customUserId = e.customUserId),
+        e.disableAutoHit || a.hit();
+    }),
+    (a.hit = function () {
+      var e,
+        t = encodeURIComponent(o.URL),
+        n = encodeURIComponent(o.referrer);
+      (e = new URL(o.URL).searchParams.get("oid")) &&
+        (sessionStorage["iap.oid"] = e),
+        d("/tracker/hit", [
+          "url=" + t,
+          "ref=" + n,
+          "sw=" + i.screen.width,
+          "sh=" + i.screen.height,
+          "rnd=" + Math.random(),
+        ]);
+    }),
+    (a.event = function (e) {
+      !(function () {
+        if (!s.isInitialized)
+          throw new ReferenceError("iapSDK: SKD not initialized");
+      })();
+      var t = { ADD_TO_CART: 1, CONFIRM_ATTRIBUTION: 2 };
+      if (!t[e.event])
+        throw new TypeError("iapSDK: Unknown event type " + e.event);
+      e.data || (e.data = {}),
+        (e.event = t[e.event]),
+        d("/tracker/event", [], { event: e.event, data: e.data, offerAlias: sessionStorage['iap.oid'] || 'zcaeedoiz' });
+    }),
+    (a.order = function (e) {
+      if (!e) throw new ReferenceError("iapSDK: order object undefined");
+      e = {
+        ...e,
+        items: e.products,
+        type: e.type || "sale",
+        offerAlias: sessionStorage["iap.oid"] || "zcaeedoiz",
+      };
+      delete e.products, this.conversion(e);
+    }),
+    (a.conversion = function (e) {
+      if (!e) throw new ReferenceError("iapSDK: conversion object undefined");
+      var t;
+      "lead" === e.type &&
+        ((t = {}),
+        e.category && (t.category = e.category),
+        e.brand && (t.brand = e.brand),
+        (e = {
+          id: e.id + "",
+          type: e.type,
+          offerAlias: e.offerAlias,
+          coupon: e.coupon,
+          isNewCustomer: e.isNewCustomer,
+          items: [t],
+          comment: e.comment,
+        })),
+        d("/tracker/conversion", [], e);
+    }),
+    i.iapSDK && r(i.iapSDK))
+  )
+    for (var e = 0; e < i.iapSDK.length; e++) a.push(i.iapSDK[e]);
+  i.iapSDK = a;
+})(window, document);
+//CPA widget test
+

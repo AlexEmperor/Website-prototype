@@ -20,7 +20,7 @@ namespace WEBtest.Db.Repositories
             {
                 order.Id = Guid.NewGuid();
                 order.CreationDateTime = DateTime.UtcNow;
-                order.DeliveryUser.Id = Guid.NewGuid();
+               //   order.DeliveryUser.Id = Guid.NewGuid();
                 order.Status = OrderStatus.Created;
                // order.Address = string.Address;
 
@@ -34,10 +34,10 @@ namespace WEBtest.Db.Repositories
             }
         }
 
-        public List<Order> GetAll() => _databaseContext.Orders.Include(x => x.DeliveryUser).Include(x => x.Items).ThenInclude(x => x.Product).ToList();
+        public List<Order> GetAll() => _databaseContext.Orders.Include(x => x.Items).ThenInclude(x => x.Product).ToList();  //Include(x => x.DeliveryUser)
 
         public Order? TryGetById(Guid orderId) =>
-            _databaseContext.Orders.Include(x => x.DeliveryUser).Include(x => x.Items).ThenInclude(x => x.Product).FirstOrDefault(order => order.Id == orderId);
+            _databaseContext.Orders.Include(x => x.Items).ThenInclude(x => x.Product).FirstOrDefault(order => order.Id == orderId);  //.Include(x => x.DeliveryUser)
 
         public void UpdateStatus(Guid orderId, OrderStatus newStatus)
         {

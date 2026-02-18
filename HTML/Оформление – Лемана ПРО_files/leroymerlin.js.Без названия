@@ -1,0 +1,7 @@
+new Image().src = "https://px.adhigh.net/p/tracking.gif?syncs=default&site_id=8582";
+new Image().src = "https://px.adhigh.net/p/tracking.gif?syncs=bsw&syncs_only=true";
+new Image().src = "https://rtb-eu.b.otm-r.com/spevent?sadd=10000181";
+new Image().src = "https://ssp.afp.ai/api/smart_pixel/16969510692";
+const script = document.createElement('script');
+script.src = 'https://cdn.al-adtech.com/ssp/smart-pixel.js';
+document.head.appendChild(script);

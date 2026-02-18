@@ -1,0 +1,35 @@
+@font-face {
+  font-family: LMMain;
+  font-weight: 700;
+  src: url('./lm-main/bold.woff2') format('woff2'), url('./lm-main/bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LMMain;
+  font-weight: 600;
+  src: url('./lm-main/demi-bold.woff2') format('woff2'), url('./lm-main/demi-bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LMMain;
+  font-weight: 400;
+  src: url('./lm-main/regular.woff2') format('woff2'),
+    url('./lm-main/regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LMTitle;
+  font-weight: 700;
+  src: url('./lm-title/bold.woff2') format('woff2'), url('./lm-title/bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: LMTitle;
+  font-weight: 600;
+  src: url('./lm-title/demi-bold.woff2') format('woff2'), url('./lm-title/demi-bold.woff') format('woff');
+  font-display: swap;
+}

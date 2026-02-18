@@ -12,13 +12,13 @@ namespace WEBTest.Db
         }
 
         //Доступ к таблицам
-        public DbSet<Product> Products { get; set; }   //Товары
-        public DbSet<Cart> Carts { get; set; }        //Корзина
-        public DbSet<CartItem> CartItems { get; set; } //Лежит в Корзине
-        public DbSet<Favourite> Favorites { get; set; } = null!; //Избранное
-        public DbSet<Comparison> Comparisons { get; set; } = null!; //Сравнение
-        public DbSet<Order> Orders { get; set; } = null!;    // Заказы
-        public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;  // Пользовательские доставки
-   
+        public DbSet<Product> Products { get; set; }                     //Товары
+        public DbSet<Cart> Carts { get; set; }                           //Корзина
+        public DbSet<CartItem> CartItems { get; set; }                   //Лежит в Корзине
+        public DbSet<Favourite> Favorites { get; set; } = null!;         //Избранное
+        public DbSet<Comparison> Comparisons { get; set; } = null!;      //Сравнение
+        public DbSet<Order> Orders { get; set; } = null!;                // Заказы
+        public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;  // Информация о пользователе заказа (Пользователи сделали заказ)
+        public DbSet<Registration> Registration { get; set; } = null!;   // Пользователи прошедшие регистрацию
     }
 }

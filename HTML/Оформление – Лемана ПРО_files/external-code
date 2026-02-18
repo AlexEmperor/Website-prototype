@@ -1,0 +1,79 @@
+(function () {
+    if(true){
+    var d_i = document.createElement("img");
+    d_i.style.cssText="width:1px !important; height:1px !important; display:none !important;";
+    d_i.setAttribute("alt","");
+    d_i.setAttribute("src","//counter.yadro.ru/id127/ddp-id.gif?v=2");
+    var s = document.body;
+    s.appendChild(d_i);}
+})();
+
+// A
+
+(function (w, d, n, u, s) {
+w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+var a=d.createElement(s),m=d.getElementsByTagName(s)[0];
+a.async=true;a.src=u;m.parentNode.insertBefore(a,m)
+})(window, document, 'DSPCounter', 'https://tags.soloway.ru/DSPCounter.js', 'script');
+DSPCounter('send', {
+  'sid'     : '228568',
+  'user_id' : ''
+});
+
+// G
+
+if (typeof __GetI === "undefined") {
+        __GetI = [];
+    }
+    (function () {
+        var p = {
+            type: "VIEW",
+            /* config START */
+            site_id: "9762",
+            product_id: "",
+            product_price: "",
+            category_id: "",
+            pixel_id: ""
+            /* config END */
+        };
+        __GetI.push(p);
+        var domain = (typeof __GetI_domain) == "undefined" ? "px.adhigh.net" : __GetI_domain;
+        var src = ('https:' == document.location.protocol ? 'https://' : 'http://') + domain + '/t.js';
+        var script = document.createElement( 'script' );
+        script.type = 'text/javascript';
+        script.src = src;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);
+    })();
+
+// DMP 
+
+(function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://prodmp.ru/client/counter.js?condition=Y2xpZW50SWQ9MTM0OCZjb3VudGVySWQ9MTcxNg==&documentUrl=' + document.URL;
+        var d = document.getElementsByTagName('script')[0];
+        d.parentNode.insertBefore(s, d);
+    })();
+
+// Adspend
+
+
+(function(segmentId) {
+      var s = document.createElement('script');
+      s.setAttribute('segmentId', segmentId);
+      s.src = ('https:'===window.location.protocol ? 'https':'http')+'://dmp.adspend.space/public/visit.js?rand='+(new Date).getTime();
+      document.querySelector('head').appendChild(s);
+   })('66e83d6482f0457caf80b258');
+
+
+//mobi
+(function(){var c=0,b=document;b.cookie.split(";").forEach(function(d){var e=d.indexOf("_mobidriven_cmf=");-1!=e&&(c=parseInt(d.substring(e+13)))});if(2>c){var a=new Date((new Date).getTime()+864E5);b.cookie="_mobidriven_cmf="+(c+1)+";expires="+a.toGMTString()+";path=/";a=b.createElement("iframe");a.src="https://sp.mobidriven.com/cmf?"+Math.random();a.scrolling="no";a.style.cssText="position:absolute;bottom:-10px;left:-10px;width:1px;height:1px;overflow:hidden;border:none";b.getElementsByTagName("body")[0].appendChild(a)}})();
+
+//q-bid
+(function(){var c=0,b=document;b.cookie.split(";").forEach(function(d){var e=d.indexOf("_q-bid_cmf=");-1!=e&&(c=parseInt(d.substring(e+13)))});if(2>c){var a=new Date((new Date).getTime()+864E5);b.cookie="_q-bid_cmf="+(c+1)+";expires="+a.toGMTString()+";path=/";a=b.createElement("iframe");a.src="https://sp.q-bid.ru/cmf?"+Math.random();a.scrolling="no";a.style.cssText="position:absolute;bottom:-10px;left:-10px;width:1px;height:1px;overflow:hidden;border:none";b.getElementsByTagName("body")[0].appendChild(a)}})();
+
+//link
+(function(){var c=0,b=document;b.cookie.split(";").forEach(function(d){var e=d.indexOf("_linkssp_cmf=");-1!=e&&(c=parseInt(d.substring(e+13)))});if(2>c){var a=new Date((new Date).getTime()+864E5);b.cookie="_linkssp_cmf="+(c+1)+";expires="+a.toGMTString()+";path=/";a=b.createElement("iframe");a.src="https://sp.linkssp.ru/cmf?"+Math.random();a.scrolling="no";a.style.cssText="position:absolute;bottom:-10px;left:-10px;width:1px;height:1px;overflow:hidden;border:none";b.getElementsByTagName("body")[0].appendChild(a)}})();
+

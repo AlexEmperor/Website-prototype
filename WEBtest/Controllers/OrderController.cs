@@ -51,7 +51,7 @@ namespace WEBtest.Controllers
                 Id = order.Id,
                 UserId = order.UserId,
                 Items = cart.Items,
-                DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
+                //DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
                 CreationDateTime = order.CreationDateTime,
                 Status = (OrderStatus)order.Status,
                 

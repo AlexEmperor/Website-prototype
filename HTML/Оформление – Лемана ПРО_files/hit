@@ -1,0 +1,6 @@
+(function() {
+    if ('47c64609c66a6df4e6ff138dfdce71f3' !== '') {
+        typeof setLocalStorageWithExpiry === 'function' && setLocalStorageWithExpiry('rai', '47c64609c66a6df4e6ff138dfdce71f3', 60);
+        typeof setCookie === 'function' && setCookie('rai', '47c64609c66a6df4e6ff138dfdce71f3', 60);
+    }
+})();
