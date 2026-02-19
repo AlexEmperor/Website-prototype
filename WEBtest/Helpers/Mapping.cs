@@ -162,5 +162,51 @@ namespace WEBtest.Helpers
             };
         }
         #endregion
+
+        #region Registracion  //регистрация пользователей
+       
+
+
+        public static Registration ToRegistrationViewModel(this Registration registra) // !!!!передача 
+        {
+            return new Registration()
+            {
+                Id = registra.Id,
+                Login = registra.Login,
+                Password = registra.Password,
+                Phone = registra.Phone,
+                FirstName = registra.FirstName,
+                LastName = registra.LastName,
+            };
+        }
+/*
+        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
+        {
+            return new DeliveryUserViewModel()
+            {
+                Id = deliveryUserDb.Id,
+                Name = deliveryUserDb.Name,
+                Address = deliveryUserDb.Address,
+                Phone = deliveryUserDb.Phone,
+                Date = DateTime.SpecifyKind(deliveryUserDb.Date, DateTimeKind.Utc),
+                Comment = deliveryUserDb.Comment
+            };
+        }
+
+        public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)  // получение данных при "Оформление заказа"
+        {
+            return new DeliveryUser()
+            {
+                Id = deliveryUser.Id,
+                Name = deliveryUser.Name,
+                Address = deliveryUser.Address,
+                Phone = deliveryUser.Phone,
+                Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),
+                Comment = deliveryUser.Comment
+            };
+        }
+    */
+        #endregion
+
     }
 }

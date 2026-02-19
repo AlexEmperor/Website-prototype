@@ -12,17 +12,19 @@ namespace WEBtest.Repositories
         public void Add(User user)
         {
             user.Id = Guid.NewGuid();
-            user.CreationDateTime = DateTime.Now;
+            user.CreationDateTime = DateTime.Now;   // Время регистрации нового пользователя
+
+
 
             _users.Add(user);
         }
 
 
         public User? TryGetByLogin(string login) =>
-            _users.FirstOrDefault(user => user.Login == login);
+            _users.FirstOrDefault(user => user.Login == login);  //Передача логина
 
 
-        public List<User> GetAll() => _users;
+        public List<User> GetAll() => _users;                    //Получить зарегестрированных пользователей
 
 
         public User? TryGetById(Guid userId) =>

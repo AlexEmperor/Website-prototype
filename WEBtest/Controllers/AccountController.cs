@@ -21,7 +21,9 @@ namespace WEBtest.Controllers
             return View();
         }
 
-        [HttpPost]
+
+
+        [HttpPost]  // Авторизация пользователя
         public IActionResult Autorization(Autorization autorization)
         {
             if (autorization.Password == autorization.Login)
@@ -48,13 +50,13 @@ namespace WEBtest.Controllers
             return RedirectToAction(nameof(Index), "Home");
         }
 
-        public IActionResult Registration()
+        public IActionResult Registration()  // Нажатие на кнопку регистрации
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Registration(Registration registration)
+        public IActionResult Registration(RegistrationViewModel registration)
         {
             if (registration.Password == registration.Login)
             {
@@ -86,7 +88,7 @@ namespace WEBtest.Controllers
 
             return RedirectToAction(nameof(Index), "Home");
 
-            //return View();
+           // return View();
         }
     }
 }

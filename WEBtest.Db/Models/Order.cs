@@ -10,19 +10,7 @@ namespace WEBtest.Db.Models
         public DateTime CreationDateTime { get; set; }               //Время во сколько сделали заказ
         public OrderStatus Status { get; set; }                      //статус заказа
         ///////////////////////////////////////////////////////////////////////////////////
-   
         public string Address { get; set; }                         //адрес покупателя
-
-
-
-        /*
-        Id = deliveryUser.Id,
-                Name = deliveryUser.Name,
-                Address = deliveryUser.Address,
-                Phone = deliveryUser.Phone,
-                Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),
-                Comment = deliveryUser.Comment
-        */
 
     }
 }

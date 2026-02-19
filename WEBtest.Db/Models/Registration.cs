@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WEBtest.Db.Models
 {
@@ -17,9 +16,5 @@ namespace WEBtest.Db.Models
 
 
         public string LastName { get; set; }
-
-
-
-
     }
 }

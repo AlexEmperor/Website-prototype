@@ -5,7 +5,7 @@ namespace WEBtest.Interfaces
 {
     public interface IUserRepository
     {
-        void Add(User user);
+        void Add(User user);  // добавление нового пользователя
         User? TryGetByLogin(string login);
         List<User> GetAll();
         User? TryGetById(Guid userId);

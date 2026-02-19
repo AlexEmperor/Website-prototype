@@ -9,7 +9,7 @@ namespace WEBtest.Controllers
         {
             return View();
         }
-        public IActionResult Register(Registration registration)
+        public IActionResult Register(RegistrationViewModel registration)
         {
             return View();
         }
