@@ -3,13 +3,10 @@ using WEBtest.Models;
 
 namespace WEBtest.Repositories
 {
-
     public class InMemoryProductRepository : IProductRepository
     {
         private int _instanceCounter = 0;
-
         private readonly List<ProductViewModel> _products;
-
         public InMemoryProductRepository()
         {
             _products =
@@ -26,7 +23,6 @@ namespace WEBtest.Repositories
                 new ProductViewModel(++_instanceCounter, "Товар 10", 10000.0M, "Описание товара 10")
             ];
         }
-
         public List<ProductViewModel> GetAll() => _products;
         public List<ProductViewModel> Search(string text)
         {
@@ -34,9 +30,7 @@ namespace WEBtest.Repositories
 
             return products.ToList() ?? [];
         }
-
         public ProductViewModel? TryGetById(int id) => _products.FirstOrDefault(product => product.Id == id);
-
         public void Add(string name, decimal cost, string description)
         {
             var product = new ProductViewModel(++_instanceCounter, name, cost, description);

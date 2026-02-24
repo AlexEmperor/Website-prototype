@@ -35,19 +35,7 @@ namespace WEBtest.Controllers
             _productRepository.Add(product);
 
             return RedirectToAction(nameof(Index), "Home");
-            //return View("../Home/index", ProductRepository.GetAll());
         }
-        /*public IActionResult Addition(string name, decimal cost, string description)
-        {
-            _productRepository.Add(name, cost, description);
-            return View(_productRepository);
-        }
-        public IActionResult Add(string name, decimal cost, string description)
-        {
-            _productRepository.Add(name, cost, description);
 
-            return RedirectToAction(nameof(Index), "Home");
-            //return View("../Home/index", ProductRepository.GetAll());
-        }*/
     }
 }

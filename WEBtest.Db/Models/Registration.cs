@@ -4,7 +4,7 @@ namespace WEBtest.Db.Models
 {
     public class Registration  //Класс регистрация
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }  // Первичный ключ
 
         public string Login { get; set; }                         //Логин
@@ -16,5 +16,8 @@ namespace WEBtest.Db.Models
 
 
         public string LastName { get; set; }
+
+        public string ConfirmPassword { get; set; }
+        
     }
 }

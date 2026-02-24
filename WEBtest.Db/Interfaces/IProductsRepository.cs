@@ -10,5 +10,6 @@ namespace WEBtest.Db.Interfaces
         void Delete(int productId);
         void Update(Product product);
         List<Product> Search(string text);
+
     }
 }

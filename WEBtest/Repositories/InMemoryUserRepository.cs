@@ -14,7 +14,7 @@ namespace WEBtest.Repositories
             user.Id = Guid.NewGuid();
             user.CreationDateTime = DateTime.Now;   // Время регистрации нового пользователя
 
-
+            ////!!!!!!////
 
             _users.Add(user);
         }

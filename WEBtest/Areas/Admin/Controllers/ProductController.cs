@@ -54,8 +54,6 @@ namespace WEBtest.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
         public IActionResult Update(int id)
         {
             var existingProduct = _productsRepository.TryGetById(id);

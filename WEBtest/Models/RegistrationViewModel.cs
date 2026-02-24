@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.Extensions.Hosting;
+using System.ComponentModel.DataAnnotations;
 
 namespace WEBtest.Models
 {
@@ -46,5 +47,23 @@ namespace WEBtest.Models
         [DataType(DataType.Text)]
         [StringLength(25, MinimumLength = 2, ErrorMessage = "Фамилия должна быть от {2} до {1} символов")]
         public required string LastName { get; set; }
+
+
+        public required int ID { get; set; }
+
+
+
+        public RegistrationViewModel() { }
+
+        public RegistrationViewModel(int id,string login, string password, string confirmPassword, string phone, string firstName, string lastName)
+        {
+            ID = id;
+            Login = login;
+            Password = password;
+            ConfirmPassword = confirmPassword;
+            Phone = phone;
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }

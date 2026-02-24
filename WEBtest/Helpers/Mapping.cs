@@ -1,4 +1,5 @@
-﻿using WEBtest.Db.Models;
+﻿using Microsoft.Win32;
+using WEBtest.Db.Models;
 using WEBtest.Models;
 
 namespace WEBtest.Helpers
@@ -164,10 +165,36 @@ namespace WEBtest.Helpers
         #endregion
 
         #region Registracion  //регистрация пользователей
-       
+
+        public static List<RegistrationViewModel> ToRegistrationViewModel(this List<Registration> registesDb)
+        {
+            var registrationViewModel = new List<RegistrationViewModel>();
+
+            foreach (var registeDb in registesDb)
+            {
+                registrationViewModel.Add(registeDb.ToRegistrationViewModel());
+            }
+            return registrationViewModel;
+        }
+
+        public static RegistrationViewModel ToRegistrationViewModel(this Registration registeDb)
+        {
+            return new RegistrationViewModel()
+            {
+                Login = registeDb.Login,
+                Password = registeDb.Password,
+                Phone = registeDb.Phone,
+                FirstName = registeDb.FirstName,
+                LastName = registeDb.LastName,
+                ConfirmPassword = registeDb.ConfirmPassword,
 
 
-        public static Registration ToRegistrationViewModel(this Registration registra) // !!!!передача 
+                //PhotoPath = productDb.PhotoPath,
+                // jpeg = productDb.jpeg,
+            };
+        }
+
+        public static Registration ToRegistrationDb(this Registration registra) // !!!!передача 
         {
             return new Registration()
             {
