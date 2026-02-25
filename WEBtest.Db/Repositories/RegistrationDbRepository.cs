@@ -50,11 +50,11 @@ namespace WEBtest.Db.Repositories
             }
         }
 
-        public List<Product> Search(string text)
-        {
-            var registration = GetAll().Where(registration => registration.Login!.Contains(text, StringComparison.CurrentCultureIgnoreCase));
+        //public List<Product> Search(string text)
+        //{
+        //    var registration = GetAll().Where(registration => registration.Login!.Contains(text, StringComparison.CurrentCultureIgnoreCase));
 
-            return registration.ToList() ?? [];
-        }
+        //    return registration.ToList() ?? [];
+        //}
     }
 }

@@ -5,11 +5,11 @@ namespace WEBtest.Interfaces
 {
     public interface IRegistrationRepository
     {
-        List<Registration> GetAll();
-        Registration? TryGetById(int registrationId);
-        void Add(Registration registration);
+        List<RegistrationViewModel> GetAll();
+        RegistrationViewModel? TryGetById(int registrationId);
+        void Add(RegistrationViewModel registration);
         void Delete(int registrationId);
-        void Update(Registration registration);
-        List<Registration> Search(string text);
+        void Update(RegistrationViewModel registration);
+        List<RegistrationViewModel> Search(string text);
     }
 }

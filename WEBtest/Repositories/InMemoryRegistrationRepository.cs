@@ -36,7 +36,7 @@ namespace WEBtest.Repositories
         
         public void Add(int id, string login, string password, string confirmPassword, string phone, string firstName, string lastName)
         {
-            var product = new RegistrationViewModel(++_instanceCounter, login, password,confirmPassword, phone,  firstName,lastName);
+            var registration = new RegistrationViewModel(++_instanceCounter, login, password,confirmPassword, phone,  firstName,lastName);
 
             _registrations.Add(registration);
         }
@@ -46,7 +46,7 @@ namespace WEBtest.Repositories
 
             _registrations.Add(registration);
         }
-        public void Delete(int registration)
+        public void Delete(int registrationId)
         {
             var existingRegistration = TryGetById(registrationId);
 

@@ -7,7 +7,8 @@ namespace WEBTest.Db
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            //Database.EnsureDeleted();
+            //Database.EnsureDeleted(); // проверка существования БД, если она есть - удаляет БД
+            //Database.EnsureCreated(); // проверка существования БД, если её нет - создаёт новую БД
             Database.Migrate();
         }
 

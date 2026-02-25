@@ -26,17 +26,11 @@ namespace WEBtest.Controllers
             return View();
         }
 
-        public IActionResult Addition(Registration registration)
-        {
-            _registrationRepository.Add(registration);
-            return View(_registrationRepository);
-        }
-        public IActionResult Add(Registration registration)
+        public IActionResult Registration(Registration registration)
         {
             _registrationRepository.Add(registration);
 
             return RedirectToAction(nameof(Index), "Home");
         }
-
     }
 }
