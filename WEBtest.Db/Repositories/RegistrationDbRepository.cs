@@ -8,7 +8,7 @@ namespace WEBtest.Db.Repositories
     {
         private readonly DatabaseContext _databaseContext;
 
-        public RegistrationDbRepository(DatabaseContext databaseContext)
+        public RegistrationDbRepository(DatabaseContext databaseContext)  // подробнее
         {
             _databaseContext = databaseContext;
         }
@@ -20,6 +20,10 @@ namespace WEBtest.Db.Repositories
 
         public void Add(Registration registration)
         {
+
+            //registration.Id = Guid.NewGuid();
+            //registration.CreationDateTime = DateTime.Now;   // Время регистрации нового пользователя
+
             _databaseContext.Registration.Add(registration);
 
             _databaseContext.SaveChanges();  // Сохраняем изменения в БД

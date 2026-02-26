@@ -23,4 +23,8 @@
     <ProjectReference Include="..\WEBtest.Db\WEBtest.Db.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Registration\" />
+  </ItemGroup>
+
 </Project>

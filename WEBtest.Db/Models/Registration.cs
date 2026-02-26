@@ -9,6 +9,7 @@ namespace WEBtest.Db.Models
 
         public string Login { get; set; }                         //Логин
         public string Password { get; set; }                      //Пароль
+        public string ConfirmPassword { get; set; }               //Подтверждение пароля
 
         public string Phone { get; set; }
 
@@ -17,7 +18,10 @@ namespace WEBtest.Db.Models
 
         public string LastName { get; set; }
 
-        public string ConfirmPassword { get; set; }
-        
+        //public string LastName { get; set; }
+
+        //registration.Id = Guid.NewGuid();
+        //registration.CreationDateTime = DateTime.Now;   // Время регистрации нового пользователя
+
     }
 }

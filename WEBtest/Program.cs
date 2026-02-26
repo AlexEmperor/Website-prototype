@@ -27,7 +27,7 @@ builder.Services.AddSingleton<IRoleRepository, InMemoryRoleRepository>();
 builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
-
+/////////////////////////////////////////////////////////////////////////////////////
 builder.Services.AddTransient<IRegistrationsRepository, RegistrationDbRepository>();  //
 
 

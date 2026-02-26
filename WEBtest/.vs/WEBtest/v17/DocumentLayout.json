@@ -3,58 +3,76 @@
   "WorkspaceRootPath": "C:\\Git\\Website-prototype\\WEBtest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\repositories\\registrationdbrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\user\\changerole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\user\\changerole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\user\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\user\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\shared\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\shared\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\order\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\order\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\user\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\user\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\repositories\\inmemoryuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:repositories\\inmemoryuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\repositories\\inmemoryregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:repositories\\inmemoryregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\interfaces\\iregistrationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\models\\changerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\models\\changerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\views\\account\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\account\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\views\\account\\autorization.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\account\\autorization.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Git\\Website-prototype\\WEBtest.Db\\Migrations\\20260225081449_Add-Registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\models\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\interfaces\\iregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:interfaces\\iregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\repositories\\inmemoryregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:repositories\\inmemoryregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\role\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\role\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -64,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
@@ -96,184 +114,249 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Autorization.cshtml",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Account\\Autorization.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Autorization.cshtml",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Account\\Autorization.cshtml",
-              "RelativeToolTip": "Views\\Account\\Autorization.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwCAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-25T07:59:03.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Registration.cshtml",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Account\\Registration.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Registration.cshtml",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Account\\Registration.cshtml",
-              "RelativeToolTip": "Views\\Account\\Registration.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAKAAAAAAAAAA==",
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\Detail.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Detail.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\User\\Detail.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-25T07:39:18.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InMemoryUserRepository.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryUserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\InMemoryUserRepository.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryUserRepository.cs",
-              "RelativeToolTip": "Repositories\\InMemoryUserRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:32:55.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAUwDYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:32:55.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegistrationController.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\RegistrationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RegistrationController.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\RegistrationController.cs",
-              "RelativeToolTip": "Controllers\\RegistrationController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:32:55.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T08:10:27.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Header.cshtml",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Shared\\Header.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Header.cshtml",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Shared\\Header.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Header.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-25T08:09:14.506Z",
+              "WhenOpened": "2026-02-26T15:40:42.672Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "20260225081449_Add-Registration.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Migrations\\20260225081449_Add-Registration.cs",
-              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Migrations\\20260225081449_Add-Registration.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\Migrations\\20260225081449_Add-Registration.cs",
-              "RelativeToolTip": "..\\WEBtest.Db\\Migrations\\20260225081449_Add-Registration.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T08:14:50.271Z",
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T15:40:31.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-25T08:03:53.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Models\\ProductViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ProductViewModel.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Models\\ProductViewModel.cs",
-              "RelativeToolTip": "Models\\ProductViewModel.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:28:33.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IRegistrationRepository.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Interfaces\\IRegistrationRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IRegistrationRepository.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Interfaces\\IRegistrationRepository.cs",
-              "RelativeToolTip": "Interfaces\\IRegistrationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:17:26.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "InMemoryRegistrationRepository.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryRegistrationRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\InMemoryRegistrationRepository.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryRegistrationRepository.cs",
-              "RelativeToolTip": "Repositories\\InMemoryRegistrationRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAA7wDQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:17:39.25Z",
+              "WhenOpened": "2026-02-26T15:40:29.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
-              "RelativeDocumentMoniker": "..\\WEBtest.Db\\DatabaseContext.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
-              "RelativeToolTip": "..\\WEBtest.Db\\DatabaseContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:17:51.284Z",
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Order\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Order\\Detail.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Order\\Detail.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Order\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T15:40:27.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "RegistrationViewModel.cs",
-              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Models\\RegistrationViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\RegistrationViewModel.cs",
-              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Models\\RegistrationViewModel.cs",
-              "RelativeToolTip": "Models\\RegistrationViewModel.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBoAAAAVAAAAAAAAAA==",
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Add.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\Add.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Add.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\User\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T15:40:18.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SideBar.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Shared\\SideBar.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\SideBar.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Shared\\SideBar.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\SideBar.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T15:40:05.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T07:17:30.441Z",
+              "WhenOpened": "2026-02-26T15:28:49.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRegistrationsRepository.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Interfaces\\IRegistrationsRepository.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Interfaces\\IRegistrationsRepository.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\Interfaces\\IRegistrationsRepository.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Interfaces\\IRegistrationsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T14:52:49.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Models\\Registration.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Registration.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\Models\\Registration.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Models\\Registration.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T14:51:14.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\DatabaseContext.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\DatabaseContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA5wBkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T14:51:11.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InMemoryRegistrationRepository.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryRegistrationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\InMemoryRegistrationRepository.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryRegistrationRepository.cs",
+              "RelativeToolTip": "Repositories\\InMemoryRegistrationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T14:46:25.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InMemoryUserRepository.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\InMemoryUserRepository.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Repositories\\InMemoryUserRepository.cs",
+              "RelativeToolTip": "Repositories\\InMemoryUserRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T12:38:43.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegistrationDbRepository.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T12:38:43.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAjwDkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T14:25:50.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangeRole.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\ChangeRole.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\ChangeRole.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\ChangeRole.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\User\\ChangeRole.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T14:24:10.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChangeRole.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Models\\ChangeRole.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\ChangeRole.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Models\\ChangeRole.cs",
+              "RelativeToolTip": "Areas\\Admin\\Models\\ChangeRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T14:22:28.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Role\\Add.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Role\\Add.cshtml",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Role\\Add.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Role\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-26T14:21:38.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwCEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T12:38:44.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RegistrationController.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\RegistrationController.cs",
+              "RelativeToolTip": "Controllers\\RegistrationController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAIwHcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T11:13:15.241Z",
               "EditorCaption": ""
             }
           ]

@@ -31,9 +31,6 @@ namespace WEBtest.Repositories
             return products.ToList() ?? [];
         }
         public RegistrationViewModel? TryGetById(int id) => _registrations.FirstOrDefault(product => product.ID == id);
-      
-        
-        
         public void Add(int id, string login, string password, string confirmPassword, string phone, string firstName, string lastName)
         {
             var registration = new RegistrationViewModel(++_instanceCounter, login, password,confirmPassword, phone,  firstName,lastName);

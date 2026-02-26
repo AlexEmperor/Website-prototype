@@ -1,4 +1,5 @@
 ﻿using WEBtest.Areas.Admin.Models;
+using WEBtest.Db.Models;
 using WEBtest.Interfaces;
 using WEBtest.Models;
 
@@ -24,9 +25,11 @@ namespace WEBtest.Repositories
             _users.FirstOrDefault(user => user.Login == login);  //Передача логина
 
 
-        public List<User> GetAll() => _users;                    //Получить зарегестрированных пользователей
+        //public List<User> GetAll() => regist;                      //Получить зарегестрированных пользователей
 
+        public List<User> GetAll() => _users;                       //Получить зарегестрированных пользователей
 
+        
         public User? TryGetById(Guid userId) =>
             _users.FirstOrDefault(user => user.Id == userId);
 

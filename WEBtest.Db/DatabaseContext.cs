@@ -20,6 +20,9 @@ namespace WEBTest.Db
         public DbSet<Comparison> Comparisons { get; set; } = null!;      //Сравнение
         public DbSet<Order> Orders { get; set; } = null!;                // Заказы
         public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;  // Информация о пользователе заказа (Пользователи сделали заказ)
+       
+        
+        
         public DbSet<Registration> Registration { get; set; } = null!;   // Пользователи прошедшие регистрацию
     }
 }

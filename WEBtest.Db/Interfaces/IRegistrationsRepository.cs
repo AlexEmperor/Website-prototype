@@ -4,6 +4,7 @@ namespace WEBtest.Db.Interfaces
 {
     public interface IRegistrationsRepository
     {
+
         List<Registration> GetAll();
         Registration? TryGetById(int registrationId);
         void Add(Registration registration);

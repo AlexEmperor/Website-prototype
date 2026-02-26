@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WEBtest.Areas.Admin.Models;
+using WEBtest.Db.Interfaces;
+using WEBtest.Db.Models;
 using WEBtest.Interfaces;
 using WEBtest.Models;
 
@@ -11,19 +13,25 @@ namespace WEBtest.Areas.Admin.Controllers
     {
         private readonly IUserRepository _usersRepository;
         private readonly IRoleRepository _rolesRepository;
+        private readonly IRegistrationsRepository _registrationRepository;
 
 
-        public UserController(IUserRepository usersRepository, IRoleRepository rolesRepository)
+        public UserController(IUserRepository usersRepository, IRoleRepository rolesRepository, IRegistrationsRepository registrationRepository)
         {
-            _usersRepository = usersRepository;
+           // _usersRepository = usersRepository;
             _rolesRepository = rolesRepository;
+            _registrationRepository = registrationRepository;
 
         }
         public IActionResult Index()
         {
-            var roles = _usersRepository.GetAll();
+            //var roles = _usersRepository.GetAll();
+            var roles = _registrationRepository.GetAll();
 
-            return View(roles);
+
+            //var roles = _registrationRepository.GetAll();
+
+            return View(roles);                     // Роли полтзователей
         }
         public IActionResult Add()
         {
@@ -32,9 +40,9 @@ namespace WEBtest.Areas.Admin.Controllers
 
 
         [HttpPost]
-        public IActionResult Add(User user)
+        public IActionResult Add(Registration registration,User user)
         {
-            if (_usersRepository.TryGetByLogin(user.Login) != null)
+            if (_usersRepository.TryGetByLogin(registration.Login) != null)
             {
                 ModelState.AddModelError("",
                     "Такой пользователь уже существует!");
@@ -42,16 +50,23 @@ namespace WEBtest.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
-                return View(user);
+                return View(registration);
             }
 
-            _usersRepository.Add(user);
+            _registrationRepository.Add(registration);
+            //_usersRepository.Add(user);
 
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Detail(Guid id)
+
+
+        public IActionResult Detail(Guid id, Registration registration)   ///!!!
         {
-            var user = _usersRepository.TryGetById(id);
+
+         //   Registration? TryGetById(int registrationId);
+
+            var user = _registrationRepository.TryGetById(registration.Id);
+           // var user = _usersRepository.TryGetById(id);
 
             return View(user);
         }
@@ -116,7 +131,9 @@ namespace WEBtest.Areas.Admin.Controllers
 
         public IActionResult ChangeRole(Guid id)
         {
-            var existingUser = _usersRepository.TryGetById(id);
+            var existingUser = _usersRepository.TryGetById(id);  // изменение роли из _usersRepository
+
+
 
             var changeRole = new ChangeRole()
             {

@@ -7,6 +7,7 @@ namespace WEBtest.Controllers
 {
     public class AccountController : Controller
     {
+        /*
         private readonly IUserRepository _usersRepository;
         private readonly IRoleRepository _rolesRepository;
 
@@ -16,13 +17,15 @@ namespace WEBtest.Controllers
             _rolesRepository = rolesRepository;
             _usersRepository = usersRepository;
         }
+
+
         public IActionResult Autorization()
         {
             return View();
         }
+*/
 
-
-
+/*
         [HttpPost]  // Авторизация пользователя
         public IActionResult Autorization(Autorization autorization)
         {
@@ -49,12 +52,14 @@ namespace WEBtest.Controllers
 
             return RedirectToAction(nameof(Index), "Home");
         }
-
+*/
+  
         public IActionResult Registration()  // Нажатие на кнопку регистрации
         {
             return View();
         }
-
+ 
+        /*
         [HttpPost]
         public IActionResult Registration(RegistrationViewModel registration)
         {
@@ -90,5 +95,6 @@ namespace WEBtest.Controllers
 
            // return View();
         }
+        */
     }
 }
