@@ -18,20 +18,20 @@ namespace WEBtest.Areas.Admin.Controllers
 
         public UserController(IUserRepository usersRepository, IRoleRepository rolesRepository, IRegistrationsRepository registrationRepository)
         {
-           // _usersRepository = usersRepository;
+            _usersRepository = usersRepository;
             _rolesRepository = rolesRepository;
             _registrationRepository = registrationRepository;
 
         }
         public IActionResult Index()
         {
-            //var roles = _usersRepository.GetAll();
+            var roles2 = _usersRepository.GetAll();
             var roles = _registrationRepository.GetAll();
 
 
             //var roles = _registrationRepository.GetAll();
 
-            return View(roles);                     // Роли полтзователей
+            return View(roles2);                     // Роли полтзователей
         }
         public IActionResult Add()
         {
