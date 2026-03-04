@@ -27,9 +27,18 @@ namespace WEBtest.Helpers
                 Name = productDb.Name,
                 Cost = productDb.Cost,
                 Description = productDb.Description,
+                Article = productDb.Article,
+                Barcode = productDb.Barcode,
+                Category = productDb.Category,
+                PhotoPath = productDb.PhotoPath,
+                Storage_Ozon = productDb.Storage_Ozon,
+                Storage_FBS1 = productDb.Storage_FBS1,
+                Cost_price = productDb.Cost_price,
+                Costs_Ozon = productDb.Costs_Ozon,
+                Margin_FBO1 = productDb.Margin_FBO1,
+                Margin_FBS1 = productDb.Margin_FBS1,
 
-               //PhotoPath = productDb.PhotoPath,
-               // jpeg = productDb.jpeg,
+                // jpeg = productDb.jpeg,
             };
         }
 
@@ -43,6 +52,15 @@ namespace WEBtest.Helpers
                 Description = product.Description,
                 PhotoPath = product.PhotoPath,
                 jpeg = product.japeg,
+                Article = product.Article,
+                Barcode = product.Barcode,
+                Category = product.Category,
+                Storage_Ozon = product.Storage_Ozon,
+                Storage_FBS1 = product.Storage_FBS1,
+                Cost_price = product.Cost_price,
+                Costs_Ozon = product.Costs_Ozon,
+                Margin_FBO1 = product.Margin_FBO1,
+                Margin_FBS1 = product.Margin_FBS1,
             };
         }
         #endregion

@@ -16,9 +16,23 @@
 
         public List<CartItem>? CartItems { get; set; }
 
+        public string? Article { get; set; }
 
+        public string? Barcode { get; set; }
 
+        public string? Category { get; set; }
 
+        public int? Storage_Ozon { get; set; }
+
+        public int? Storage_FBS1 { get; set; }
+
+        public int? Cost_price { get; set; }
+
+        public int? Costs_Ozon { get; set; }
+
+        public int? Margin_FBO1 { get; set; }
+
+        public int? Margin_FBS1 { get; set; }
 
         //public List<Image> Images { get; set; }
 

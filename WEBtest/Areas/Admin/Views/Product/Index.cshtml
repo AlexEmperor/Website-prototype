@@ -26,8 +26,17 @@
                         <thead>
                             <tr align="center">
                                 <th scope="col">#</th>
+                                <th scope="col">Артикул</th>
+                                <th scope="col">Штрихкод</th>
+                                <th scope="col">Категория</th>
                                 <th scope="col">Наименование товара</th>
                                 <th scope="col">Цена, руб.</th>
+                                <th scope="col">OZON, кол-во.</th>
+                                <th scope="col">FBS1, кол-во.</th>
+                                <th scope="col">Себестоимость</th>
+                                <th scope="col">Затраты на ОЗОН</th>
+                                <th scope="col">Маржа FBO1, %</th>
+                                <th scope="col">Маржа FBS1, %</th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                             </tr>
@@ -36,7 +45,10 @@
                             @for (var i = 0; i < Model.Count; i++)
                             {
                                 <tr align="center" class="align-baseline">
-                                    <td class="fw-bold">@(i + 1)</td>
+                                    <td class="fw-bold">@Model[i].Id</td>
+                                    <td>@Model[i].Article</td>
+                                    <td>@Model[i].Barcode</td>
+                                    <td>@Model[i].Category</td>
                                     <td align="left">
                                         <a class="text-success"
                                            asp-area=""
@@ -47,6 +59,12 @@
                                         </a>
                                     </td>
                                     <td>@Model[i].Cost.ToString("c")</td>
+                                    <td>@Model[i].Storage_Ozon</td>
+                                    <td>@Model[i].Storage_FBS1</td>
+                                    <td>@Model[i].Cost_price</td>
+                                    <td>@Model[i].Costs_Ozon</td>
+                                    <td>@Model[i].Margin_FBO1</td>
+                                    <td>@Model[i].Margin_FBS1</td>
                                     <td>
                                         <a class="btn btn-outline-success"
                                            asp-area="Admin"

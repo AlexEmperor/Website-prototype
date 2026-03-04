@@ -46,6 +46,15 @@ namespace WEBtest.Db.Repositories
                 excitingProduct.Name = product.Name;
                 excitingProduct.Cost = product.Cost;
                 excitingProduct.Description = product.Description;
+                excitingProduct.Article = product.Article;
+                excitingProduct.Barcode = product.Barcode;
+                excitingProduct.Category = product.Category;
+                excitingProduct.Storage_Ozon = product.Storage_Ozon;
+                excitingProduct.Storage_FBS1 = product.Storage_FBS1;
+                excitingProduct.Cost_price = product.Cost_price;
+                excitingProduct.Costs_Ozon = product.Costs_Ozon;
+                excitingProduct.Margin_FBO1 = product.Margin_FBO1;
+                excitingProduct.Margin_FBS1 = product.Margin_FBS1;
 
                 _databaseContext.SaveChanges();  // Сохраняем изменения в БД
             }

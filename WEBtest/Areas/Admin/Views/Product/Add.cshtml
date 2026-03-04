@@ -7,7 +7,7 @@
     <h2 class="row-title">Добавление нового товара</h2>
 </div>
 
-<form method="post">
+<form method="post">   
     <div class="row justify-content-center mt-3">
         <div class="col-6 mb-3">
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
@@ -26,9 +26,63 @@
                 <textarea class="form-control" asp-for="Description"></textarea>
                 <span asp-validation-for="Description"></span>
             </p>
+            <p>
+                <label class="form-label" asp-for="Article"></label><br />
+                <textarea class="form-control" asp-for="Article"></textarea>
+                <span asp-validation-for="Article"></span>
+            </p>
+            <p>
+                <label class="form-label" asp-for="Barcode"></label><br />
+                <textarea class="form-control" asp-for="Barcode"></textarea>
+                <span asp-validation-for="Barcode"></span>
+            </p>
+            <p>
+                <label>Категория</label>
+                <label class="form-label" asp-for="Category"></label><br />
+                <textarea class="form-control" asp-for="Category"></textarea>
+                <span asp-validation-for="Category"></span>
+            </p>
+
+            <p>
+                <label>Фото</label>
+                <input type="file" class="form-control" asp-for="PhotoFile" />
+                <small class="text-muted">Допустимые форматы: JPG, PNG, GIF</small>
+            </p>
+            <p>
+                <label>Склад Озон кол-во</label><br />
+                <textarea class="form-control" asp-for="Storage_Ozon"></textarea>
+                <span asp-validation-for="Storage_Ozon"></span>
+            </p>
+            <p>
+                <label>Склад FBS1 кол-во</label><br />
+                <textarea class="form-control" asp-for="Storage_FBS1"></textarea>
+                <span asp-validation-for="Storage_FBS1"></span>
+            </p>
+            <p>
+                <label>Себестоимость</label><br />
+                <textarea class="form-control" asp-for="Cost_price"></textarea>
+                <span asp-validation-for="Cost_price"></span>
+            </p>
+            <p>
+                <label>Затраты на Озон</label><br />
+                <textarea class="form-control" asp-for="Costs_Ozon"></textarea>
+                <span asp-validation-for="Costs_Ozon"></span>
+            </p>
+            <p>
+                <label>Маржа FBO1</label><br />
+                <textarea class="form-control" asp-for="Margin_FBO1"></textarea>
+                <span asp-validation-for="Margin_FBO1"></span>
+            </p>
+            <p>
+                <label>Маржа FBS1</label><br />
+                <textarea class="form-control" asp-for="Margin_FBS1"></textarea>
+                <span asp-validation-for="Margin_FBS1"></span>
+            </p>
 
 
-            <!-- Фотография -->
+
+
+            @* <!-- Фотография 
             <p>
                 <label class="form-label" asp-for="japeg"></label><br />
 
@@ -45,8 +99,8 @@
                 <span asp-validation-for="japeg" class="text-danger"></span>
 
                 <small class="text-muted">Допустимые форматы: JPG, PNG, GIF</small>
-            </p>
-
+        </p>
+        -->@
             <!--            <script>
                 // Отображение имени файла в текстовом поле
                 document.getElementById('imageUpload').addEventListener('change', function (e) 
@@ -59,7 +113,7 @@
 
             -->
 
-            <script>
+@*             <script>
                 // Скрипт предпросмотра
                 document.getElementById('imageUpload').addEventListener('change', function (e) {
                     const file = e.target.files[0];
@@ -72,7 +126,7 @@
                         reader.readAsDataURL(file);
                     }
                 });
-            </script>
+            </script> *@
             <!--Окончание Фотографи -->
         </div>
     </div>

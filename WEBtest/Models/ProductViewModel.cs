@@ -22,15 +22,42 @@ namespace WEBtest.Models
         [DataType(DataType.MultilineText)]
         public string? Description { get; set; }
 
-        [Required]
-        public string? PhotoPath { get; set; } = "/img/product.png";
+       // [Required]
+        public string? PhotoPath { get; set; }
+
+
+        public IFormFile? PhotoFile { get; set; }
+
 
         [Required]
         public Byte[]? japeg { get; set; } = { };
-        
+
+        [Required]
+        public string Article { get; set; }
 
 
+        [Required]
+        public string Barcode { get; set; }
 
+        [Required]
+        public string Category { get; set; }
+
+        [Required]
+        public int? Storage_Ozon { get; set; }
+
+        [Required]
+        public int? Storage_FBS1 { get; set; }
+
+        [Required]
+        public int? Cost_price { get; set; }
+
+        [Required]
+        public int? Costs_Ozon { get; set; }
+
+        [Required]
+        public int? Margin_FBO1 { get; set; }
+        [Required]
+        public int? Margin_FBS1 { get; set; }
 
         public ProductViewModel() { }
 

@@ -161,11 +161,26 @@ namespace WEBtest.Db.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Article")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Barcode")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Category")
+                        .HasColumnType("text");
+
                     b.Property<Guid?>("ComparisonId")
                         .HasColumnType("uuid");
 
                     b.Property<decimal>("Cost")
                         .HasColumnType("numeric");
+
+                    b.Property<int?>("Cost_price")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Costs_Ozon")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
@@ -173,12 +188,24 @@ namespace WEBtest.Db.Migrations
                     b.Property<Guid?>("FavouriteId")
                         .HasColumnType("uuid");
 
+                    b.Property<int?>("Margin_FBO1")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Margin_FBS1")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("PhotoPath")
                         .HasColumnType("text");
+
+                    b.Property<int?>("Storage_FBS1")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Storage_Ozon")
+                        .HasColumnType("integer");
 
                     b.Property<byte[]>("jpeg")
                         .HasColumnType("bytea");

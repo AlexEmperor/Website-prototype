@@ -11,19 +11,18 @@ namespace WEBtest.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IProductsRepository _productsRepository;
+        private readonly IWebHostEnvironment _environment;
 
-
-        public ProductController(IProductsRepository productsRepository)
+        public ProductController(IProductsRepository productsRepository, IWebHostEnvironment environment)
         {
             _productsRepository = productsRepository;
-
+            _environment = environment;
         }
 
 
         public IActionResult Index()
         {
-            var products = _productsRepository.GetAll();
-            return View(products.ToProductViewModels());
+            return View(_productsRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
             //return View(products);
         }
 
@@ -35,17 +34,43 @@ namespace WEBtest.Areas.Admin.Controllers
 
 
         [HttpPost]
-        public IActionResult Add(ProductViewModel product)
+        public async Task<IActionResult> Add(ProductViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                return View(product);
+                return View(model);
             }
-            _productsRepository.Add(product.ToProductDb());
-            //_productsRepository.Add(product);
+            /*
+            // Фото ОБЯЗАТЕЛЬНО при создании
+            if (model.PhotoFile == null)
+            {
+                ModelState.AddModelError("PhotoFile", "Необходимо загрузить фото товара");
+                return View(model);
+            }
+
+            model.PhotoPath = await FileSaver.SaveFileAsync(
+                model.PhotoFile,
+                "img",
+                _environment,
+                model.Name);
+            */
+            _productsRepository.Add(model.ToProductDb());
 
             return RedirectToAction(nameof(Index));
         }
+
+        /* [HttpPost]
+         public IActionResult Add(ProductViewModel product)
+         {
+             if (!ModelState.IsValid)
+             {
+                 return View(product);
+             }
+             _productsRepository.Add(product.ToProductDb());
+             //_productsRepository.Add(product);
+
+             return RedirectToAction(nameof(Index));
+         }*/
 
 
         public IActionResult Delete(int id)

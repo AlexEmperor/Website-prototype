@@ -526,3 +526,8 @@ C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets.build.endpoint
 C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\swae.build.ex.cache
 C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\WEBtest.csproj.Up2Date
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
