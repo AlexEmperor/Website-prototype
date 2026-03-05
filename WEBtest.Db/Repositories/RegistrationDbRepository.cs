@@ -1,4 +1,5 @@
-﻿using WEBtest.Db.Interfaces;
+﻿using System.Data;
+using WEBtest.Db.Interfaces;
 using WEBtest.Db.Models;
 using WEBTest.Db;
 
@@ -49,6 +50,7 @@ namespace WEBtest.Db.Repositories
                 excitingRegistration.Login = registration.Login;
                 excitingRegistration.Password = registration.Password;
                 excitingRegistration.LastName = registration.LastName;
+                excitingRegistration.Role = registration.Role;
 
                 _databaseContext.SaveChanges();  // Сохраняем изменения в БД
             }

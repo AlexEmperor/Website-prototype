@@ -10,6 +10,21 @@
       "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\repositories\\registrationdbrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\models\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\helpers\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:helpers\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,14 +51,7 @@
       "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\git\\website-prototype\\webtest.db\\repositories\\cartsdbrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -56,10 +64,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\git\\website-prototype\\webtest\\areas\\admin\\views\\user\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -80,7 +84,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -113,6 +117,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "RegistrationViewModel.cs",
+              "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Models\\RegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\RegistrationViewModel.cs",
+              "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Models\\RegistrationViewModel.cs",
+              "RelativeToolTip": "Models\\RegistrationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T10:02:42.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Update.cshtml",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Update.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Update.cshtml",
@@ -120,12 +137,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Update.cshtml",
               "ViewState": "AgIAAD0AAAAAAAAAAAAAAEUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-04T14:04:20.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T14:04:20.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Index.cshtml",
@@ -133,12 +149,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Index.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAACYAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-04T12:42:56.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T12:42:56.419Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\Index.cshtml",
@@ -150,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Add.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\Add.cshtml",
@@ -168,7 +183,7 @@
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
               "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
               "RelativeToolTip": "..\\WEBtest.Db\\Repositories\\RegistrationDbRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwA8AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T11:46:11.146Z",
               "EditorCaption": ""
@@ -181,27 +196,27 @@
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\UserController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAqwCEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAmwEcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T11:46:11.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "RegistrationController.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\RegistrationController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegistrationController.cs",
               "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\RegistrationController.cs",
               "RelativeToolTip": "Controllers\\RegistrationController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAkwHYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAhwHUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T12:11:51.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -213,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Add.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Add.cshtml",
@@ -221,12 +236,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Add.cshtml",
               "ViewState": "AgIAAEMAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-04T12:03:06.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T12:03:06.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "ProductsDbRepository.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
@@ -234,12 +248,11 @@
               "RelativeToolTip": "..\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAhwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T10:49:36.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T10:49:36.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ProductController.cs",
@@ -252,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "OrdersDbRepository.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Repositories\\OrdersDbRepository.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Repositories\\OrdersDbRepository.cs",
@@ -265,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "CartsDbRepository.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Repositories\\CartsDbRepository.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Repositories\\CartsDbRepository.cs",
@@ -278,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ProductViewModel.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Models\\ProductViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ProductViewModel.cs",
@@ -286,24 +299,24 @@
               "RelativeToolTip": "Models\\ProductViewModel.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAA4wDkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T10:35:02.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T10:35:02.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Git\\Website-prototype\\WEBtest\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowAcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T08:40:19.11Z"
+              "WhenOpened": "2026-02-27T08:40:19.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\Models\\Product.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Product.cs",
@@ -311,12 +324,11 @@
               "RelativeToolTip": "..\\WEBtest.Db\\Models\\Product.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAUwCAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T10:02:17.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T10:02:17.686Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Mapping.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Helpers\\Mapping.cs",
               "RelativeDocumentMoniker": "Helpers\\Mapping.cs",
@@ -329,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\User\\Detail.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\User\\Detail.cshtml",
@@ -341,13 +353,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "DatabaseContext.cs",
               "DocumentMoniker": "C:\\Git\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "..\\WEBtest.Db\\DatabaseContext.cs",
               "ToolTip": "C:\\Git\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
               "RelativeToolTip": "..\\WEBtest.Db\\DatabaseContext.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwAsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T14:51:11.046Z",
               "EditorCaption": ""

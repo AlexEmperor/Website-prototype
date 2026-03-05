@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using WEBtest.Areas.Admin.Models;
 using WEBtest.Db.Models;
 using WEBtest.Models;
 
@@ -205,6 +206,7 @@ namespace WEBtest.Helpers
                 FirstName = registeDb.FirstName,
                 LastName = registeDb.LastName,
                 ConfirmPassword = registeDb.ConfirmPassword,
+                Role = registeDb.Role,
 
 
                 //PhotoPath = productDb.PhotoPath,
@@ -222,6 +224,7 @@ namespace WEBtest.Helpers
                 Phone = registra.Phone,
                 FirstName = registra.FirstName,
                 LastName = registra.LastName,
+                Role = registra.Role,
             };
         }
 /*

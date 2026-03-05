@@ -107,16 +107,17 @@ namespace WEBtest.Controllers
                 return View(registration);
             }
 
-            var user = new User()
+            var user = new RegistrationViewModel()
             {
                 Login = registration.Login,
                 Password = registration.Password,
                 FirstName = registration.FirstName,
                 LastName = registration.LastName,
                 Phone = registration.Phone,
+                Role = registration.Role,
             };
 
-            _usersRepository.Add(user);
+            //_usersRepository.Add(user);
             _registrationRepository.Add(registration);
 
             return RedirectToAction(nameof(Index), "Home");

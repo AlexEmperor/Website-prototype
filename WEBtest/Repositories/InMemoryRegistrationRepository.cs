@@ -13,13 +13,14 @@ namespace WEBtest.Repositories
         private int _instanceCounter = 0;
 
         private readonly List<RegistrationViewModel> _registrations;
+
         public InMemoryRegistrationRepository()
         {
             _registrations =
             [
-                new RegistrationViewModel(++_instanceCounter,"1", "1", "1", "1", "1", "1"),
-                new RegistrationViewModel(++_instanceCounter,"1", "1", "1", "1", "1", "1"),
-                new RegistrationViewModel(++_instanceCounter,"1", "1", "1", "1", "1", "1"),
+                new RegistrationViewModel(++_instanceCounter,"1", "1", "1", "1", "1", "1","1"),
+                new RegistrationViewModel(++_instanceCounter,"1", "1", "1", "1", "1", "1","1"),
+                new RegistrationViewModel(++_instanceCounter,"1", "1", "1", "1", "1", "1", "1"),
             ];
         }
 
@@ -31,9 +32,9 @@ namespace WEBtest.Repositories
             return products.ToList() ?? [];
         }
         public RegistrationViewModel? TryGetById(int id) => _registrations.FirstOrDefault(product => product.ID == id);
-        public void Add(int id, string login, string password, string confirmPassword, string phone, string firstName, string lastName)
+        public void Add(int id, string login, string password, string confirmPassword, string phone, string firstName, string lastName, string Role)
         {
-            var registration = new RegistrationViewModel(++_instanceCounter, login, password,confirmPassword, phone,  firstName,lastName);
+            var registration = new RegistrationViewModel(++_instanceCounter, login, password,confirmPassword, phone,firstName,lastName,Role);
 
             _registrations.Add(registration);
         }

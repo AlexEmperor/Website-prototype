@@ -51,11 +51,14 @@ namespace WEBtest.Models
 
         public int ID { get; set; }
 
+        public string Role { get; set; }
+        
+
 
 
         public RegistrationViewModel() { }
 
-        public RegistrationViewModel(int id,string login, string password, string confirmPassword, string phone, string firstName, string lastName)
+        public RegistrationViewModel(int id,string login, string password, string confirmPassword, string phone, string firstName, string lastName,string Role)
         {
             ID = id;
             Login = login;
@@ -64,6 +67,7 @@ namespace WEBtest.Models
             Phone = phone;
             FirstName = firstName;
             LastName = lastName;
+            Role = Role;
         }
     }
 }
