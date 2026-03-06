@@ -69,6 +69,23 @@ namespace WEBtest.Db.Migrations
                     b.ToTable("CartItems");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Comparison", b =>
                 {
                     b.Property<Guid>("Id")
@@ -128,6 +145,39 @@ namespace WEBtest.Db.Migrations
                     b.ToTable("Favorites");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.Furniture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("OrderFurnitureId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("OrderPlace")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderFurnitureId");
+
+                    b.ToTable("Furniture");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Order", b =>
                 {
                     b.Property<Guid>("Id")
@@ -151,6 +201,32 @@ namespace WEBtest.Db.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurniture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("OrderCreationDateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("OrderDeliveryDateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("Provider")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FurnitureOrders");
                 });
 
             modelBuilder.Entity("WEBtest.Db.Models.Product", b =>
@@ -283,6 +359,13 @@ namespace WEBtest.Db.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.Furniture", b =>
+                {
+                    b.HasOne("WEBtest.Db.Models.OrderFurniture", null)
+                        .WithMany("Furniture")
+                        .HasForeignKey("OrderFurnitureId");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Product", b =>
                 {
                     b.HasOne("WEBtest.Db.Models.Comparison", null)
@@ -312,6 +395,11 @@ namespace WEBtest.Db.Migrations
             modelBuilder.Entity("WEBtest.Db.Models.Order", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurniture", b =>
+                {
+                    b.Navigation("Furniture");
                 });
 
             modelBuilder.Entity("WEBtest.Db.Models.Product", b =>

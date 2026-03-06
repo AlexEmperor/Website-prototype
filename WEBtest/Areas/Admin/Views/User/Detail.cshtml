@@ -1,4 +1,5 @@
-﻿@model User
+﻿@using WEBtest.Db.Models
+@model RegistrationViewModel
 @{
     ViewData["Title"] = "Пользователь";
 }
@@ -15,7 +16,7 @@
 
             @if (Model != null)
             {
-                <input type="hidden" name="Id" value="@Model.Id" />
+                <input type="hidden" name="Id" value="@Model.ID" />
 
                 <div class="text-end mt-5">
 
@@ -29,7 +30,7 @@
                                asp-area="Admin"
                                asp-controller="User"
                                asp-action="ChangePassword"
-                               asp-route-id="@Model.Id">
+                               asp-route-id="@Model.ID">
                                 Смена пароля
                             </a>
                         </li>
@@ -38,7 +39,7 @@
                                asp-area="Admin"
                                asp-controller="User"
                                asp-action="Update"
-                               asp-route-id="@Model.Id">
+                               asp-route-id="@Model.ID">
                                 Редактирование данных
                             </a>
                         </li>
@@ -47,7 +48,7 @@
                                asp-area="Admin"
                                asp-controller="User"
                                asp-action="ChangeRole"
-                               asp-route-id="@Model.Id">
+                               asp-route-id="@Model.ID">
                                 Смена прав доступа
                             </a>
                         </li>
@@ -62,7 +63,7 @@
                 <table class="table table-hover">
                     <tr>
                         <td><span>ID</span></td>
-                        <td>@Model.Id</td>
+                        <td>@Model.ID</td>
                     </tr>
                     <tr>
                         <td><span>Email (логин)</span></td>
@@ -83,11 +84,7 @@
 
                     <tr>
                         <td><span>Роль</span></td>
-                        <td>@Model.Role?.Name</td>
-                    </tr>
-                    <tr>
-                        <td class="w-25"><span>Дата регистрации</span></td>
-                        <td class="w-auto">@Model.CreationDateTime</td>
+                        <td>@Model.Role</td>
                     </tr>
                 </table>
             }
@@ -98,7 +95,7 @@
                 </div>
             }
 
-            <!--
+
             <div class="modal fade" id="Returned" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalWindow" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -113,7 +110,7 @@
                                     asp-area="Admin"
                                     asp-controller="User"
                                     asp-action="Delete"
-                                    asp-route-id=@Model.Id>
+                                    asp-route-id=@Model.ID>
                                 Удалить
                             </button>
 
@@ -127,7 +124,6 @@
                     </div>
                 </div>
             </div>
-        -->
         </form>
     </div>
 </div>

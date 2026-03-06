@@ -31,8 +31,10 @@ builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
 builder.Services.AddTransient<IRegistrationsRepository, RegistrationDbRepository>();  //
 
 
-//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(connection));
+
+//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
 //builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(connection));
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {

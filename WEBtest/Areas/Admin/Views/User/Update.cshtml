@@ -1,4 +1,5 @@
-﻿@model User
+﻿@using WEBtest.Db.Models
+@model RegistrationViewModel
 @{
     ViewData["Title"] = "Редактирование данных пользователя";
 }
@@ -11,7 +12,7 @@
     <div class="row justify-content-center mt-3">
         <div class="col-6 mb-3">
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
-            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" name="Id" value="@Model.ID" />
 
             <p>
                 <label class="form-label" asp-for="FirstName"></label><br />

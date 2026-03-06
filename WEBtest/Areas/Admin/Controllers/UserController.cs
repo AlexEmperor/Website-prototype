@@ -26,12 +26,12 @@ namespace WEBtest.Areas.Admin.Controllers
         public IActionResult Index()
         {
             //var roles2 = _usersRepository.GetAll();
-            var roles = _registrationRepository.GetAll();
+            var user_registation = _registrationRepository.GetAll();
 
 
             //var roles = _registrationRepository.GetAll();
 
-            return View(roles);                     // Роли полтзователей
+            return View(user_registation);                     // Роли полтзователей
         }
         public IActionResult Add()
         {
