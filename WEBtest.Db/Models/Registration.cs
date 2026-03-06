@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WEBtest.Db.Models
+﻿namespace WEBtest.Db.Models
 {
     public class Registration  //Класс регистрация
     {
@@ -13,15 +11,11 @@ namespace WEBtest.Db.Models
 
         public string Phone { get; set; }
 
-        public string FirstName { get; set;}
+        public string FirstName { get; set; }
 
+        public DateTime CreationDateTime => DateTime.Now;
 
         public string LastName { get; set; }
-
-        //public string LastName { get; set; }
-
-        //registration.Id = Guid.NewGuid();
-        //registration.CreationDateTime = DateTime.Now;   // Время регистрации нового пользователя
 
     }
 }

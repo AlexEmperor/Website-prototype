@@ -1,0 +1,100 @@
+﻿/* ===== HEADER APPEAR ===== */
+.navbar {
+    animation: slideDown 0.6s ease-out;
+    position: relative;
+    background: #141414 !important; /* navbar полностью непрозрачный */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== BUTTON LIFT EFFECT IN HEADER ===== */
+.navbar .btn {
+    transition: transform 0.375s ease, box-shadow 0.375s ease;
+}
+
+    .navbar .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 255, 120, 0.35);
+    }
+
+/* ===== DROPDOWN FADE & FULL OPACITY ===== */
+.navbar .dropdown-menu {
+    animation: fadeIn 0.375s ease;
+    z-index: 1000 !important;
+    background-color: #1a1a1a !important; /* непрозрачный фон */
+    opacity: 1 !important; /* точно непрозрачное */
+    backdrop-filter: none !important; /* отключаем размытие */
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HEADER GLOW LINE ===== */
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #20c997, transparent);
+    z-index: 0;
+}
+
+/* Keep content above effects */
+.navbar > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Force header colors */
+header.navbar,
+.navbar.navbar-dark,
+.navbar.bg-dark {
+    background: linear-gradient(180deg, #141414 0%, #121212 100%) !important;
+}
+
+    header.navbar * {
+        color: #ffffff !important;
+    }
+
+    /* Dropdown item hover effect */
+    header.navbar .dropdown-item:hover {
+        background-color: #198754 !important;
+        color: #ffffff !important;
+    }
+    /* ===== FIX DROPDOWN TEXT COLORS ===== */
+    header.navbar .dropdown-menu,
+    header.navbar .dropdown-menu .dropdown-item,
+    header.navbar .dropdown-menu .nav-item,
+    header.navbar .dropdown-menu span {
+        color: #ffffff !important; /* белый текст для всех элементов */
+        background-color: #1a1a1a !important; /* фон всегда темный */
+    }
+
+        header.navbar .dropdown-menu .dropdown-item:hover,
+        header.navbar .dropdown-menu .nav-item:hover,
+        header.navbar .dropdown-menu span:hover {
+            background-color: #198754 !important; /* зеленый при наведении */
+            color: #ffffff !important; /* текст остаётся белым */
+        }

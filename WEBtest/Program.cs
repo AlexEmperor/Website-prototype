@@ -1,14 +1,18 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System.Globalization;
+using WEBtest;
+using WEBtest.Db;
 using WEBtest.Db.Interfaces;
+using WEBtest.Db.Models;
 using WEBtest.Db.Repositories;
-using WEBtest.Interfaces;
-using WEBtest.Repositories;
 using WEBTest.Db;
 
 var builder = WebApplication.CreateBuilder(args);
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 string connection = builder.Configuration.GetConnectionString("WebTestConnection");
 
 builder.Host.UseSerilog((context, configuration) => configuration
@@ -23,17 +27,29 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IOrdersRepository, OrdersDbRepository>();
 builder.Services.AddTransient<IFavouritesRepository, FavouritesDbRepository>();
 builder.Services.AddTransient<IComparisonsRepository, ComparisonsDbRepository>();
-builder.Services.AddSingleton<IRoleRepository, InMemoryRoleRepository>();
-builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
+//builder.Services.AddSingleton<IRoleRepository, InMemoryRoleRepository>();
+//builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
 /////////////////////////////////////////////////////////////////////////////////////
-builder.Services.AddTransient<IRegistrationsRepository, RegistrationDbRepository>();  //
+//builder.Services.AddTransient<IRegistrationsRepository, RegistrationDbRepository>();  //
 
 
-//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(connection));
-//builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite(connection));
+builder.Services.AddDbContext<IdentityContext>(options => options.UseNpgsql(connection));
+
+builder.Services.AddIdentity<UserDTO, IdentityRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.ExpireTimeSpan = TimeSpan.FromHours(1);
+    options.LoginPath = "/Account/Autorization";
+    options.LogoutPath = "/Account/Logout";
+    options.Cookie = new CookieBuilder
+    {
+        IsEssential = true
+    };
+});
+
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
@@ -70,4 +86,13 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserDTO>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    IdentityInitializer.Inititalize(userManager, roleManager);
+}
+
 app.Run();

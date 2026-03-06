@@ -1,6 +1,6 @@
 ﻿@model Autorization
 @{
-    ViewData["Title"] = "Авторизация пользователя";
+    ViewData["Title"] = "Авторизация";
 }
 
 <div class="text-center text-uppercase text-success mb-5 mt-5">
@@ -10,6 +10,7 @@
     <div class="row justify-content-center mt-3">
         <div class="col-6 mb-3">
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
+            <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
             <p>
                 <label class="form-label" asp-for="Login"></label><br />
                 <input class="form-control" asp-for="Login" />
@@ -20,28 +21,24 @@
                 <input class="form-control" asp-for="Password" />
                 <span asp-validation-for="Password"></span>
             </p>
-            <p>          
+            <p>
                 <label class="form-check-label" asp-for="Memorize"></label>
-                <input class="form-check-input" asp-for="Memorize"
-                 type="checkbox" value="true" />
-                <span asp-validation-for="Memorize"></span>
+                <input class="form-check-input" asp-for="Memorize" type="checkbox" />
             </p>
         </div>
     </div>
     <div class="text-center m-3">
         <button class="btn btn-outline-success" type="submit"
-                asp-controller="Registration"
+                asp-controller="Account"
                 asp-action="Autorization">
-            <!--Account-->
             Войти
         </button>
     </div>
     <div class="text-center m-3">
         <a class="btn text-decoration-underline"
-           asp-controller="Registration"  
+           asp-controller="Account"
            asp-action="Registration">
-            <!--Account-->
-            Регистрация нового пользователя
+            Зарегистрироваться
         </a>
     </div>
 </form>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using WEBtest.Db.Models;
 
 namespace WEBTest.Db
@@ -8,8 +9,8 @@ namespace WEBTest.Db
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             //Database.EnsureDeleted(); // проверка существования БД, если она есть - удаляет БД
-            //Database.EnsureCreated(); // проверка существования БД, если её нет - создаёт новую БД
-            Database.Migrate();
+            // Database.EnsureCreated(); // проверка существования БД, если её нет - создаёт новую БД
+            //Database.Migrate();
         }
 
         //Доступ к таблицам
@@ -20,9 +21,16 @@ namespace WEBTest.Db
         public DbSet<Comparison> Comparisons { get; set; } = null!;      //Сравнение
         public DbSet<Order> Orders { get; set; } = null!;                // Заказы
         public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;  // Информация о пользователе заказа (Пользователи сделали заказ)
-       
-        
-        
+
+
+
         public DbSet<Registration> Registration { get; set; } = null!;   // Пользователи прошедшие регистрацию
+
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.ConfigureWarnings(warnings =>
+                warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
+        }
     }
 }

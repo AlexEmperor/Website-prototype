@@ -1,164 +1,245 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using WEBtest.Areas.Admin.Models;
-using WEBtest.Db.Interfaces;
 using WEBtest.Db.Models;
-using WEBtest.Interfaces;
 using WEBtest.Models;
 
 namespace WEBtest.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = Constants.AdminRoleName)]
     public class UserController : Controller
     {
-        private readonly IUserRepository _usersRepository;
-        private readonly IRoleRepository _rolesRepository;
-        private readonly IRegistrationsRepository _registrationRepository;
+        private readonly UserManager<UserDTO> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-
-        public UserController(IUserRepository usersRepository, IRoleRepository rolesRepository, IRegistrationsRepository registrationRepository)
+        public UserController(
+            UserManager<UserDTO> userManager,
+            RoleManager<IdentityRole> roleManager)
         {
-            _usersRepository = usersRepository;
-            _rolesRepository = rolesRepository;
-            _registrationRepository = registrationRepository;
-
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
-            var roles2 = _usersRepository.GetAll();
-            var roles = _registrationRepository.GetAll();
+            var users = await _userManager.Users.ToListAsync();
+            var model = new List<AdminUserViewModel>();
 
+            foreach (var user in users)
+            {
+                var roles = await _userManager.GetRolesAsync(user); // возвращает IList<string>
+                model.Add(new AdminUserViewModel
+                {
+                    Id = user.Id,
+                    Email = user.Email!,
+                    Phone = user.PhoneNumber,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Login = user.Email,
+                    Role = roles.FirstOrDefault() ?? "User" // берём первую роль или дефолт
+                });
+            }
 
-            //var roles = _registrationRepository.GetAll();
-
-            return View(roles2);                     // Роли полтзователей
+            return View(model);
         }
+
+        public async Task<IActionResult> Delete(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user != null)
+            {
+                await _userManager.DeleteAsync(user);
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Detail(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var model = new AdminUserViewModel
+            {
+                Id = user.Id,
+                Login = user.Email,
+                Email = user.Email!,
+                Phone = user.PhoneNumber,
+                FirstName = user.FirstName,
+                CreationDateTime = user.CreationDateTime,
+                LastName = user.LastName,
+                Role = roles.FirstOrDefault() ?? "User"
+            };
+
+            return View(model);
+        }
+
         public IActionResult Add()
         {
+            ViewBag.Roles = _roleManager.Roles
+        .Select(r => r.Name)
+        .ToList();
+
             return View();
         }
 
-
         [HttpPost]
-        public IActionResult Add(Registration registration,User user)
+        public async Task<IActionResult> Add(AdminUserViewModel model)
         {
-            if (_usersRepository.TryGetByLogin(registration.Login) != null)
-            {
-                ModelState.AddModelError("",
-                    "Такой пользователь уже существует!");
-            }
-
             if (!ModelState.IsValid)
             {
-                return View(registration);
+                return View(model);
             }
 
-            _registrationRepository.Add(registration);
-            //_usersRepository.Add(user);
+            var user = new UserDTO
+            {
+                UserName = model.Login,
+                Email = model.Email,
+                PhoneNumber = model.Phone,
+                FirstName = model.FirstName,
+                LastName = model.LastName
+            };
+
+            var result = await _userManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                ViewBag.Roles = _roleManager.Roles.Select(r => r.Name).ToList();
+
+                return View(model);
+            }
+
+            // Назначаем роль (по умолчанию "User")
+            await _userManager.AddToRoleAsync(user, model.Role ?? Constants.UserRoleName);
 
             return RedirectToAction(nameof(Index));
         }
 
-
-        public IActionResult Detail(Guid id, Registration registration)   ///!!!
+        public async Task<IActionResult> Update(string id)
         {
-
-         //   Registration? TryGetById(int registrationId);
-
-            var user = _registrationRepository.TryGetById(registration.Id);
-           // var user = _usersRepository.TryGetById(id);
-
-            return View(user);
-        }
-        public IActionResult Delete(Guid id)
-        {
-            _usersRepository.Delete(id);
-
-            return RedirectToAction(nameof(Index));
-        }
-        public IActionResult Update(Guid id)
-        {
-            var existingUser = _usersRepository.TryGetById(id);
-
-            return View(existingUser);
-        }
-
-
-        [HttpPost]
-        public IActionResult Update(User user)
-        {
-            if (!ModelState.IsValid)
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
             {
-                return View(user);
+                return RedirectToAction(nameof(Index));
             }
 
-            _usersRepository.Update(user);
+            var roles = await _userManager.GetRolesAsync(user);
 
-            return RedirectToAction(nameof(Detail), new { _usersRepository.TryGetByLogin(user.Login)?.Id });
-        }
-
-        public IActionResult ChangePassword(Guid id)
-        {
-            var existingUser = _usersRepository.TryGetById(id);
-
-            var changePassword = new ChangePassword()
+            var model = new EditAdminUserViewModel
             {
-                Login = existingUser?.Login
+                Id = user.Id,
+                Email = user.Email,
+                Phone = user.PhoneNumber,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Role = roles.FirstOrDefault() ?? "User"
             };
 
-            return View(changePassword);
+            return View(model);
         }
-
 
         [HttpPost]
-        public IActionResult ChangePassword(ChangePassword changePassword)
+        public async Task<IActionResult> Update(EditAdminUserViewModel model)
         {
-            if (changePassword.Login == changePassword.Password)
-            {
-                ModelState.AddModelError("",
-                    "Имя и пароль не должны совпадать");
-            }
-
             if (!ModelState.IsValid)
             {
-                return View(changePassword);
+                return View(model);
             }
 
-            _usersRepository.ChangePassword(changePassword.Login, changePassword.Password);
+            var user = await _userManager.FindByIdAsync(model.Id);
+            if (user == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
 
-            return RedirectToAction(nameof(Detail), new { _usersRepository.TryGetByLogin(changePassword.Login)?.Id });
+            user.Email = model.Email;
+            user.UserName = model.Email;
+            user.PhoneNumber = model.Phone;
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View(model);
+            }
+
+            // Обновление роли
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            if (!string.IsNullOrEmpty(model.Role) && !currentRoles.Contains(model.Role))
+            {
+                await _userManager.RemoveFromRolesAsync(user, currentRoles);
+                await _userManager.AddToRoleAsync(user, model.Role);
+            }
+
+            return RedirectToAction(nameof(Detail), new { id = user.Id });
         }
 
-        public IActionResult ChangeRole(Guid id)
+
+        public async Task<IActionResult> ChangeRole(string id)
         {
-            var existingUser = _usersRepository.TryGetById(id);  // изменение роли из _usersRepository
-
-
-
-            var changeRole = new ChangeRole()
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
             {
-                Login = existingUser?.Login,
-                Role = existingUser?.Role?.ToString(),
-                Roles = _rolesRepository.GetAll().Select(role => new SelectListItem() { Value = role.Name.ToString(), Text = role.Name }).ToList()
+                return RedirectToAction(nameof(Index));
+            }
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+
+            var model = new ChangeRole
+            {
+                Id = user.Id,
+                Login = user.Email,
+                Role = userRoles.FirstOrDefault(),
+                Roles = _roleManager.Roles
+                    .Select(r => new SelectListItem
+                    {
+                        Value = r.Name,
+                        Text = r.Name,
+                        Selected = userRoles.Contains(r.Name)
+                    }).ToList()
             };
 
-
-            return View(changeRole);
+            return View(model);
         }
 
-
-
         [HttpPost]
-        public IActionResult ChangeRole(ChangeRole changeRole)
+        public async Task<IActionResult> ChangeRole(ChangeRole model)
         {
             if (!ModelState.IsValid)
             {
-                return View(changeRole);
+                return View(model);
             }
 
-            _usersRepository.ChangeRole(changeRole.Login, _rolesRepository.TryGetByName(changeRole.Role));
+            var user = await _userManager.FindByIdAsync(model.Id);
+            if (user == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
 
-            return RedirectToAction(nameof(Detail), new { _usersRepository.TryGetByLogin(changeRole.Login)?.Id });
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            await _userManager.RemoveFromRolesAsync(user, currentRoles);
+            await _userManager.AddToRoleAsync(user, model.Role);
+
+            return RedirectToAction(nameof(Detail), new { id = user.Id });
         }
     }
 }

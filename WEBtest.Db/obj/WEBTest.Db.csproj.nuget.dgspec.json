@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj": {}
+    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj": {}
   },
   "projects": {
-    "C:\\Git\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj": {
+    "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj",
+        "projectUniqueName": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj",
         "projectName": "WEBtest.Db",
-        "projectPath": "C:\\Git\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj",
-        "packagesPath": "C:\\Users\\IGOR\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\Website-prototype\\WEBtest.Db\\obj\\",
+        "projectPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj",
+        "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sasha\\Desktop\\Образованиие\\Учебные проекты\\Website-prototype\\WEBtest.Db\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\IGOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -56,7 +57,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.22, )"
+              "version": "[9.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -70,11 +71,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.22, )"
+              "version": "[9.0.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.11, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -93,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
