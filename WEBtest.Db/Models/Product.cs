@@ -12,15 +12,20 @@
 
         public string? PhotoPath { get; set; } //= "/img/anyProduct.png";
 
-        public Byte[]? jpeg { get; set; } = { };
+        public byte[]? jpeg { get; set; } = { };
 
         public List<CartItem>? CartItems { get; set; }
+
+        public int? FurnitureOrderId { get; set; }
+        public OrderFurniture? FurnitureOrder { get; set; }
+
+        public int? CategoryId { get; set; }
+        public Category? Category { get; set; }
 
         public string? Article { get; set; }
 
         public string? Barcode { get; set; }
 
-        public string? Category { get; set; }
 
         public int? Storage_Ozon { get; set; }
 
@@ -34,22 +39,7 @@
 
         public int? Margin_FBS1 { get; set; }
 
-        //public List<Image> Images { get; set; }
 
-        /*public Product() { }
 
-        public Product(int id, string name, decimal cost, string? description)
-        {
-            Id = id;
-            Name = name;
-            Cost = cost;
-            Description = description;
-        }
-
-        public Product()
-        {
-            CartItems = [];
-            Images = [];
-        }*/
     }
 }

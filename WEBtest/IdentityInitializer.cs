@@ -7,7 +7,7 @@ namespace WEBtest
     {
         public static void Inititalize(UserManager<UserDTO> userManager, RoleManager<IdentityRole> roleManager)
         {
-            var adminEmail = "admin@gmail.com";
+            var adminEmail = "admin2@gmail.com";
             var password = "_Aa123456";
 
             if (roleManager.FindByNameAsync(Constants.AdminRoleName).Result == null)

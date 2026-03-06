@@ -7,6 +7,10 @@ wwwroot\img\geo.png
 wwwroot\img\mag\emblema44.jpg
 wwwroot\img\phone.jpg
 wwwroot\img\product.png
+wwwroot\img\vvizor.png
+wwwroot\img\ак-«sdr».png
+wwwroot\img\мэмс.jpg
+wwwroot\img\товар-11.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

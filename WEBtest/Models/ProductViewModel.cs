@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WEBtest.Db.Models;
 
 namespace WEBtest.Models
 {
@@ -22,9 +23,15 @@ namespace WEBtest.Models
         [DataType(DataType.MultilineText)]
         public string? Description { get; set; }
 
-       // [Required]
+        // [Required]
         public string? PhotoPath { get; set; }
 
+
+        public int? FurnitureOrderId { get; set; }
+        public OrderFurniture? FurnitureOrder { get; set; }
+
+        public int? CategoryId { get; set; }
+        public Category? Category { get; set; }
 
         public IFormFile? PhotoFile { get; set; }
 
@@ -38,9 +45,6 @@ namespace WEBtest.Models
 
         [Required]
         public string Barcode { get; set; }
-
-        [Required]
-        public string Category { get; set; }
 
         [Required]
         public int? Storage_Ozon { get; set; }
@@ -67,7 +71,7 @@ namespace WEBtest.Models
             Name = name;
             Cost = cost;
             Description = description;
-            
+
         }
     }
 }

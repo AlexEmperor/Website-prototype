@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WEBtest.Helpers;
-using WEBtest.Interfaces;
-using WEBtest.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WEBtest.Db.Interfaces;
-using WEBtest.Db.Models;
+using WEBtest.Helpers;
+using WEBtest.Models;
 
 namespace WEBtest.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area(Constants.AdminRoleName)]
     public class ProductController : Controller
     {
         private readonly IProductsRepository _productsRepository;
@@ -29,6 +28,18 @@ namespace WEBtest.Areas.Admin.Controllers
 
         public IActionResult Add()
         {
+            ViewBag.Categories = _productsRepository.GetAllCategories()
+        .Select(c => new SelectListItem
+        {
+            Value = c.Id.ToString(),
+            Text = c.CategoryName
+        }).ToList();
+            ViewBag.FurnitureOrders = _productsRepository.GetAllFurnitureOrders()
+    .Select(fo => new SelectListItem
+    {
+        Value = fo.Id.ToString(),
+        Text = $"{fo.Provider} ({fo.OrderCreationDateTime:dd.MM.yyyy})"
+    }).ToList();
             return View();
         }
 
@@ -40,7 +51,6 @@ namespace WEBtest.Areas.Admin.Controllers
             {
                 return View(model);
             }
-            /*
             // Фото ОБЯЗАТЕЛЬНО при создании
             if (model.PhotoFile == null)
             {
@@ -53,24 +63,11 @@ namespace WEBtest.Areas.Admin.Controllers
                 "img",
                 _environment,
                 model.Name);
-            */
+
             _productsRepository.Add(model.ToProductDb());
 
             return RedirectToAction(nameof(Index));
         }
-
-        /* [HttpPost]
-         public IActionResult Add(ProductViewModel product)
-         {
-             if (!ModelState.IsValid)
-             {
-                 return View(product);
-             }
-             _productsRepository.Add(product.ToProductDb());
-             //_productsRepository.Add(product);
-
-             return RedirectToAction(nameof(Index));
-         }*/
 
 
         public IActionResult Delete(int id)
@@ -81,9 +78,21 @@ namespace WEBtest.Areas.Admin.Controllers
         }
         public IActionResult Update(int id)
         {
-            var existingProduct = _productsRepository.TryGetById(id);
-            return View(existingProduct?.ToProductViewModel());
-            //return View(existingProduct);
+            var product = _productsRepository.TryGetById(id);
+
+            ViewBag.Categories = _productsRepository.GetAllCategories()
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.CategoryName
+                }).ToList();
+            ViewBag.FurnitureOrders = _productsRepository.GetAllFurnitureOrders()
+    .Select(fo => new SelectListItem
+    {
+        Value = fo.Id.ToString(),
+        Text = $"{fo.Provider} ({fo.OrderCreationDateTime:dd.MM.yyyy})"
+    }).ToList();
+            return View(product?.ToProductViewModel());
         }
 
 
@@ -94,8 +103,32 @@ namespace WEBtest.Areas.Admin.Controllers
             {
                 return View(product);
             }
+            var productDb = _productsRepository.TryGetById(product.Id);
+            if (productDb == null)
+            {
+                return NotFound();
+            }
+
+            // ===== Фото =====
+            if (product.PhotoFile != null)
+            {
+                // Удаляем старый файл
+                if (!string.IsNullOrEmpty(productDb.PhotoPath))
+                {
+                    var oldPhotoPath = Path.Combine(_environment.WebRootPath, productDb.PhotoPath.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
+                    if (System.IO.File.Exists(oldPhotoPath))
+                    {
+                        System.IO.File.Delete(oldPhotoPath);
+                    }
+                }
+
+                var newPhoto = FileSaver.SaveFileAsync(product.PhotoFile, "img", _environment, product.Name).Result;
+                if (newPhoto != null)
+                {
+                    productDb.PhotoPath = newPhoto;
+                }
+            }
             _productsRepository.Update(product.ToProductDb());
-            //_productsRepository.Update(product);
 
             return RedirectToAction(nameof(Index));
         }

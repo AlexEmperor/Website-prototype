@@ -22,17 +22,11 @@ builder.Host.UseSerilog((context, configuration) => configuration
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
-//builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
 builder.Services.AddTransient<IOrdersRepository, OrdersDbRepository>();
 builder.Services.AddTransient<IFavouritesRepository, FavouritesDbRepository>();
 builder.Services.AddTransient<IComparisonsRepository, ComparisonsDbRepository>();
-//builder.Services.AddSingleton<IRoleRepository, InMemoryRoleRepository>();
-//builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
-/////////////////////////////////////////////////////////////////////////////////////
-//builder.Services.AddTransient<IRegistrationsRepository, RegistrationDbRepository>();  //
 
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(connection));

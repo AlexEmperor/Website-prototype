@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using WEBtest.Db.Models;
+﻿using WEBtest.Db.Models;
 using WEBtest.Models;
 
 namespace WEBtest.Helpers
@@ -29,7 +28,10 @@ namespace WEBtest.Helpers
                 Description = productDb.Description,
                 Article = productDb.Article,
                 Barcode = productDb.Barcode,
-                Category = productDb.Category,
+                CategoryId = productDb.CategoryId,
+                Category = productDb.Category, // ← добавляем объект
+                FurnitureOrderId = productDb.FurnitureOrderId,
+                FurnitureOrder = productDb.FurnitureOrder, // ← добавляем объект
                 PhotoPath = productDb.PhotoPath,
                 Storage_Ozon = productDb.Storage_Ozon,
                 Storage_FBS1 = productDb.Storage_FBS1,
@@ -37,8 +39,6 @@ namespace WEBtest.Helpers
                 Costs_Ozon = productDb.Costs_Ozon,
                 Margin_FBO1 = productDb.Margin_FBO1,
                 Margin_FBS1 = productDb.Margin_FBS1,
-
-                // jpeg = productDb.jpeg,
             };
         }
 
@@ -54,7 +54,8 @@ namespace WEBtest.Helpers
                 jpeg = product.japeg,
                 Article = product.Article,
                 Barcode = product.Barcode,
-                Category = product.Category,
+                CategoryId = product.CategoryId,
+                FurnitureOrderId = product.FurnitureOrderId,
                 Storage_Ozon = product.Storage_Ozon,
                 Storage_FBS1 = product.Storage_FBS1,
                 Cost_price = product.Cost_price,
@@ -149,13 +150,13 @@ namespace WEBtest.Helpers
                 Id = orderDb.Id,
                 UserId = orderDb.UserId,
                 Items = orderDb.Items.ToCartItemViewModels(),
-             //   DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
+                //   DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
                 CreationDateTime = orderDb.CreationDateTime,
                 Status = (OrderStatusViewModel)orderDb.Status,
             };
         }
 
-        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)  
+        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
         {
             return new DeliveryUserViewModel()
             {
@@ -224,33 +225,33 @@ namespace WEBtest.Helpers
                 LastName = registra.LastName,
             };
         }
-/*
-        public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
-        {
-            return new DeliveryUserViewModel()
-            {
-                Id = deliveryUserDb.Id,
-                Name = deliveryUserDb.Name,
-                Address = deliveryUserDb.Address,
-                Phone = deliveryUserDb.Phone,
-                Date = DateTime.SpecifyKind(deliveryUserDb.Date, DateTimeKind.Utc),
-                Comment = deliveryUserDb.Comment
-            };
-        }
+        /*
+                public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
+                {
+                    return new DeliveryUserViewModel()
+                    {
+                        Id = deliveryUserDb.Id,
+                        Name = deliveryUserDb.Name,
+                        Address = deliveryUserDb.Address,
+                        Phone = deliveryUserDb.Phone,
+                        Date = DateTime.SpecifyKind(deliveryUserDb.Date, DateTimeKind.Utc),
+                        Comment = deliveryUserDb.Comment
+                    };
+                }
 
-        public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)  // получение данных при "Оформление заказа"
-        {
-            return new DeliveryUser()
-            {
-                Id = deliveryUser.Id,
-                Name = deliveryUser.Name,
-                Address = deliveryUser.Address,
-                Phone = deliveryUser.Phone,
-                Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),
-                Comment = deliveryUser.Comment
-            };
-        }
-    */
+                public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)  // получение данных при "Оформление заказа"
+                {
+                    return new DeliveryUser()
+                    {
+                        Id = deliveryUser.Id,
+                        Name = deliveryUser.Name,
+                        Address = deliveryUser.Address,
+                        Phone = deliveryUser.Phone,
+                        Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),
+                        Comment = deliveryUser.Comment
+                    };
+                }
+            */
         #endregion
 
     }

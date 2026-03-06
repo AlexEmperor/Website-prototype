@@ -48,7 +48,7 @@
                                     <td class="fw-bold">@Model[i].Id</td>
                                     <td>@Model[i].Article</td>
                                     <td>@Model[i].Barcode</td>
-                                    <td>@Model[i].Category</td>
+                                    <td>@Model[i].Category?.CategoryName</td>
                                     <td align="left">
                                         <a class="text-success"
                                            asp-area=""
@@ -57,6 +57,21 @@
                                            asp-route-Id="@Model[i].Id">
                                             <h5>@Model[i].Name</h5>
                                         </a>
+                                    </td>
+                                    <td>
+
+                                        @if (Model[i].FurnitureOrder?.Furnitures != null)
+                                        {
+                                            foreach (var furniture in Model[i].FurnitureOrder.Furnitures)
+                                            {
+                                                <div>
+
+                                                    @furniture.Name
+
+                                                </div>
+                                            }
+                                        }
+
                                     </td>
                                     <td>@Model[i].Cost.ToString("c")</td>
                                     <td>@Model[i].Storage_Ozon</td>

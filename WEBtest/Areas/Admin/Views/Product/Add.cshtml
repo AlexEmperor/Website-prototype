@@ -7,7 +7,7 @@
     <h2 class="row-title">Добавление нового товара</h2>
 </div>
 
-<form method="post">   
+<form method="post" enctype="multipart/form-data">
     <div class="row justify-content-center mt-3">
         <div class="col-6 mb-3">
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
@@ -38,11 +38,20 @@
             </p>
             <p>
                 <label>Категория</label>
-                <label class="form-label" asp-for="Category"></label><br />
-                <textarea class="form-control" asp-for="Category"></textarea>
-                <span asp-validation-for="Category"></span>
+                <select class="form-control"
+                        asp-for="CategoryId"
+                        asp-items="ViewBag.Categories">
+                    <option value="">Выберите категорию</option>
+                </select>
             </p>
-
+            <p>
+                <label>Заказ фурнитуры</label>
+                <select class="form-control"
+                        asp-for="FurnitureOrderId"
+                        asp-items="ViewBag.FurnitureOrders">
+                    <option value="">Выберите заказ</option>
+                </select>
+            </p>
             <p>
                 <label>Фото</label>
                 <input type="file" class="form-control" asp-for="PhotoFile" />
@@ -78,56 +87,6 @@
                 <textarea class="form-control" asp-for="Margin_FBS1"></textarea>
                 <span asp-validation-for="Margin_FBS1"></span>
             </p>
-
-
-
-
-            @* <!-- Фотография 
-            <p>
-                <label class="form-label" asp-for="japeg"></label><br />
-
-                <div class="input-group">
-                    <input type="text" class="form-control" id="fileName" placeholder="Файл не выбран" readonly />
-                    <input type="file" class="form-control d-none" accept="image/*" id="imageUpload" />
-
-                    <!-- Нажатие на кнопку -->
-                    <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('imageUpload').click()">
-                        📷 Выбрать фото
-                    </button>
-                </div>
-
-                <span asp-validation-for="japeg" class="text-danger"></span>
-
-                <small class="text-muted">Допустимые форматы: JPG, PNG, GIF</small>
-        </p>
-        -->@
-            <!--            <script>
-                // Отображение имени файла в текстовом поле
-                document.getElementById('imageUpload').addEventListener('change', function (e) 
-                {
-                    const fileName = e.target.files[0] ? e.target.files[0].name : 'Файл не выбран';
-
-                    document.getElementById('fileName').value = fileName;
-                });
-            </script>
-
-            -->
-
-@*             <script>
-                // Скрипт предпросмотра
-                document.getElementById('imageUpload').addEventListener('change', function (e) {
-                    const file = e.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            document.getElementById('previewImg').src = e.target.result;
-                            document.getElementById('imagePreview').style.display = 'block';
-                        }
-                        reader.readAsDataURL(file);
-                    }
-                });
-            </script> *@
-            <!--Окончание Фотографи -->
         </div>
     </div>
     <div class="text-center m-3">

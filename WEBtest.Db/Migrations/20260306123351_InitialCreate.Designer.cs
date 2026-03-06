@@ -12,18 +12,33 @@ using WEBTest.Db;
 namespace WEBtest.Db.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20260304150858_Add-Margin_FBS1-In-Publik-Products")]
-    partial class AddMargin_FBS1InPublikProducts
+    [Migration("20260306123351_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.22")
+                .HasAnnotation("ProductVersion", "9.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("FurnitureOrderFurniture", b =>
+                {
+                    b.Property<int>("FurnituresId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("OrderFurnituresId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("FurnituresId", "OrderFurnituresId");
+
+                    b.HasIndex("OrderFurnituresId");
+
+                    b.ToTable("FurnitureOrderFurniture");
+                });
 
             modelBuilder.Entity("WEBtest.Db.Models.Cart", b =>
                 {
@@ -32,7 +47,7 @@ namespace WEBtest.Db.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreationDateTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -72,6 +87,23 @@ namespace WEBtest.Db.Migrations
                     b.ToTable("CartItems");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Comparison", b =>
                 {
                     b.Property<Guid>("Id")
@@ -101,7 +133,7 @@ namespace WEBtest.Db.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -131,6 +163,59 @@ namespace WEBtest.Db.Migrations
                     b.ToTable("Favorites");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.Furniture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("OrderPlace")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Furniture");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Петля мебельная",
+                            Name = "Петля Hettich",
+                            OrderPlace = "Germany",
+                            Price = 120m
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Газлифт мебельный",
+                            Name = "Газлифт 100N",
+                            OrderPlace = "China",
+                            Price = 300m
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Направляющие для ящиков",
+                            Name = "Направляющие шариковые",
+                            OrderPlace = "Poland",
+                            Price = 450m
+                        });
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Order", b =>
                 {
                     b.Property<Guid>("Id")
@@ -142,7 +227,7 @@ namespace WEBtest.Db.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreationDateTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
@@ -154,6 +239,88 @@ namespace WEBtest.Db.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurniture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("OrderCreationDateTime")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime>("OrderDeliveryDateTime")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("Provider")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FurnitureOrders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            OrderCreationDateTime = new DateTime(2025, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderDeliveryDateTime = new DateTime(2025, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 15000m,
+                            Provider = "Hettich"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            OrderCreationDateTime = new DateTime(2025, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderDeliveryDateTime = new DateTime(2025, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 8000m,
+                            Provider = "Blum"
+                        });
+                });
+
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurnitureItem", b =>
+                {
+                    b.Property<int>("OrderFurnitureId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("FurnitureId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.HasKey("OrderFurnitureId", "FurnitureId");
+
+                    b.HasIndex("FurnitureId");
+
+                    b.ToTable("OrderFurnitureItems");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderFurnitureId = 1,
+                            FurnitureId = 1,
+                            Quantity = 20
+                        },
+                        new
+                        {
+                            OrderFurnitureId = 1,
+                            FurnitureId = 3,
+                            Quantity = 10
+                        },
+                        new
+                        {
+                            OrderFurnitureId = 2,
+                            FurnitureId = 2,
+                            Quantity = 15
+                        });
                 });
 
             modelBuilder.Entity("WEBtest.Db.Models.Product", b =>
@@ -170,8 +337,8 @@ namespace WEBtest.Db.Migrations
                     b.Property<string>("Barcode")
                         .HasColumnType("text");
 
-                    b.Property<string>("Category")
-                        .HasColumnType("text");
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("integer");
 
                     b.Property<Guid?>("ComparisonId")
                         .HasColumnType("uuid");
@@ -190,6 +357,12 @@ namespace WEBtest.Db.Migrations
 
                     b.Property<Guid?>("FavouriteId")
                         .HasColumnType("uuid");
+
+                    b.Property<int?>("FurnitureId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("FurnitureOrderId")
+                        .HasColumnType("integer");
 
                     b.Property<int?>("Margin_FBO1")
                         .HasColumnType("integer");
@@ -215,9 +388,15 @@ namespace WEBtest.Db.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("ComparisonId");
 
                     b.HasIndex("FavouriteId");
+
+                    b.HasIndex("FurnitureId");
+
+                    b.HasIndex("FurnitureOrderId");
 
                     b.ToTable("Products");
                 });
@@ -259,6 +438,21 @@ namespace WEBtest.Db.Migrations
                     b.ToTable("Registration");
                 });
 
+            modelBuilder.Entity("FurnitureOrderFurniture", b =>
+                {
+                    b.HasOne("WEBtest.Db.Models.Furniture", null)
+                        .WithMany()
+                        .HasForeignKey("FurnituresId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WEBtest.Db.Models.OrderFurniture", null)
+                        .WithMany()
+                        .HasForeignKey("OrderFurnituresId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.CartItem", b =>
                 {
                     b.HasOne("WEBtest.Db.Models.Cart", "Cart")
@@ -282,8 +476,31 @@ namespace WEBtest.Db.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurnitureItem", b =>
+                {
+                    b.HasOne("WEBtest.Db.Models.Furniture", "Furniture")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("FurnitureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WEBtest.Db.Models.OrderFurniture", "OrderFurniture")
+                        .WithMany("Items")
+                        .HasForeignKey("OrderFurnitureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Furniture");
+
+                    b.Navigation("OrderFurniture");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Product", b =>
                 {
+                    b.HasOne("WEBtest.Db.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("WEBtest.Db.Models.Comparison", null)
                         .WithMany("Items")
                         .HasForeignKey("ComparisonId");
@@ -291,11 +508,28 @@ namespace WEBtest.Db.Migrations
                     b.HasOne("WEBtest.Db.Models.Favourite", null)
                         .WithMany("Items")
                         .HasForeignKey("FavouriteId");
+
+                    b.HasOne("WEBtest.Db.Models.Furniture", null)
+                        .WithMany("Products")
+                        .HasForeignKey("FurnitureId");
+
+                    b.HasOne("WEBtest.Db.Models.OrderFurniture", "FurnitureOrder")
+                        .WithMany()
+                        .HasForeignKey("FurnitureOrderId");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("FurnitureOrder");
                 });
 
             modelBuilder.Entity("WEBtest.Db.Models.Cart", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("WEBtest.Db.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("WEBtest.Db.Models.Comparison", b =>
@@ -308,7 +542,19 @@ namespace WEBtest.Db.Migrations
                     b.Navigation("Items");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.Furniture", b =>
+                {
+                    b.Navigation("OrderItems");
+
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.Order", b =>
+                {
+                    b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurniture", b =>
                 {
                     b.Navigation("Items");
                 });

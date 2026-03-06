@@ -1,4 +1,5 @@
-﻿using WEBtest.Db.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using WEBtest.Db.Interfaces;
 using WEBtest.Db.Models;
 using WEBTest.Db;
 
@@ -14,11 +15,19 @@ namespace WEBtest.Db.Repositories
             _databaseContext = databaseContext;
         }
 
-        public List<Product> GetAll() => _databaseContext.Products.ToList();
+        public List<Product> GetAll() =>
+            _databaseContext.Products
+                .Include(p => p.Category)
+                .Include(p => p.FurnitureOrder)
+                    .ThenInclude(fo => fo.Furnitures)
+                .ToList();
 
         public Product? TryGetById(int productId) =>
-            _databaseContext.Products.FirstOrDefault(product => product.Id == productId);
-
+            _databaseContext.Products
+                .Include(p => p.Category)
+                .Include(p => p.FurnitureOrder)
+                    .ThenInclude(fo => fo.Furnitures)
+                .FirstOrDefault(product => product.Id == productId);
         public void Add(Product product)
         {
             _databaseContext.Products.Add(product);
@@ -48,7 +57,8 @@ namespace WEBtest.Db.Repositories
                 excitingProduct.Description = product.Description;
                 excitingProduct.Article = product.Article;
                 excitingProduct.Barcode = product.Barcode;
-                excitingProduct.Category = product.Category;
+                excitingProduct.CategoryId = product.CategoryId;
+                excitingProduct.FurnitureOrderId = product.FurnitureOrderId;
                 excitingProduct.Storage_Ozon = product.Storage_Ozon;
                 excitingProduct.Storage_FBS1 = product.Storage_FBS1;
                 excitingProduct.Cost_price = product.Cost_price;
@@ -62,9 +72,16 @@ namespace WEBtest.Db.Repositories
 
         public List<Product> Search(string text)
         {
-            var products = GetAll().Where(product => product.Name!.Contains(text, StringComparison.CurrentCultureIgnoreCase));
-
-            return products.ToList() ?? [];
+            return _databaseContext.Products
+                .Include(p => p.Category)
+                .Include(p => p.FurnitureOrder)
+                    .ThenInclude(fo => fo.Furnitures)
+                .Where(product => product.Name!.Contains(text, StringComparison.CurrentCultureIgnoreCase))
+                .ToList();
         }
+
+        public List<Category> GetAllCategories() => _databaseContext.Categories.ToList();
+
+        public List<OrderFurniture> GetAllFurnitureOrders() => _databaseContext.FurnitureOrders.ToList();
     }
 }

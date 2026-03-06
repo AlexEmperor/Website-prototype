@@ -7,11 +7,13 @@
     <h2 class="row-title">Редактирование товара</h2>
 </div>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
     <div class="row justify-content-center mt-3">
         <div class="col-6 mb-3">
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
-            <input type="hidden" name="Id" value="@Model.Id" />
+
+
             <p>
                 <label class="form-label" asp-for="Name"></label><br />
                 <input class="form-control" asp-for="Name" value="@Model.Name" />
@@ -37,10 +39,25 @@
                 <textarea class="form-control" asp-for="Barcode"></textarea>
                 <span asp-validation-for="Barcode"></span>
             </p>
+
             <p>
-                <label class="form-label" asp-for="Category"></label><br />
-                <textarea class="form-control" asp-for="Category"></textarea>
-                <span asp-validation-for="Category"></span>
+                <label>Фото</label>
+                <input type="file" class="form-control" asp-for="PhotoFile" />
+            </p>
+            <p>
+                <label asp-for="CategoryId">Категория</label>
+                <select class="form-control"
+                        asp-for="CategoryId"
+                        asp-items="ViewBag.Categories">
+                </select>
+            </p>
+
+            <p>
+                <label asp-for="FurnitureOrderId">Заказ фурнитуры</label>
+                <select class="form-control"
+                        asp-for="FurnitureOrderId"
+                        asp-items="ViewBag.FurnitureOrders">
+                </select>
             </p>
             <p>
                 <label class="form-label" asp-for="Storage_Ozon"></label><br />

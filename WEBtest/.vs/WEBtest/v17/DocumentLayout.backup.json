@@ -3,57 +3,49 @@
   "WorkspaceRootPath": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\wwwroot\\css\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:wwwroot\\css\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\areas\\admin\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\identitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\identityinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:identityinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\helpers\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:helpers\\mapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\areas\\admin\\models\\changerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:areas\\admin\\models\\changerole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\models\\furniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\views\\account\\autorization.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\account\\autorization.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\views\\account\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:views\\account\\registration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\models\\orderfurniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\repositories\\productsdbrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{62ABC325-146A-4F28-97A3-2ED6017AF265}|WEBtest.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{1DA1C820-1674-408B-903E-7976A36A7E41}|..\\WEBtest.Db\\WEBtest.Db.csproj|c:\\users\\sasha\\desktop\\\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0443\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\website-prototype\\webtest.db\\interfaces\\iproductsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -68,144 +60,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "header.css",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\wwwroot\\css\\header.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\header.css",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\wwwroot\\css\\header.css*",
-              "RelativeToolTip": "wwwroot\\css\\header.css*",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwGMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-06T09:23:04.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IdentityContext.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\IdentityContext.cs",
-              "RelativeDocumentMoniker": "..\\WEBtest.Db\\IdentityContext.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\IdentityContext.cs",
-              "RelativeToolTip": "..\\WEBtest.Db\\IdentityContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:54:27.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ChangeRole.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Models\\ChangeRole.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\ChangeRole.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Models\\ChangeRole.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\ChangeRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:47:02.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:43:36.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Registration.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Views\\Account\\Registration.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Registration.cshtml",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Views\\Account\\Registration.cshtml",
-              "RelativeToolTip": "Views\\Account\\Registration.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-06T08:42:28.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Autorization.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Views\\Account\\Autorization.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Autorization.cshtml",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Views\\Account\\Autorization.cshtml",
-              "RelativeToolTip": "Views\\Account\\Autorization.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-06T08:39:35.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:37:39.021Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-06T13:28:55.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:33:21.802Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-06T11:33:52.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IdentityInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\IdentityInitializer.cs",
-              "RelativeDocumentMoniker": "IdentityInitializer.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\IdentityInitializer.cs",
-              "RelativeToolTip": "IdentityInitializer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA8wBEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:32:40.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\UserDTO.cs",
-              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\UserDTO.cs",
-              "RelativeToolTip": "..\\WEBtest.Db\\Models\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:25:14.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Constants.cs",
-              "RelativeDocumentMoniker": "Constants.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Constants.cs",
-              "RelativeToolTip": "Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T08:18:39.692Z",
+              "DocumentIndex": 2,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-06T11:33:51.437Z",
               "EditorCaption": ""
             },
             {
@@ -245,46 +133,137 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Header.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Views\\Shared\\Header.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\Header.cshtml",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Views\\Shared\\Header.cshtml",
-              "RelativeToolTip": "Views\\Shared\\Header.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-06T08:17:20.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
-              "RelativeDocumentMoniker": "..\\WEBtest.Db\\DatabaseContext.cs",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
-              "RelativeToolTip": "..\\WEBtest.Db\\DatabaseContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T07:56:25.921Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-05T11:31:08.889Z",
+              "DocumentIndex": 5,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Models\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProductViewModel.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Models\\ProductViewModel.cs",
+              "RelativeToolTip": "Models\\ProductViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T11:26:58.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Mapping.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Helpers\\Mapping.cs",
+              "RelativeDocumentMoniker": "Helpers\\Mapping.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Helpers\\Mapping.cs",
+              "RelativeToolTip": "Helpers\\Mapping.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T11:27:03.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAADwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T11:22:52.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Interfaces\\IProductsRepository.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Interfaces\\IProductsRepository.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Interfaces\\IProductsRepository.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Interfaces\\IProductsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T11:11:04.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductsDbRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Repositories\\ProductsDbRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T10:56:52.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Furniture.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Furniture.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Furniture.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Furniture.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Models\\Furniture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T09:59:39.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Product.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Models\\Product.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T10:53:07.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\DatabaseContext.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\DatabaseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T10:03:57.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderFurniture.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\OrderFurniture.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\OrderFurniture.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\OrderFurniture.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Models\\OrderFurniture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T09:59:57.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "..\\WEBtest.Db\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Sasha\\Desktop\\\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438\u0435\\\u0423\u0447\u0435\u0431\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\Website-prototype\\WEBtest.Db\\Models\\Category.cs",
+              "RelativeToolTip": "..\\WEBtest.Db\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T10:00:32.026Z",
               "EditorCaption": ""
             }
           ]
