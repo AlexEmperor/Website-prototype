@@ -516,16 +516,6 @@ C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\scopedcss\bundle\WEBtest.style
 C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\scopedcss\projectbundle\WEBtest.bundle.scp.css
 C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\WEBtest.genruntimeconfig.cache
 C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\ref\WEBtest.dll
-C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\WEBtest.staticwebassets.endpoints.json
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\swae.build.ex.cache
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\WEBtest.csproj.Up2Date
 C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -553,3 +543,27 @@ C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\We
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\Website-prototype\WEBtest\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\Website-prototype\WEBtest\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Sasha\Desktop\Образованиие\Учебные проекты\Website-prototype\WEBtest\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets\msbuild.WEBtest.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets\msbuild.build.WEBtest.props
+C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WEBtest.props
+C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WEBtest.props
+C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Git\Website-prototype\WEBtest\obj\Debug\net8.0\WEBtest.csproj.CopyComplete
