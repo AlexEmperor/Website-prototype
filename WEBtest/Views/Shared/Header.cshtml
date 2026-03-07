@@ -1,12 +1,9 @@
 ﻿<header class="navbar sticky-top shadow p-2" data-bs-theme="dark">
+    
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
         <div class="container-fluid">
 
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Натали</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -17,6 +14,29 @@
                 @await Component.InvokeAsync("Cart")
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Autorization">Вход</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><span class="nav-item text-success">@User.Identity.Name</span></li>
+                    <li><a class="nav-item"asp-area=""asp-controller="Account"asp-action="Logout">Выйти</a></li>
+
+                    @if (User.IsInRole(Constants.AdminRoleName))
+                    {
+                       <li><a class="nav-item"asp-area="Admin"asp-controller="Order"asp-action="Index">Панель администратора</a></li>
+                    }
+                }
+                else
+                {
+                <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Autorization">Войти</a></li>
+                }
+            </button>
+
+
+
 
             @* <li><a class="dropdown-item">@await Component.InvokeAsync("Cart")</a></li> *@
 
@@ -29,47 +49,7 @@
                     <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">О нас</a></li>
                     <li><a class="dropdown-item" asp-area="" asp-controller="Favourite" asp-action="Index">Избранное</a></li>
                     <li><a class="dropdown-item" asp-area="" asp-controller="Comparison" asp-action="Index">Сравнение товаров</a></li>
-
-
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li>
-                            <span class="nav-item text-success">
-                                @User.Identity.Name
-                            </span>
-                        </li>
-
-                        <li>
-                            <a class="nav-item"
-                               asp-area=""
-                               asp-controller="Account"
-                               asp-action="Logout">
-                                Выйти
-                            </a>
-                        </li>
-
-                        @if (User.IsInRole(Constants.AdminRoleName))
-                        {
-                            <li>
-                                <a class="nav-item"
-                                   asp-area="Admin"
-                                   asp-controller="Order"
-                                   asp-action="Index">
-                                    Панель администратора
-                                </a>
-                            </li>
-                        }
-                    }
-                    else
-                    {
-                        <li>
-                            <a class="nav-item"
-                               asp-controller="Account"
-                               asp-action="Autorization">
-                                Войти
-                            </a>
-                        </li>
-                    }
+  
 
 @*                     <li><a class="nav-item" asp-area="" asp-controller="Contacts" asp-action="Index">Контакты</a></li> *@
 

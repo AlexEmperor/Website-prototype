@@ -10,7 +10,7 @@
 
         public string? Description { get; set; }
 
-        public string? PhotoPath { get; set; } //= "/img/anyProduct.png";
+        public string? PhotoPath { get; set; } = "/img/anyProduct.png";
 
         public byte[]? jpeg { get; set; } = { };
 

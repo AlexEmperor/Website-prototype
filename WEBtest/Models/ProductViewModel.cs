@@ -43,7 +43,7 @@ namespace WEBtest.Models
         public string Article { get; set; }
 
 
-        [Required]
+        
         public string Barcode { get; set; }
 
         [Required]
