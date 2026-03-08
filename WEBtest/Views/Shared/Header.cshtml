@@ -9,38 +9,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <button class="dropdown-item" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                @await Component.InvokeAsync("Cart")
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Autorization">Вход</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li><span class="nav-item text-success">@User.Identity.Name</span></li>
-                    <li><a class="nav-item"asp-area=""asp-controller="Account"asp-action="Logout">Выйти</a></li>
-
-                    @if (User.IsInRole(Constants.AdminRoleName))
-                    {
-                       <li><a class="nav-item"asp-area="Admin"asp-controller="Order"asp-action="Index">Панель администратора</a></li>
-                    }
-                }
-                else
-                {
-                <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Autorization">Войти</a></li>
-                }
-            </button>
-
-
-
-
-            @* <li><a class="dropdown-item">@await Component.InvokeAsync("Cart")</a></li> *@
-
-
             <div class="dropdown me-2">
                 <button class="btn btn-dark dropdown-toggle text-white" type="button" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-list"></i> Меню
@@ -49,18 +17,64 @@
                     <li><a class="dropdown-item" asp-area="" asp-controller="Contacts" asp-action="Index">О нас</a></li>
                     <li><a class="dropdown-item" asp-area="" asp-controller="Favourite" asp-action="Index">Избранное</a></li>
                     <li><a class="dropdown-item" asp-area="" asp-controller="Comparison" asp-action="Index">Сравнение товаров</a></li>
-  
-
-@*                     <li><a class="nav-item" asp-area="" asp-controller="Contacts" asp-action="Index">Контакты</a></li> *@
+                @*  <li><a class="nav-item" asp-area="" asp-controller="Contacts" asp-action="Index">Контакты</a></li> *@
 
                 </ul>
             </div>
 
 
 
-            
+
+
+            <!--Корзина-->
+            <a class="dropdown-item d-flex align-items-center py-2"
+               asp-controller="Comparison"
+               asp-action="Index"
+               aria-label="Корзина">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="28"
+                     height="28"
+                     fill="currentColor"
+                     class="bi bi-cart-fill me-2 text-primary transition"
+                     viewBox="0 0 16 16"
+                     style="transition: transform 0.2s ease;">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                </svg>
+
+                <span class="fw-medium">Корзина</span>
+                <span class="badge bg-danger rounded-pill ms-auto" id="cart-badge">3</span>
+            </a>
+
+
+
+
+
 
 
         </div>
     </nav>
+
+    
+    <button class="navbar-toggler" type="button">
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <span class="nav-item text-success">@User.Identity.Name</span>
+            
+
+            @if (User.IsInRole(Constants.AdminRoleName))
+            {
+                <a class="nav-item" asp-area="Admin" asp-controller="Order" asp-action="Index">Панель администратора</a>
+                <a class="nav-item" asp-area="" asp-controller="Account" asp-action="Logout">Выйти</a>
+            }
+        }
+        else
+        {
+                <a class="nav-item" asp-area="" asp-controller="Account" asp-action="Autorization">ВХОД</a>
+        }
+    </button>
+
+
+
 </header>

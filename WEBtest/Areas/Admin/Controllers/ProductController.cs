@@ -51,13 +51,14 @@ namespace WEBtest.Areas.Admin.Controllers
             {
                 return View(model);
             }
+            /*
             // Фото ОБЯЗАТЕЛЬНО при создании
             if (model.PhotoFile == null)
             {
                 ModelState.AddModelError("PhotoFile", "Необходимо загрузить фото товара");
                 return View(model);
             }
-
+            */
             model.PhotoPath = await FileSaver.SaveFileAsync(
                 model.PhotoFile,
                 "img",
