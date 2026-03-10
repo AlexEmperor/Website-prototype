@@ -24,9 +24,9 @@
 
         public Category? Category { get; set; }
 
-        public string? Article { get; set; }
+        public string? Article { get; set; } = "0";
 
-        public string? Barcode { get; set; }
+        public string? Barcode { get; set; } = "0";
 
         public int? Storage_Ozon { get; set; }
 
