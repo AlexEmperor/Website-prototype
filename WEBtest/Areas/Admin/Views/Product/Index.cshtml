@@ -37,6 +37,7 @@
                                 <th scope="col">Затраты на ОЗОН</th>
                                 <th scope="col">Маржа FBO1, %</th>
                                 <th scope="col">Маржа FBS1, %</th>
+                                <th scope="col">Furnitures</th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                             </tr>
@@ -58,21 +59,6 @@
                                             <h5>@Model[i].Name</h5>
                                         </a>
                                     </td>
-                                    <td>
-
-                                        @if (Model[i].FurnitureOrder?.Furnitures != null)
-                                        {
-                                            foreach (var furniture in Model[i].FurnitureOrder.Furnitures)
-                                            {
-                                                <div>
-
-                                                    @furniture.Name
-
-                                                </div>
-                                            }
-                                        }
-
-                                    </td>
                                     <td>@Model[i].Cost.ToString("c")</td>
                                     <td>@Model[i].Storage_Ozon</td>
                                     <td>@Model[i].Storage_FBS1</td>
@@ -80,6 +66,16 @@
                                     <td>@Model[i].Costs_Ozon</td>
                                     <td>@Model[i].Margin_FBO1</td>
                                     <td>@Model[i].Margin_FBS1</td>
+                                    <td>
+                                        @if (Model[i].FurnitureOrder?.Furnitures != null)
+                                        {
+                                            foreach (var furniture in Model[i].FurnitureOrder.Furnitures)
+                                            {
+                                                <div>@furniture.Name</div>
+                                            }
+                                        }
+                                    </td>
+
                                     <td>
                                         <a class="btn btn-outline-success"
                                            asp-area="Admin"
