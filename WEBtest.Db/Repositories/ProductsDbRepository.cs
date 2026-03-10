@@ -19,7 +19,7 @@ namespace WEBtest.Db.Repositories
             _databaseContext.Products
                 .Include(p => p.Category)
                 .Include(p => p.FurnitureOrder)
-                    .ThenInclude(fo => fo.Furnitures)
+                .ThenInclude(fo => fo.Furnitures)
                 .ToList();
 
         public Product? TryGetById(int productId) =>
@@ -65,6 +65,7 @@ namespace WEBtest.Db.Repositories
                 excitingProduct.Costs_Ozon = product.Costs_Ozon;
                 excitingProduct.Margin_FBO1 = product.Margin_FBO1;
                 excitingProduct.Margin_FBS1 = product.Margin_FBS1;
+                excitingProduct.Jpeg = product.Jpeg;  // !!
 
                 _databaseContext.SaveChanges();  // Сохраняем изменения в БД
             }

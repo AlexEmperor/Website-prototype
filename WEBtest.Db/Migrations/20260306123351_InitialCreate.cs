@@ -204,7 +204,7 @@ namespace WEBtest.Db.Migrations
                     Cost = table.Column<decimal>(type: "numeric", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
                     PhotoPath = table.Column<string>(type: "text", nullable: true),
-                    jpeg = table.Column<byte[]>(type: "bytea", nullable: true),
+                    Jpeg = table.Column<byte[]>(type: "bytea", nullable: true),
                     FurnitureOrderId = table.Column<int>(type: "integer", nullable: true),
                     CategoryId = table.Column<int>(type: "integer", nullable: true),
                     Article = table.Column<string>(type: "text", nullable: true),

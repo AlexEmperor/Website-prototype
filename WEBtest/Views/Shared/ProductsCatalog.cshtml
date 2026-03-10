@@ -6,13 +6,12 @@
     {
         <div class="col-3 mb-3">
             <div class="card shadow">
-@*                 <img class="card-img-top" src=@product.japeg alt="..."> *@
 
-                <div class="alert alert-info">
-                    <strong>Диагностика:</strong><br>
-                    - Продукт: @(product != null ? "OK" : "NULL")<br>
-                    - Japeg массив: @(product.Jpeg != null ? "OK" : "NULL")<br>
-                    - Размер: @(product.Jpeg?.Length) байт
+                <div class="product-image">
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Jpeg)"
+                         alt="Product Image"
+                         class="img-fluid"
+                         style="max-width: 200px;" />
                 </div>
 
                 <div class="card-body text-center">

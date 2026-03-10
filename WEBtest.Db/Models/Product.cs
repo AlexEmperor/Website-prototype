@@ -12,7 +12,7 @@
 
         public string? PhotoPath { get; set; } = "/img/anyProduct.png";
 
-        public byte[]? Jpeg { get; set; } = {0};
+        public byte[]? Jpeg { get; set; } 
 
         public List<CartItem>? CartItems { get; set; }
 

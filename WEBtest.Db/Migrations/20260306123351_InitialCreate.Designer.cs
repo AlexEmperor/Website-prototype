@@ -383,7 +383,7 @@ namespace WEBtest.Db.Migrations
                     b.Property<int?>("Storage_Ozon")
                         .HasColumnType("integer");
 
-                    b.Property<byte[]>("jpeg")
+                    b.Property<byte[]>("Jpeg")
                         .HasColumnType("bytea");
 
                     b.HasKey("Id");

@@ -4,7 +4,7 @@ namespace WEBtest.Interfaces
 {
     public interface IProductRepository
     {
-        void Add(string name, decimal cost, string description, Byte[] japeg);
+        void Add(string name, decimal cost, string description, byte[] japeg);
         List<ProductViewModel> GetAll();
         List<ProductViewModel> Search(string text);
         ProductViewModel? TryGetById(int id);

@@ -25,11 +25,13 @@ namespace WEBtest.Models
         [DataType(DataType.MultilineText)]
         public string? Description { get; set; }
 
-        //internal byte[]? jpeg;
-        public byte[]? Jpeg { get;} 
+
+        public byte[]? Jpeg { get; set; }
+
 
         // [Required]
         public string? PhotoPath { get; set; }
+        public IFormFile? PhotoFile { get; set; }
 
 
         public int? FurnitureOrderId { get; set; }
@@ -40,11 +42,8 @@ namespace WEBtest.Models
 
         public Category? Category { get; set; }
 
-        public IFormFile? PhotoFile { get; set; }
 
 
-        [Required]
-        public Byte[]? japeg { get; set; } = { };
 
         [Required]
         public string Article { get; set; }
@@ -80,6 +79,7 @@ namespace WEBtest.Models
             Cost = cost;
             Description = description;
             Jpeg = jpeg;
+            PhotoPath = PhotoPath;
         }
 
     }

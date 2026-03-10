@@ -6065,7 +6065,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ррр\\.nuget\\packages\\": {},
+    "C:\\Users\\IGOR\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -6074,14 +6074,14 @@
       "projectUniqueName": "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj",
       "projectName": "WEBtest",
       "projectPath": "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj",
-      "packagesPath": "C:\\Users\\ррр\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\IGOR\\.nuget\\packages\\",
       "outputPath": "C:\\Git\\Website-prototype\\WEBtest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ррр\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\IGOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6106,7 +6106,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -6176,7 +6182,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
