@@ -33,6 +33,7 @@ namespace WEBtest.Helpers
                 FurnitureOrderId = productDb.FurnitureOrderId,
                 FurnitureOrder = productDb.FurnitureOrder, // ← добавляем объект
                 PhotoPath = productDb.PhotoPath,
+                Jpeg = productDb.Jpeg,
                 Storage_Ozon = productDb.Storage_Ozon,
                 Storage_FBS1 = productDb.Storage_FBS1,
                 Cost_price = productDb.Cost_price,
@@ -51,7 +52,7 @@ namespace WEBtest.Helpers
                 Cost = product.Cost,
                 Description = product.Description,
                 PhotoPath = product.PhotoPath,
-                jpeg = product.japeg,
+                Jpeg = product.Jpeg,
                 Article = product.Article,
                 Barcode = product.Barcode,
                 CategoryId = product.CategoryId,
@@ -206,10 +207,6 @@ namespace WEBtest.Helpers
                 FirstName = registeDb.FirstName,
                 LastName = registeDb.LastName,
                 ConfirmPassword = registeDb.ConfirmPassword,
-
-
-                //PhotoPath = productDb.PhotoPath,
-                // jpeg = productDb.jpeg,
             };
         }
 

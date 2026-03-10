@@ -36,11 +36,11 @@ namespace WEBTest.Db
 
             // ===== Категории =====
             modelBuilder.Entity<Category>().HasData(
-                new { Id = 1, CategoryName = "Кухонная фурнитура" },
-                new { Id = 2, CategoryName = "Мебельные ручки" },
-                new { Id = 3, CategoryName = "Петли" },
-                new { Id = 4, CategoryName = "Направляющие" },
-                new { Id = 5, CategoryName = "Газлифты" }
+                new { Id = 1, CategoryName = "Сережки" },
+                new { Id = 2, CategoryName = "Стройка" },
+                new { Id = 3, CategoryName = "Брошь" },
+                new { Id = 4, CategoryName = "Заколки" },
+                new { Id = 5, CategoryName = "Игрушки" }
             );
             // Furniture
             modelBuilder.Entity<Furniture>().HasData(
@@ -62,8 +62,6 @@ namespace WEBTest.Db
                 new { OrderFurnitureId = 2, FurnitureId = 2, Quantity = 15 }
             );
         }
-
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

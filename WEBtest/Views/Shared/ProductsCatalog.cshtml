@@ -6,7 +6,15 @@
     {
         <div class="col-3 mb-3">
             <div class="card shadow">
-                <img class="card-img-top" src=@product.PhotoPath alt="...">
+@*                 <img class="card-img-top" src=@product.japeg alt="..."> *@
+
+                <div class="alert alert-info">
+                    <strong>Диагностика:</strong><br>
+                    - Продукт: @(product != null ? "OK" : "NULL")<br>
+                    - Japeg массив: @(product.Jpeg != null ? "OK" : "NULL")<br>
+                    - Размер: @(product.Jpeg?.Length) байт
+                </div>
+
                 <div class="card-body text-center">
                     <a class="text-success"
                        asp-controller="Product"
@@ -27,13 +35,13 @@
                                    asp-route-productId="@product.Id">
                         Добавить в избранное
                     </a>
-                    <a class="btn btn-outline-secondary mt-3"
+@*                     <a class="btn btn-outline-secondary mt-3"
                        asp-area=""
                        asp-controller="Comparison"
                        asp-action="Add"
                        asp-route-productId="@product.Id">
                         Добавить в сравнение
-                    </a>
+                    </a> *@
                 </div>
             </div>
         </div>

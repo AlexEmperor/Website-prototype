@@ -12,20 +12,21 @@
 
         public string? PhotoPath { get; set; } = "/img/anyProduct.png";
 
-        public byte[]? jpeg { get; set; } = { };
+        public byte[]? Jpeg { get; set; } = {0};
 
         public List<CartItem>? CartItems { get; set; }
 
         public int? FurnitureOrderId { get; set; }
+
         public OrderFurniture? FurnitureOrder { get; set; }
 
         public int? CategoryId { get; set; }
+
         public Category? Category { get; set; }
 
         public string? Article { get; set; }
 
         public string? Barcode { get; set; }
-
 
         public int? Storage_Ozon { get; set; }
 
@@ -38,8 +39,5 @@
         public int? Margin_FBO1 { get; set; }
 
         public int? Margin_FBS1 { get; set; }
-
-
-
     }
 }

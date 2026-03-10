@@ -7,22 +7,25 @@ namespace WEBtest.Repositories
     {
         private int _instanceCounter = 0;
         private readonly List<ProductViewModel> _products;
+
+      
         public InMemoryProductRepository()
         {
             _products =
             [
-                new ProductViewModel(++_instanceCounter, "Товар 1", 1000.0M, "Описание товара 1"),
-                new ProductViewModel(++_instanceCounter, "Товар 2", 2000.0M, "Описание товара 2"),
-                new ProductViewModel(++_instanceCounter, "Товар 3", 3000.0M, "Описание товара 3"),
-                new ProductViewModel(++_instanceCounter, "Товар 4", 4000.0M, "Описание товара 4"),
-                new ProductViewModel(++_instanceCounter, "Товар 5", 5000.0M, "Описание товара 5"),
-                new ProductViewModel(++_instanceCounter, "Товар 6", 6000.0M, "Описание товара 6"),
-                new ProductViewModel(++_instanceCounter, "Товар 7", 7000.0M, "Описание товара 7"),
-                new ProductViewModel(++_instanceCounter, "Товар 8", 8000.0M, "Описание товара 8"),
-                new ProductViewModel(++_instanceCounter, "Товар 9", 9000.0M, "Описание товара 9"),
-                new ProductViewModel(++_instanceCounter, "Товар 10", 10000.0M, "Описание товара 10")
+                new ProductViewModel(++_instanceCounter, "Товар 1", 1000.0M, "Описание товара 1", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 2", 2000.0M, "Описание товара 2", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 3", 3000.0M, "Описание товара 3", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 4", 4000.0M, "Описание товара 4", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 5", 5000.0M, "Описание товара 5", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 6", 6000.0M, "Описание товара 6", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 7", 7000.0M, "Описание товара 7", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 8", 8000.0M, "Описание товара 8", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 9", 9000.0M, "Описание товара 9", new byte[] { 0x89 }),
+                new ProductViewModel(++_instanceCounter, "Товар 10", 10000.0M, "Описание товара 10", new byte[] { 0x89 })
             ];
         }
+    
         public List<ProductViewModel> GetAll() => _products;
         public List<ProductViewModel> Search(string text)
         {
@@ -31,9 +34,11 @@ namespace WEBtest.Repositories
             return products.ToList() ?? [];
         }
         public ProductViewModel? TryGetById(int id) => _products.FirstOrDefault(product => product.Id == id);
-        public void Add(string name, decimal cost, string description)
+
+
+        public void Add(string name, decimal cost, string description, byte[] japag)
         {
-            var product = new ProductViewModel(++_instanceCounter, name, cost, description);
+            var product = new ProductViewModel(++_instanceCounter, name, cost, description,japag);
 
             _products.Add(product);
         }

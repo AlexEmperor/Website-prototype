@@ -5,6 +5,8 @@ namespace WEBtest.Models
 {
     public class ProductViewModel
     {
+
+
         public int Id { get; set; }
 
         [Display(Name = "Наименование товара", Prompt = "Наименование товара")]
@@ -23,14 +25,19 @@ namespace WEBtest.Models
         [DataType(DataType.MultilineText)]
         public string? Description { get; set; }
 
+        //internal byte[]? jpeg;
+        public byte[]? Jpeg { get;} 
+
         // [Required]
         public string? PhotoPath { get; set; }
 
 
         public int? FurnitureOrderId { get; set; }
+
         public OrderFurniture? FurnitureOrder { get; set; }
 
         public int? CategoryId { get; set; }
+
         public Category? Category { get; set; }
 
         public IFormFile? PhotoFile { get; set; }
@@ -41,9 +48,7 @@ namespace WEBtest.Models
 
         [Required]
         public string Article { get; set; }
-
-
-        
+       
         public string Barcode { get; set; }
 
         [Required]
@@ -60,18 +65,22 @@ namespace WEBtest.Models
 
         [Required]
         public int? Margin_FBO1 { get; set; }
+
         [Required]
         public int? Margin_FBS1 { get; set; }
 
+
+
         public ProductViewModel() { }
 
-        public ProductViewModel(int id, string name, decimal cost, string? description)
+        public ProductViewModel(int id, string name, decimal cost, string? description, Byte[] jpeg)
         {
             Id = id;
             Name = name;
             Cost = cost;
             Description = description;
-
+            Jpeg = jpeg;
         }
+
     }
 }
