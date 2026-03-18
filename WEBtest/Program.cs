@@ -17,7 +17,7 @@ string connection = builder.Configuration.GetConnectionString("WebTestConnection
 
 builder.Host.UseSerilog((context, configuration) => configuration
 .ReadFrom.Configuration(context.Configuration)
-.Enrich.WithProperty("ApplicationName", "WEBTest"));
+.Enrich.WithProperty("ApplicationName", "WEBTest2"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

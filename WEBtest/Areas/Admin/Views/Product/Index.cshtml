@@ -2,9 +2,19 @@
 @{
     ViewData["Title"] = "Товары";
 }
-
+@await Html.PartialAsync("SideBar")
 <div class="row mt-3">
-    @await Html.PartialAsync("SideBar")
+
+    <div class="text-end">
+        <a class="btn btn-outline-success mb-2 mt-2"
+           asp-area="Admin"
+           asp-controller="Product"
+           asp-action="Add">
+            Добавить новый продукт
+        </a>
+    </div>
+
+
     <div class="col-9 mb-3">
         <div class="text-center text-uppercase text-success mb-5 mt-5">
             <h2 class="row-title">Товары</h2>
@@ -14,14 +24,6 @@
         {
             <div class="row justify-content-center mt-3">
                 <div class="col-12">
-                    <div class="text-end">
-                        <a class="btn btn-outline-success mb-2 mt-2"
-                           asp-area="Admin"
-                           asp-controller="Product"
-                           asp-action="Add">
-                            Добавить новый продукт
-                        </a>
-                    </div>
                     <table class="table table-responsive table-striped table-hover mb-5">
                         <thead>
                             <tr align="center">
@@ -59,22 +61,25 @@
                                             <h5>@Model[i].Name</h5>
                                         </a>
                                     </td>
-                                    <td>@Model[i].Cost.ToString("c")</td>
+                                    <td>@Model[i].Cost</td>
                                     <td>@Model[i].Storage_Ozon</td>
                                     <td>@Model[i].Storage_FBS1</td>
                                     <td>@Model[i].Cost_price</td>
                                     <td>@Model[i].Costs_Ozon</td>
                                     <td>@Model[i].Margin_FBO1</td>
                                     <td>@Model[i].Margin_FBS1</td>
-                                    <td>
-                                        @if (Model[i].FurnitureOrder?.Furnitures != null)
+                                    <td>@Model[i].Category.CategoryName</td>
+
+
+@*                                     <td>
+                                        @if (Model[i].FurnitureOrder?.Id != null)
                                         {
                                             foreach (var furniture in Model[i].FurnitureOrder.Furnitures)
                                             {
                                                 <div>@furniture.Name</div>
                                             }
                                         }
-                                    </td>
+                                    </td> *@
 
                                     <td>
                                         <a class="btn btn-outline-success"

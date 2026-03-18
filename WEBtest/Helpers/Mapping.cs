@@ -6,6 +6,7 @@ namespace WEBtest.Helpers
     public static class Mapping
     {
         #region Productм // Товар
+
         public static List<ProductViewModel> ToProductViewModels(this List<Product> productsDb)
         {
             var productsViewModel = new List<ProductViewModel>();
