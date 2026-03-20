@@ -30,7 +30,7 @@ namespace WEBTest.Db
         public DbSet<Registration> Registration { get; set; } = null!;   // Пользователи прошедшие регистрацию
 
 
-        public DbSet<Pictures> Pictures { get; set; } = null!;   // Пользователи прошедшие регистрацию
+     //   public DbSet<Pictures> Pictures { get; set; } = null!;   // Пользователи прошедшие регистрацию
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
