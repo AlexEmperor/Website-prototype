@@ -13,7 +13,7 @@ using WEBTest.Db;
 var builder = WebApplication.CreateBuilder(args);
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
-string connection = builder.Configuration.GetConnectionString("WebTestConnection");
+string connection = builder.Configuration.GetConnectionString("WebTestConnection")!;
 
 builder.Host.UseSerilog((context, configuration) => configuration
 .ReadFrom.Configuration(context.Configuration)
@@ -27,7 +27,7 @@ builder.Services.AddTransient<IFavouritesRepository, FavouritesDbRepository>();
 builder.Services.AddTransient<IComparisonsRepository, ComparisonsDbRepository>();
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
-
+builder.Services.AddTransient<PicturesDbRepository>();
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(connection));
 builder.Services.AddDbContext<IdentityContext>(options => options.UseNpgsql(connection));
