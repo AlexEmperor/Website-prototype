@@ -14,15 +14,6 @@ namespace WEBtest.Db.Repositories
         {
             _databaseContext = databaseContext;
         }
-
-        /*
-        public List<Pictures> GetAll() =>
-            _databaseContext.Pictures
-                .Include(p => p.Id)
-                .Include(p => p.Point)
-                .ToList();
-        */
-
         public List<Pictures> GetAll() => _databaseContext.Pictures.ToList();
 
 
