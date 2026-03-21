@@ -30,7 +30,7 @@ namespace WEBTest.Db
         public DbSet<Registration> Registration { get; set; } = null!;   // Пользователи прошедшие регистрацию
 
 
-     //   public DbSet<Pictures> Pictures { get; set; } = null!;   // Пользователи прошедшие регистрацию
+        public DbSet<Pictures> Pictures { get; set; } = null!;   // Пользователи прошедшие регистрацию
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,7 +44,8 @@ namespace WEBTest.Db
                 new { Id = 3, CategoryName = "Брошь" },
                 new { Id = 4, CategoryName = "Заколки" },
                 new { Id = 5, CategoryName = "Игрушки" },
-                new { Id = 6, CategoryName = "Вязание" }
+                new { Id = 6, CategoryName = "Вязание" },
+                new { Id = 7, CategoryName = "Дополнительное" }
             );
             // Furniture
             modelBuilder.Entity<Furniture>().HasData(

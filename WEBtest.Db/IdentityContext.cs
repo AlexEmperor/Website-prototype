@@ -9,7 +9,7 @@ namespace WEBtest.Db
     {
         public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
         {
-            Database.Migrate();
+            //Database.Migrate();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

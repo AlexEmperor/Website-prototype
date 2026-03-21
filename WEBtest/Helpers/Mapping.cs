@@ -5,7 +5,41 @@ namespace WEBtest.Helpers
 {
     public static class Mapping
     {
-        #region Productм // Товар
+        #region Picturs // Товар
+
+        public static List<PicturesViewModel> ToPicturesViewModels(this List<Pictures> picturesDb)
+        {
+            var picturesViewModel = new List<PicturesViewModel>();
+
+            foreach (var pictureDb in picturesDb)
+            {
+                picturesViewModel.Add(pictureDb.ToPictureViewModel());
+            }
+
+            return picturesViewModel;
+        }
+
+        public static PicturesViewModel ToPictureViewModel(this Pictures pictureDb)
+        {
+            return new PicturesViewModel()
+            {
+                Id = pictureDb.Id,
+                Point = pictureDb.Point
+            };
+        }
+
+        public static Pictures ToPictureViewModel(this PicturesViewModel picture)
+        {
+            return new Pictures
+            {
+                Id = picture.Id,
+                Point = picture.Point
+            };
+        }
+
+        #endregion
+
+        #region Product // Товар
 
         public static List<ProductViewModel> ToProductViewModels(this List<Product> productsDb)
         {

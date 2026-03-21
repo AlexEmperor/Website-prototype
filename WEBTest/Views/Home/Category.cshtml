@@ -1,0 +1,58 @@
+﻿@model List<ProductViewModel>
+@{
+    ViewData["Title"] = "Категория Сережки";
+}
+
+<div class="text-center text-uppercase text-success mb-5 mt-5">
+    <h2 class="row-title">По категориям</h2>
+</div>
+
+
+@if (Model != null && Model.Count > 0)
+{
+    @foreach (var product in Model)
+    {
+        if (product?.Category?.CategoryName == "Сережки")
+        {
+            <div class="col-3 mb-3">
+                <div class="card shadow">
+
+                    <div class="product-image">
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Jpeg)"
+                             alt="Product Image"
+                             class="img-fluid"
+                             style="max-width: 200px;" />
+                    </div>
+
+                    <div class="card-body text-center">
+                        <a class="text-success"
+                           asp-controller="Product"
+                           asp-action="Index"
+                           asp-route-id="@product.Id">
+                            <h5>@product.Name</h5>
+                        </a>
+                        <h2 class="text-danger">@product.Cost.ToString("c")</h2>
+                        <a class="btn btn-success"
+                           asp-controller="Cart"
+                           asp-action="Add"
+                           asp-route-productId="@product.Id">
+                            Добавить в корзину
+                        </a>
+                        <a class="btn btn-outline-secondary mt-3"
+                           asp-controller="Favourite"
+                           asp-action="Add"
+                           asp-route-productId="@product.Id">
+                            Добавить в избранное
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
+else
+{
+    <div class="text-center">
+        <h2>Нет товаров для отображения!</h2>
+    </div>
+}

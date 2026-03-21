@@ -27,7 +27,7 @@ builder.Services.AddTransient<IFavouritesRepository, FavouritesDbRepository>();
 builder.Services.AddTransient<IComparisonsRepository, ComparisonsDbRepository>();
 builder.Services.AddTransient<IProductsRepository, ProductsDbRepository>();
 builder.Services.AddTransient<ICartsRepository, CartsDbRepository>();
-//builder.Services.AddTransient<PicturesDbRepository>();
+builder.Services.AddTransient<IPicturesRepository, PicturesDbRepository>();
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(connection));
 builder.Services.AddDbContext<IdentityContext>(options => options.UseNpgsql(connection));
@@ -56,11 +56,6 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 });
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-    context.Database.Migrate();
-}
 
 app.UseHttpsRedirection();
 app.UseRequestLocalization();
@@ -83,6 +78,11 @@ app.MapControllerRoute(
 
 using (var scope = app.Services.CreateScope())
 {
+    var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+    context.Database.Migrate();
+    var identityContext = scope.ServiceProvider.GetRequiredService<IdentityContext>();
+    identityContext.Database.Migrate();
+
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserDTO>>();
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 

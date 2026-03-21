@@ -6,7 +6,7 @@ using WEBTest.Db;
 namespace WEBtest.Db.Repositories
 {
 
-    public class PicturesDbRepository  // : IProductsRepository
+    public class PicturesDbRepository  : IPicturesRepository
     {
         private readonly DatabaseContext _databaseContext;
 
@@ -14,14 +14,14 @@ namespace WEBtest.Db.Repositories
         {
             _databaseContext = databaseContext;
         }
-   //     public List<Pictures> GetAll() => _databaseContext.Pictures.ToList();
+
+        public byte[]? TryGetPhotoById(int id)
+        {
+            var result = _databaseContext.Pictures.FirstOrDefault(picture => picture.Id == id);
+            return result?.Point;
+        }
+        public List<Pictures> GetAll() => _databaseContext.Pictures.ToList();
 
 
-
-
-
-        // public List<Category> GetAllCategories() => _databaseContext.Categories.ToList();
-
-        // public List<OrderFurniture> GetAllFurnitureOrders() => _databaseContext.FurnitureOrders.ToList();
-    }
+    } 
 }

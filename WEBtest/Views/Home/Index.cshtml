@@ -1,36 +1,85 @@
-﻿@model List<ProductViewModel>
+﻿@model HomeViewModel
+
 @{
     ViewData["Title"] = "Главная";
 }
-
 @await Html.PartialAsync("SearchBlock")
 
-<center>
-<img src="~/img/mag/emblema44.jpg" width="1000" height="300">
-</center>
 
-
+<!--Банер-->
+<div class="product-image">
+    <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures[0].Point)"
+         alt="Product Image"
+         class="img-fluid"
+         width="1000" height="300" />
+</div>
+<!--Надпись :"По категориям" -->
 <div class="text-center text-uppercase text-success mb-5 mt-5">
     <h2 class="row-title">По категориям</h2>
 </div>
 
 
 <!--Категория Сережки-->
-<div class="c1gskyi_plp" data-qa="Сережки">
-    <div class="c1b15czr_plp"><picture class="plzjsxv_plp">
-        <source media="(max-width: 767px)" srcset="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_1.0/w_48/h_48/v1590588312/fudzi/elbrus/images/catalog-popup-images/version5/listovye-materialy.jpg/listovye-materialy.jpg 1x, https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_2.0/w_48/h_48/v1590588312/fudzi/elbrus/images/catalog-popup-images/version5/listovye-materialy.jpg/listovye-materialy.jpg 2x">
-        <source media="(min-width: 768px)" srcset="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_1.0/w_80/h_80/v1590588312/fudzi/elbrus/images/catalog-popup-images/version5/listovye-materialy.jpg/listovye-materialy.jpg 1x, https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_2.0/w_80/h_80/v1590588312/fudzi/elbrus/images/catalog-popup-images/version5/listovye-materialy.jpg/listovye-materialy.jpg 2x">
-        <img src="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_1.0/w_80/h_80/v1590588312/fudzi/elbrus/images/catalog-popup-images/version5/listovye-materialy.jpg/listovye-materialy.jpg" alt="Листовые материалы" width="80" height="80" srcset="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_2.0/w_80/h_80/v1590588312/fudzi/elbrus/images/catalog-popup-images/version5/listovye-materialy.jpg/listovye-materialy.jpg 2x" class="kn1vrf9CFC_plp c1aqcpaq_plp" data-qa="catalogue-category-img"></picture>
-</div>
-<a class="wAxCBuwj4T_plp MwdWfXRUvr_plp tNPZUji6n3_plp c41t4ce_plp Gobl7ntAlQ_plp" data-testid="button" rel="noopener" href="/catalogue/listovye-materialy/" color="text-primary">Сережки</a></div>
+<a asp-area=""
+   asp-controller="Home"
+   asp-action="Category"
+   asp-route-category="sergeki"
+   class="btn btn-outline-success category-btn"
+   role="button"
+   data-category="sergeki"
+   data-qa="category-sergeki">
+   @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
+   {
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures[1].Point)"
+             alt="Сережки"
+             class="category-img"
+             width="80"
+             height="80"
+             loading="lazy">
+   }
+   else
+    {
+        <!-- Заглушка, если изображения нет -->
+        <div class="category-img-placeholder bg-light d-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+            <span class="text-muted small">Нет фото</span>
+        </div>
+    }
+
+    <span class="category-label d-block mt-2">Сережки</span>
+</a>
 
 <!--Категория Брелки-->
-<div class="c1gskyi_plp" data-qa="Брелки">
-    <div class="c1b15czr_plp"><picture class="plzjsxv_plp">
-        <source media="(max-width: 767px)" srcset="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_1.0/w_48/h_48/v1727441776/fudzi/fudzi/lbwnEJWM3nlZCiONwPsxR/18482108.png/18482108.png 1x, https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_2.0/w_48/h_48/v1727441776/fudzi/fudzi/lbwnEJWM3nlZCiONwPsxR/18482108.png/18482108.png 2x">
-        <source media="(min-width: 768px)" srcset="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_1.0/w_80/h_80/v1727441776/fudzi/fudzi/lbwnEJWM3nlZCiONwPsxR/18482108.png/18482108.png 1x, https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_2.0/w_80/h_80/v1727441776/fudzi/fudzi/lbwnEJWM3nlZCiONwPsxR/18482108.png/18482108.png 2x">
-        <img src="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_1.0/w_80/h_80/v1727441776/fudzi/fudzi/lbwnEJWM3nlZCiONwPsxR/18482108.png/18482108.png" alt="Теплоизоляция" width="80" height="80" srcset="https://cdn.lemanapro.ru/lmru/image/upload/b_transparent/c_pad/f_auto/q_auto/dpr_2.0/w_80/h_80/v1727441776/fudzi/fudzi/lbwnEJWM3nlZCiONwPsxR/18482108.png/18482108.png 2x" class="kn1vrf9CFC_plp c1aqcpaq_plp" data-qa="catalogue-category-img"></picture>
-    </div><a class="wAxCBuwj4T_plp MwdWfXRUvr_plp tNPZUji6n3_plp c41t4ce_plp Gobl7ntAlQ_plp" data-testid="button" rel="noopener" href="/catalogue/teploizolyaciya/" color="text-primary">Брелки</a></div>
+<a asp-area=""
+   asp-controller="Contacts"
+   asp-action="Index"
+   asp-route-category="brelki"
+   class="btn btn-outline-success category-btn"
+   role="button"
+   data-category="breloki"
+   data-qa="category-brelki">
+
+    @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
+    {
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures[2].Point)"
+             alt="Брелки"
+             class="category-img"
+             width="80"
+             height="80"
+             loading="lazy">
+    }
+    else
+    {
+        <!-- Заглушка, если изображения нет -->
+        <div class="category-img-placeholder bg-light d-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+            <span class="text-muted small">Нет фото</span>
+        </div>
+    }
+
+    <span class="category-label d-block mt-2">Брелки</span>
+</a>
+
+
+
 
 
 <hr>
@@ -40,8 +89,11 @@
 
 
 <div class="row mt-3">
-    @await Html.PartialAsync("ProductsCatalog", @Model)
+    @await Html.PartialAsync("ProductsCatalog", @Model.Products)
 </div>
+
+
+
 
 <html lang="ru">
 <head>

@@ -10,6 +10,7 @@ namespace WEBtest.Models
 
 
         public List<PicturesViewModel> Items { get; set; }
+        public List<ProductViewModel> Items2 { get; set; }
 
         /*
         public ProductViewModel() { }
