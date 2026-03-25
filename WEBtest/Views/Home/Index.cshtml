@@ -8,10 +8,22 @@
 
 <!--Банер-->
 <div class="product-image">
-    <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures[0].Point)"
+      @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
+     {
+      <center>
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures[0].Point)"
          alt="Product Image"
          class="img-fluid"
-         width="1000" height="300" />
+         width="900" height="300" />
+      </center>
+    }
+    else
+    {
+        <!-- Заглушка, если изображения нет -->
+        <div class="category-img-placeholder bg-light d-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+            <span class="text-muted small">Нет фото</span>
+        </div>
+    }
 </div>
 <!--Надпись :"По категориям" -->
 <div class="text-center text-uppercase text-success mb-5 mt-5">
@@ -22,7 +34,7 @@
 <!--Категория Сережки-->
 <a asp-area=""
    asp-controller="Home"
-   asp-action="Category"
+   asp-action="Earrings"
    asp-route-category="sergeki"
    class="btn btn-outline-success category-btn"
    role="button"
@@ -50,8 +62,8 @@
 
 <!--Категория Брелки-->
 <a asp-area=""
-   asp-controller="Contacts"
-   asp-action="Index"
+   asp-controller="Home"
+   asp-action="Keychain"
    asp-route-category="brelki"
    class="btn btn-outline-success category-btn"
    role="button"
@@ -78,23 +90,53 @@
     <span class="category-label d-block mt-2">Брелки</span>
 </a>
 
+<!--Категория Стройка-->
+<a asp-area=""
+   asp-controller="Home"
+   asp-action="Building"
+   asp-route-category="building"
+   class="btn btn-outline-success category-btn"
+   role="button"
+   data-category="breloki"
+   data-qa="category-brelki">
+
+    @if (Model?.Pictures?.Count > 1 && Model.Pictures[3]?.Point != null)
+    {
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures[3].Point)"
+             alt="Брелки"
+             class="category-img"
+             width="80"
+             height="80"
+             loading="lazy">
+    }
+    else
+    {
+        <!-- Заглушка, если изображения нет -->
+        <div class="category-img-placeholder bg-light d-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+            <span class="text-muted small">Нет фото</span>
+        </div>
+    }
+
+    <span class="category-label d-block mt-2">Стройка</span>
+</a>
 
 
 
 
+<!--Надпись Товары-->
 <hr>
 <div class="text-center text-uppercase text-success mb-5 mt-5">
     <h2 class="row-title">Товары</h2>
 </div>
 
-
+<!--Каталог товаров-->
 <div class="row mt-3">
     @await Html.PartialAsync("ProductsCatalog", @Model.Products)
 </div>
 
 
 
-
+<!--Снег-->
 <html lang="ru">
 <head>
 

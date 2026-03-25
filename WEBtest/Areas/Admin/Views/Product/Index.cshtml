@@ -5,14 +5,7 @@
 @await Html.PartialAsync("SideBar")
 <div class="row mt-3">
 
-    <div class="text-end">
-        <a class="btn btn-outline-success mb-2 mt-2"
-           asp-area="Admin"
-           asp-controller="Product"
-           asp-action="Add">
-            Добавить новый продукт
-        </a>
-    </div>
+
 
 
     <div class="col-9 mb-3">
@@ -22,6 +15,15 @@
 
         @if (Model != null && Model.Count > 0)
         {
+            <div class="text-end">
+                <a class="btn btn-outline-success mb-2 mt-2"
+                   asp-area="Admin"
+                   asp-controller="Product"
+                   asp-action="Add">
+                    Добавить новый продукт
+                </a>
+            </div>
+
             <div class="row justify-content-center mt-3">
                 <div class="col-12">
                     <table class="table table-responsive table-striped table-hover mb-5">
@@ -39,7 +41,7 @@
                                 <th scope="col">Затраты на ОЗОН</th>
                                 <th scope="col">Маржа FBO1, %</th>
                                 <th scope="col">Маржа FBS1, %</th>
-                                <th scope="col">Furnitures</th>
+                                <th scope="col">Категория</th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                             </tr>
@@ -68,18 +70,8 @@
                                     <td>@Model[i].Costs_Ozon</td>
                                     <td>@Model[i].Margin_FBO1</td>
                                     <td>@Model[i].Margin_FBS1</td>
-@*                                     <td>@Model[i].Category.CategoryName</td> *@
+                                    <td>@Model[i].Category.CategoryName</td>
 
-
-@*                                     <td>
-                                        @if (Model[i].FurnitureOrder?.Id != null)
-                                        {
-                                            foreach (var furniture in Model[i].FurnitureOrder.Furnitures)
-                                            {
-                                                <div>@furniture.Name</div>
-                                            }
-                                        }
-                                    </td> *@
 
                                     <td>
                                         <a class="btn btn-outline-success"
@@ -146,6 +138,7 @@
             <div class="text-center">
                 <h2 class="row-title">В хранилище нет товаров!</h2>
             </div>
+
             <div class="text-center mt-5">
                 <a class="btn btn-outline-success mb-2 mt-2"
                    asp-area="Admin"

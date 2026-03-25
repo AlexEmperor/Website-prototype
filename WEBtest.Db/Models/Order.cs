@@ -11,6 +11,6 @@ namespace WEBtest.Db.Models
         public OrderStatus Status { get; set; }                      //статус заказа
         ///////////////////////////////////////////////////////////////////////////////////
         public string Address { get; set; }                         //адрес покупателя
-
+        
     }
 }

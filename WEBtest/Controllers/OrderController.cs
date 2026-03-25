@@ -56,7 +56,7 @@ namespace WEBtest.Controllers
                 Status = (OrderStatus)order.Status,
                 
                 Address =order.DeliveryUser.Address,   //""
-                
+                TotalCost = order.TotalCost
             };
 
             _orderRepository.Add(orderDb);

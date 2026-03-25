@@ -16,6 +16,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                   
                     @for (var i = 0; i < Model.Items.Count; i++)
                     {
                         <tr align="center" class="align-baseline">
@@ -46,6 +47,9 @@
                         <th colspan="2"></th>
                         <th colspan="2">
                             Общая стоимость: @Model.TotalCost.ToString("c")
+                        </th>
+                        <th colspan="2">
+                        Кол-во товара : @Model.Quantity
                         </th>
                         <th colspan="1">
                             <a class="btn btn-success"

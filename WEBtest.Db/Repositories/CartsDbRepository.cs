@@ -20,7 +20,7 @@ namespace WEBtest.Db.Repositories
                 .ThenInclude(x => x.Product).FirstOrDefault(x => x.UserId == userId);
         }
 
-        public void Add(Product product, string userId)
+        public void Add(Product product, string userId,string login)
         {
             var existingCart = TryGetByUserId(userId);
 
@@ -31,6 +31,7 @@ namespace WEBtest.Db.Repositories
                     UserId = userId,
                     Items = [],
                     CreationDateTime = DateTime.UtcNow
+
                 };
 
                 existingCart.Items =

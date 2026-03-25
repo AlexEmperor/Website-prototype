@@ -23,6 +23,8 @@
                                 <th scope="col">Пользователь (логин)</th>
                                 <th scope="col">Дата</th>
                                 <th scope="col">Время</th>
+                                <th scope="col">Общ.кол</th>
+                                <th scope="col">Адрес</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -36,6 +38,8 @@
                                     <td>@Model[i].UserId</td>
                                     <td>@Model[i].CreationDateTime.ToShortDateString()</td>
                                     <td>@Model[i].CreationDateTime.ToShortTimeString()</td>
+                                    <td>@Model[i].ItemsQuantity</td>
+                                    <td>@Model[i].Address</td>
                                     <td align="left">
                                         <a class="text-success"
                                            asp-area="Admin"

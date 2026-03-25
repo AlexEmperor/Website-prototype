@@ -45,11 +45,11 @@ namespace WEBTest.Db
                 new { Id = 4, CategoryName = "Заколки" },
                 new { Id = 5, CategoryName = "Игрушки" },
                 new { Id = 6, CategoryName = "Вязание" },
-                new { Id = 7, CategoryName = "Дополнительное" }
+                new { Id = 7, CategoryName = "Аксессуары" }
             );
             // Furniture
             modelBuilder.Entity<Furniture>().HasData(
-    new { Id = 1, Name = "Петля Hettich", Description = "Петля мебельная", Price = 120m, OrderPlace = "Germany" },
+    new { Id = 1, Name = "Пластик белый", Description = "PED-G", Price = 918m, OrderPlace = "WB" },
     new { Id = 2, Name = "Газлифт 100N", Description = "Газлифт мебельный", Price = 300m, OrderPlace = "China" },
     new { Id = 3, Name = "Направляющие шариковые", Description = "Направляющие для ящиков", Price = 450m, OrderPlace = "Poland" }
 );

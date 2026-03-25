@@ -5,7 +5,13 @@
     {
         <div class="col-3 mb-3">
                 <div class="card h-100">
-                <img class="card-img-top" src=@Model.Jpeg>
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Jpeg)"
+                     alt="Product Image"
+                     class="img-fluid"
+                     style="width: 180px; height: 180px; object-fit: cover;" />
+
+
+
                     <div class="card-body text-center">
                             <h4>@Model.Name</h4>
                         <h2 class="text-danger">@Model.Cost.ToString("c")</h2>

@@ -1,43 +1,81 @@
 ﻿@model List<ProductViewModel>
 
+
 @if (Model != null && Model.Count > 0)
 {
-    @foreach (var product in Model)
-    {
-        <div class="col-3 mb-3">
-            <div class="card shadow">
+   <div class="row g-4">
+     @foreach (var product in Model)
+     {
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+            <div class="card shadow" style="height: 350px;">
 
-                <div class="product-image">
-                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Jpeg)"
-                         alt="Product Image"
-                         class="img-fluid"
-                         style="max-width: 200px;" />
-                </div>
+                <div class="product-image position-relative" style="display: inline-block;">
+                        <center>
+                            <a asp-controller="Product"
+                               asp-action="Index"
+                               asp-route-id="@product.Id"
+                               class="product-link">
+
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Jpeg)"
+                                     alt="Product Image"
+                                     class="img-fluid"
+                                     style="width: 180px; height: 180px; object-fit: cover;" />
+                            </a>
+                        </center>
+
+                        <!-- Кнопка «Избранное» в правом верхнем углу -->
+                        <a class="btn btn-outline-secondary favourite-btn"
+                           asp-controller="Favourite"
+                           asp-action="Add"
+                           asp-route-productId="@product.Id"
+                           title="Добавить в избранное"
+                           style="position: absolute; top: 8px; right: 8px; padding: 4px 6px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.9); border: 1px solid #F8104B; z-index: 10;">
+
+                            <svg class="heart-outline" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                <path stroke="#F8104B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </a>
+                    </div>
+                    
 
                 <div class="card-body text-center">
+
                     <a class="text-success"
-                       asp-controller="Product"
-                                   asp-action="Index"
-                                   asp-route-id="@product.Id">
-                        <h5>@product.Name</h5>
-                    </a>
-                    <h2 class="text-danger">@product.Cost.ToString("c")</h2>
-                    <a class="btn btn-success"
-                                   asp-controller="Cart"
-                                   asp-action="Add"
-                                   asp-route-productId="@product.Id">
-                        Добавить в корзину
-                    </a>
-                    <a class="btn btn-outline-secondary mt-3"
-                                   asp-controller="Favourite"
-                                   asp-action="Add"
-                                   asp-route-productId="@product.Id">
-                        Добавить в избранное
+                            asp-controller="Product"
+                            asp-action="Index"
+                            asp-route-id="@product.Id">
+                            <!-- Название товара (может переноситься) -->
+                            <div class="product-title" style="white-space: normal; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; font-size: 14px; line-height: 1.3; color: #333;">
+                                <a asp-controller="Product" asp-action="Index" asp-route-id="@product.Id" class="text-decoration-none text-dark">
+                                    @product.Name
+                                </a>
+                            </div>
+
+                            <!-- Цена (не переносится) -->
+                            <div class="product-price" style="white-space: nowrap; font-weight: 600; font-size: 22px; color: #F8104B;">
+                                @product.Cost.ToString("N0") ₽
+                            </div>
+
+                            <a class="btn btn-success"
+                               asp-controller="Cart"
+                               asp-action="Add"
+                               asp-route-productId="@product.Id">
+                                Добавить в корзину
+                            </a>
                     </a>
                 </div>
+
             </div>
         </div>
-    }
+
+     }
+   </div>
+
+
+
+
+
 }
 else
 {
@@ -45,3 +83,8 @@ else
         <h2>Нет товаров для отображения!</h2>
     </div>
 }
+
+
+
+
+

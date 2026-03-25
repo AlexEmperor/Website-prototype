@@ -65,7 +65,7 @@ namespace WEBtest.Controllers
         }
 
 
-        public IActionResult Category()   // Вызов страницы категория Сережек
+        public IActionResult Earrings()   // Вызов страницы категория Сережек
         {
 
             return View(_productRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
@@ -82,7 +82,19 @@ namespace WEBtest.Controllers
         }
 
 
-        
+        public IActionResult Keychain()   // Вызов страницы категория Сережек
+        {
+            return View(_productRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
+        }
+
+        public IActionResult Building()   // Вызов страницы категория Сережек
+        {
+            return View(_productRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
+        }
+
+
+
+
 
 
 

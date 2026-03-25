@@ -15,6 +15,7 @@ namespace WEBtest.Controllers
         {
             _productRepository = productRepository;
             _cartRepository = cartRepository;
+
         }
 
         public IActionResult Index()
@@ -26,7 +27,7 @@ namespace WEBtest.Controllers
 
         public IActionResult Add(int productId)
         {
-            _cartRepository.Add(_productRepository.TryGetById(productId), Constants.UserId);
+            _cartRepository.Add(_productRepository.TryGetById(productId), Constants.UserId, "admin2@gmail.com");  //"admin"
 
             return RedirectToAction(nameof(Index));
             //return View("../Home/index", ProductRepository.GetAll());

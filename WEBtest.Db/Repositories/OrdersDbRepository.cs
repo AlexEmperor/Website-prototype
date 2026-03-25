@@ -20,9 +20,11 @@ namespace WEBtest.Db.Repositories
             {
                 order.Id = Guid.NewGuid();
                 order.CreationDateTime = DateTime.UtcNow;
-               //   order.DeliveryUser.Id = Guid.NewGuid();
+                //order.DeliveryUser.Id = Guid.NewGuid();
                 order.Status = OrderStatus.Created;
-               // order.Address = string.Address;
+               
+
+                //order.Items =
 
                 _databaseContext.Orders.Add(order);
 

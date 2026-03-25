@@ -15,7 +15,7 @@ namespace WEBtest.Repositories
             return _carts.FirstOrDefault(cart => cart.UserId == userId);
         }
 
-        public void Add(ProductViewModel product, string userId)
+        public void Add(ProductViewModel product, string userId,string login)
         {
             var existingCart = TryGetByUserId(userId);
             if (existingCart == null)
