@@ -91,8 +91,13 @@ namespace WEBtest.Controllers
         {
             return View(_productRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
         }
+        public IActionResult Knitting()   // Вызов страницы категория Сережек
+        {
+            return View(_productRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
+        }
 
 
+        
 
 
 

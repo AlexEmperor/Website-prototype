@@ -11,7 +11,7 @@
       @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
      {
       <center>
-        <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures[0].Point)"
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures.Find(p => p.Id == 1).Point)"
          alt="Product Image"
          class="img-fluid"
          width="900" height="300" />
@@ -42,7 +42,7 @@
    data-qa="category-sergeki">
    @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
    {
-        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures[1].Point)"
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures.Find(p => p.Id == 2).Point)"
              alt="Сережки"
              class="category-img"
              width="80"
@@ -72,7 +72,7 @@
 
     @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
     {
-        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures[2].Point)"
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures.Find(p => p.Id == 3).Point)"
              alt="Брелки"
              class="category-img"
              width="80"
@@ -102,7 +102,7 @@
 
     @if (Model?.Pictures?.Count > 1 && Model.Pictures[3]?.Point != null)
     {
-        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures[3].Point)"
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures.Find(p => p.Id == 4).Point)"
              alt="Брелки"
              class="category-img"
              width="80"
@@ -120,7 +120,35 @@
     <span class="category-label d-block mt-2">Стройка</span>
 </a>
 
+<!--Категория Вязание-->
+<a asp-area=""
+   asp-controller="Home"
+   asp-action="Knitting"
+   asp-route-category="knitting"
+   class="btn btn-outline-success category-btn"
+   role="button"
+   data-category="breloki"
+   data-qa="category-brelki">
 
+    @if (Model?.Pictures?.Count > 1 && Model.Pictures[4]?.Point != null)
+    {
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Pictures.Find(p => p.Id == 5).Point)"
+             alt="Брелки"
+             class="category-img"
+             width="80"
+             height="80"
+             loading="lazy">
+    }
+    else
+    {
+        <!-- Заглушка, если изображения нет -->
+        <div class="category-img-placeholder bg-light d-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+            <span class="text-muted small">Нет фото</span>
+        </div>
+    }
+
+    <span class="category-label d-block mt-2">Вязание</span>
+</a>
 
 
 <!--Надпись Товары-->
