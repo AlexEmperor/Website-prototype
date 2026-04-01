@@ -20,7 +20,7 @@ namespace WEBtest.Db.Repositories
                 .ThenInclude(x => x.Product).FirstOrDefault(x => x.UserId == userId);
         }
 
-        public void Add(Product product, string userId,string login)
+        public void Add(Product product, string userId)
         {
             var existingCart = TryGetByUserId(userId);
 

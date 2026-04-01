@@ -7,15 +7,12 @@ using WEBtest.Models;
 
 namespace WEBtest.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController(
+        ICartsRepository cartRepository,
+        IOrdersRepository orderRepository) : Controller
     {
-        private readonly ICartsRepository _cartRepository;
-        private readonly IOrdersRepository _orderRepository;
-        public OrderController(ICartsRepository cartRepository, IOrdersRepository orderRepository)
-        {
-            _cartRepository = cartRepository;
-            _orderRepository = orderRepository;
-        }
+        private readonly ICartsRepository _cartRepository = cartRepository;
+        private readonly IOrdersRepository _orderRepository = orderRepository;
 
         public IActionResult Index()
         {
@@ -54,17 +51,9 @@ namespace WEBtest.Controllers
 
             var orderDb = new Order()    // !!Создаем новый заказ
             {
-                Id = order.Id,
                 UserId = order.UserId,
                 Items = cart.Items,
-                DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
-                CreationDateTime = order.CreationDateTime,
-                Status = (OrderStatus)order.Status,
-                
-                Address = order.DeliveryUser.Address,   //""
-                TotalCostOrder = order.TotalCost,
-                TotalCost = order.TotalCost,
-                ItemsQuantity = order.ItemsQuantity
+                DeliveryUser = order.DeliveryUser.ToDeliveryUserDb()
             };
 
             _orderRepository.Add(orderDb);

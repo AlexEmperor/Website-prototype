@@ -11,7 +11,7 @@ namespace WEBtest.Db.Models
         public DateTime CreationDateTime { get; set; }               //Время во сколько сделали заказ
         public OrderStatus Status { get; set; }                      //статус заказа
         ///////////////////////////////////////////////////////////////////////////////////
-        public string Address { get; set; }                         //адрес покупателя
+        //public string Address { get; set; }                         //адрес покупателя
 
         public decimal? TotalCost { get; set; }                    // 
         public decimal? TotalCostOrder { get; set; }

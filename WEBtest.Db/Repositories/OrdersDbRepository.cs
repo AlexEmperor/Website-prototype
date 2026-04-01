@@ -16,7 +16,6 @@ namespace WEBtest.Db.Repositories
                 order.Id = Guid.NewGuid();
                 order.CreationDateTime = DateTime.UtcNow;
                 order.DeliveryUser.Id = Guid.NewGuid();
-                //order.DeliveryUserId = order.DeliveryUser.Id;
                 order.Status = OrderStatus.Created;
 
                 _databaseContext.Orders.Add(order);
@@ -33,7 +32,8 @@ namespace WEBtest.Db.Repositories
             .Include(x => x.DeliveryUser)
             .Include(x => x.Items)
             .ThenInclude(x => x.Product)
-            .ToList(); 
+            .OrderByDescending(x => x.CreationDateTime)
+            .ToList();
 
         public Order? TryGetById(Guid orderId) =>
             _databaseContext.Orders

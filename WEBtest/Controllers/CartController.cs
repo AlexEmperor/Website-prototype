@@ -21,11 +21,9 @@ namespace WEBtest.Controllers
 
         public IActionResult Index()
         {
+            var cart = _cartRepository.TryGetByUserId(GetUserId());
 
-                var cart = _cartRepository.TryGetByUserId(GetUserId());
-
-                return View(cart.ToCartViewModel());
-
+            return View(cart.ToCartViewModel());
         }
 
         public string GetUserId()
@@ -35,14 +33,18 @@ namespace WEBtest.Controllers
 
         public IActionResult Add(int productId)
         {
-            _cartRepository.Add(_productRepository.TryGetById(productId), GetUserId(), "admin2@gmail.com");  //"admin"
-
+            var product = _productRepository.TryGetById(productId);
+            if (product is not null)
+            {
+                _cartRepository.Add(product, GetUserId());
+            }
+            
             return RedirectToAction(nameof(Index), "Home");
         }
 
         public IActionResult AddInCart(int productId)
         {
-            _cartRepository.Add(_productRepository.TryGetById(productId), GetUserId(), "admin2@gmail.com");  //"admin"
+            _cartRepository.Add(_productRepository.TryGetById(productId), GetUserId());
 
             return RedirectToAction(nameof(Index));
         }
