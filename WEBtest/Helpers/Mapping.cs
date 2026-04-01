@@ -102,6 +102,11 @@ namespace WEBtest.Helpers
         }
         #endregion
 
+        #region Favorite
+
+
+        #endregion
+
         #region Cart   // Корзина
         public static List<CartItemViewModel> ToCartItemViewModels(this List<CartItem> cartDbItems)
         {

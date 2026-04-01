@@ -1,6 +1,8 @@
-﻿namespace WEBtest.Models
+﻿using WEBtest.Db.Models;
+
+namespace WEBtest.Models
 {
-    public class FavouriteItem
+    public class FavouriteItemViewModel
     {
         public Guid Id { get; set; }
         public ProductViewModel Product { get; set; }

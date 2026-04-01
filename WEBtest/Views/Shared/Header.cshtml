@@ -72,12 +72,12 @@
             <!--END--Мои зказы-->
 
             <!--Избранное -->
+            @**@
             <a class="dropdown-item d-flex align-items-center py-2"
-                   asp-area=""
+                    asp-area=""
                    asp-controller="Favourite"
                    asp-action="Index"
                    aria-label="Избранное">
-
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="28"
                          height="28"
@@ -87,15 +87,10 @@
                          style="transition: transform 0.2s ease;">
                          <path fill="currentColor" d="M3 10.163C3 7.262 5.13 5 8 5c1.929 0 3.244 1.102 4 2.066C12.756 6.102 14.071 5 16 5c2.87 0 5 2.264 5 5.163 0 4.561-4.568 7.856-8.243 9.66a1.71 1.71 0 0 1-1.514 0C7.568 18.02 3 14.724 3 10.163"></path>
                      </svg>
-
-                    <span class="fw-medium">Избранное</span>
-
+               <span class="fw-medium">Избранное</span>
+            @* @await Component.InvokeAsync("Favorite") *@
                 </a>
             <!--END--Избранное-->
-
-
-
-
         </div>
     </nav>
 

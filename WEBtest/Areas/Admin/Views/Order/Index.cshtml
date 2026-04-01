@@ -33,13 +33,13 @@
                             {
                                 <tr align="center" class="align-baseline">
                                     <td class="fw-bold">@(i + 1)</td>
-                                    <td>@Model[i].TotalCost.ToString()</td>
-                                    <td>@Model[i].Status</td>
+                                    <td>@Model[i].TotalCost?.ToString("c")</td>
+                                    <td>@Html.DisplayFor(model => Model[i].Status)</td>
                                     <td>@Model[i].DeliveryUser.Login</td>
                                     <td>@Model[i].CreationDateTime.ToShortDateString()</td>
                                     <td>@Model[i].CreationDateTime.ToShortTimeString()</td>
                                     <td>@Model[i].ItemsQuantity</td>
-                                    <td>@Model[i].Address</td>
+                                    <td>@Model[i].DeliveryUser.Address</td>
                                     <td align="left">
                                         <a class="text-success"
                                            asp-area="Admin"
