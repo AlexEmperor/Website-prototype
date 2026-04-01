@@ -35,7 +35,7 @@ builder.Services.AddDbContext<IdentityContext>(options => options.UseNpgsql(conn
 builder.Services.AddIdentity<UserDTO, IdentityRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.ExpireTimeSpan = TimeSpan.FromHours(1);
+    options.ExpireTimeSpan = TimeSpan.FromHours(8);
     options.LoginPath = "/Account/Autorization";
     options.LogoutPath = "/Account/Logout";
     options.Cookie = new CookieBuilder

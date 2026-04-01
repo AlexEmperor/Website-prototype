@@ -186,11 +186,9 @@ namespace WEBtest.Helpers
                 Id = orderDb.Id,
                 UserId = orderDb.UserId,
                 Items = orderDb.Items.ToCartItemViewModels(),
-                //   DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
+                DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
                 CreationDateTime = orderDb.CreationDateTime,
-                Status = (OrderStatusViewModel)orderDb.Status,
-                TotalCost = orderDb.TotalCost,
-                ItemsQuantity =  orderDb.ItemsQuantity,
+                Status = (OrderStatusViewModel)orderDb.Status
             };
         }
 

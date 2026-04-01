@@ -18,14 +18,12 @@ namespace WEBtest.Areas.Admin.Controllers
 
         }
 
-
         public IActionResult Index()
         {
             var orders = _ordersRepository.GetAll();
 
-            return View(orders.ToOrderViewModels());
+            return View(orders.ToOrderViewModels().OrderByDescending(x => x.CreationDateTime).ToList());
         }
-
 
         public IActionResult Detail(Guid orderId)
         {
@@ -33,7 +31,6 @@ namespace WEBtest.Areas.Admin.Controllers
 
             return View(order?.ToOrderViewModel());
         }
-
 
         [HttpPost]
         public IActionResult UpdateStatus(Guid orderId, OrderStatusViewModel status)

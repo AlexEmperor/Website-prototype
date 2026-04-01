@@ -91,9 +91,9 @@
                                     </tbody>
                                     <tfoot class="table-borderless ">
                                         <tr align="center">
-                                            <th colspan="5">
-                                                Общая стоимость заказа: Sum(item => item.Quantity).ToString("c")
-                                                
+                                            <th colspan="4"> Общая сумма заказа:</th>
+                                            <th colspan="3">
+                                                @Model.TotalCost?.ToString("c")
                                             </th>
                                         </tr>
                                     </tfoot>

@@ -34,6 +34,12 @@ namespace WEBTest.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+        //    modelBuilder.Entity<Order>()
+        //.HasOne(o => o.DeliveryUser)
+        //.WithMany() // или .WithMany(u => u.Orders), если есть обратная навигация
+        //.HasForeignKey("DeliveryUserId") // имя теневого свойства
+        //.IsRequired(false); // 👈 Делаем связь необязательной
+
             base.OnModelCreating(modelBuilder);
 
 

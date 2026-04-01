@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using WEBtest.Db.Interfaces;
 using WEBtest.Db.Models;
 using WEBtest.Helpers;
@@ -28,6 +29,11 @@ namespace WEBtest.Controllers
             return View(order);
         }
 
+        public string GetUserId()
+        {
+            return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        }
+
         [HttpPost]
         public IActionResult Buy(OrderViewModel order)
         {
@@ -39,7 +45,7 @@ namespace WEBtest.Controllers
             }
 
             order.Items = cart.Items.ToCartItemViewModels();
-            order.UserId = Constants.UserId;
+            order.UserId = GetUserId();
 
             if (!ModelState.IsValid)
             {
@@ -58,6 +64,7 @@ namespace WEBtest.Controllers
                 Address =order.DeliveryUser.Address,   //""
                 TotalCostOrder = order.TotalCost,
                 TotalCost = order.TotalCost,
+                ItemsQuantity = order.ItemsQuantity
             };
 
             _orderRepository.Add(orderDb);

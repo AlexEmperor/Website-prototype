@@ -3,6 +3,7 @@ using WEBtest.Interfaces;
 using WEBtest.Models;
 using WEBtest.Helpers;
 using WEBtest.Db.Interfaces;
+using System.Security.Claims;
 
 namespace WEBtest.Controllers
 {
@@ -27,23 +28,36 @@ namespace WEBtest.Controllers
 
         }
 
+        public string GetUserId()
+        {
+            return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        }
+
         public IActionResult Add(int productId)
         {
-            _cartRepository.Add(_productRepository.TryGetById(productId), Constants.UserId, "admin2@gmail.com");  //"admin"
+            _cartRepository.Add(_productRepository.TryGetById(productId), GetUserId(), "admin2@gmail.com");  //"admin"
+
+            return RedirectToAction(nameof(Index), "Home");
+        }
+
+        public IActionResult AddInCart(int productId)
+        {
+            _cartRepository.Add(_productRepository.TryGetById(productId), GetUserId(), "admin2@gmail.com");  //"admin"
 
             return RedirectToAction(nameof(Index));
-            //return View("../Home/index", ProductRepository.GetAll());
         }
+
         public IActionResult Delete(int productId)
         {
-            _cartRepository.Delete(productId/*_productRepository.TryGetById(productId)*/, Constants.UserId);
+            _cartRepository.Delete(productId/*_productRepository.TryGetById(productId)*/, GetUserId());
 
             return RedirectToAction(nameof(Index));
             //return View("../Home/index", ProductRepository.GetAll());
         }
+
         public IActionResult Clear()
         {
-            _cartRepository.Clear(Constants.UserId);
+            _cartRepository.Clear(GetUserId());
 
             return RedirectToAction(nameof(Index));
         }
