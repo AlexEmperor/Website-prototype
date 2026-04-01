@@ -32,6 +32,14 @@
                                     <span asp-validation-for="DeliveryUser.Name"></span>
                                 </p>
 
+                                <p>
+
+                                    <label class="form-label" asp-for="DeliveryUser.Login"></label><br />
+                                    <input class="form-control" asp-for="DeliveryUser.Login"
+                                           value=DeliveryUser.Login />
+                                    <span asp-validation-for="DeliveryUser.Login"></span>
+                                </p>
+
                                 <!--Передаю адрес доставки_Работает-->
                                 <p>   
                                     <label class="form-label" asp-for="DeliveryUser.Address">

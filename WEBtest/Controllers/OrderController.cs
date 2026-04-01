@@ -19,7 +19,7 @@ namespace WEBtest.Controllers
 
         public IActionResult Index()
         {
-            var cart = _cartRepository.TryGetByUserId(Constants.UserId);
+            var cart = _cartRepository.TryGetByUserId(GetUserId());
 
             var order = new OrderViewModel()
             {
@@ -37,7 +37,7 @@ namespace WEBtest.Controllers
         [HttpPost]
         public IActionResult Buy(OrderViewModel order)
         {
-            var cart = _cartRepository.TryGetByUserId(Constants.UserId);
+            var cart = _cartRepository.TryGetByUserId(GetUserId());
 
             if (cart == null)
             {
@@ -57,11 +57,11 @@ namespace WEBtest.Controllers
                 Id = order.Id,
                 UserId = order.UserId,
                 Items = cart.Items,
-                //DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
+                DeliveryUser = order.DeliveryUser.ToDeliveryUserDb(),
                 CreationDateTime = order.CreationDateTime,
                 Status = (OrderStatus)order.Status,
                 
-                Address =order.DeliveryUser.Address,   //""
+                Address = order.DeliveryUser.Address,   //""
                 TotalCostOrder = order.TotalCost,
                 TotalCost = order.TotalCost,
                 ItemsQuantity = order.ItemsQuantity
@@ -69,7 +69,7 @@ namespace WEBtest.Controllers
 
             _orderRepository.Add(orderDb);
 
-            _cartRepository.Clear(Constants.UserId);
+            _cartRepository.Clear(GetUserId());
 
             return RedirectToAction(nameof(Success));
         }

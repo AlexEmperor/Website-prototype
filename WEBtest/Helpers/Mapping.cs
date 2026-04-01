@@ -198,6 +198,7 @@ namespace WEBtest.Helpers
             {
                 Id = deliveryUserDb.Id,
                 Name = deliveryUserDb.Name,
+                Login = deliveryUserDb.Email,
                 Address = deliveryUserDb.Address,
                 Phone = deliveryUserDb.Phone,
                 Date = DateTime.SpecifyKind(deliveryUserDb.Date, DateTimeKind.Utc),
@@ -211,6 +212,7 @@ namespace WEBtest.Helpers
             {
                 Id = deliveryUser.Id,
                 Name = deliveryUser.Name,
+                Email = deliveryUser.Login,
                 Address = deliveryUser.Address,
                 Phone = deliveryUser.Phone,
                 Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),

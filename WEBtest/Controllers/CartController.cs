@@ -22,7 +22,7 @@ namespace WEBtest.Controllers
         public IActionResult Index()
         {
 
-                var cart = _cartRepository.TryGetByUserId(Constants.UserId);
+                var cart = _cartRepository.TryGetByUserId(GetUserId());
 
                 return View(cart.ToCartViewModel());
 

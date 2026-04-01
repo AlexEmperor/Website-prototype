@@ -11,10 +11,15 @@ namespace WEBtest.Models
 
         [DataType(DataType.Text)]
         [Display(Name = "Имя покупателя", Prompt = "Ваше имя")]
-        [StringLength(25, MinimumLength = 2, ErrorMessage = "Логин должен быть от {2} до {1} символов")]
+        //[StringLength(25, MinimumLength = 2, ErrorMessage = "Имя должен быть от {2} до {1} символов")]
         [Required(ErrorMessage = "Не указано имя покупателя")]
         public string Name { get; set; }
 
+        [DataType(DataType.Text)]
+        [Display(Name = "Логин", Prompt = "Ваш логин")]
+        [StringLength(25, MinimumLength = 2, ErrorMessage = "Логин должен быть от {2} до {1} символов")]
+        [Required(ErrorMessage = "Не указан логин покупателя")]
+        public string Login { get; set; }
 
         [Display(Name = "Адрес доставки", Prompt = "Ваш адрес")]
         [DataType(DataType.Text)]

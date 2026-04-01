@@ -5,14 +5,9 @@ using WEBTest.Db;
 
 namespace WEBtest.Db.Repositories
 {
-    public class OrdersDbRepository : IOrdersRepository
+    public class OrdersDbRepository(DatabaseContext databaseContext) : IOrdersRepository
     {
-        private readonly DatabaseContext _databaseContext;
-
-        public OrdersDbRepository(DatabaseContext databaseContext)
-        {
-            _databaseContext = databaseContext;
-        }
+        private readonly DatabaseContext _databaseContext = databaseContext;
 
         public void Add(Order order)  // передаем полученные данные об заказе  в Таблицу "Order"!!!
         {
@@ -20,11 +15,9 @@ namespace WEBtest.Db.Repositories
             {
                 order.Id = Guid.NewGuid();
                 order.CreationDateTime = DateTime.UtcNow;
-                //order.DeliveryUser.Id = Guid.NewGuid();
+                order.DeliveryUser.Id = Guid.NewGuid();
+                //order.DeliveryUserId = order.DeliveryUser.Id;
                 order.Status = OrderStatus.Created;
-               
-
-                //order.Items =
 
                 _databaseContext.Orders.Add(order);
 
@@ -36,10 +29,18 @@ namespace WEBtest.Db.Repositories
             }
         }
 
-        public List<Order> GetAll() => _databaseContext.Orders.Include(x => x.Items).ThenInclude(x => x.Product).ToList();  //Include(x => x.DeliveryUser)
+        public List<Order> GetAll() => _databaseContext.Orders
+            .Include(x => x.DeliveryUser)
+            .Include(x => x.Items)
+            .ThenInclude(x => x.Product)
+            .ToList(); 
 
         public Order? TryGetById(Guid orderId) =>
-            _databaseContext.Orders.Include(x => x.Items).ThenInclude(x => x.Product).FirstOrDefault(order => order.Id == orderId);  //.Include(x => x.DeliveryUser)
+            _databaseContext.Orders
+            .Include(x => x.DeliveryUser)
+            .Include(x => x.Items)
+            .ThenInclude(x => x.Product)
+            .FirstOrDefault(order => order.Id == orderId);
 
         public void UpdateStatus(Guid orderId, OrderStatus newStatus)
         {
