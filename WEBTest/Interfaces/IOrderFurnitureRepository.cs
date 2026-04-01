@@ -2,7 +2,7 @@
 
 namespace WEBtest.Interfaces
 {
-    public interface IOrderRepository
+    public interface IOrderFurnitureRepository
     {
         void Add(OrderViewModel order);
         List<OrderViewModel> GetAll();

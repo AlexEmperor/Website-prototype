@@ -92,7 +92,8 @@
                                     <tfoot class="table-borderless ">
                                         <tr align="center">
                                             <th colspan="5">
-                                                Общая стоимость заказа: @Model.TotalCost?.ToString("c")
+                                                Общая стоимость заказа: Sum(item => item.Quantity).ToString("c")
+                                                
                                             </th>
                                         </tr>
                                     </tfoot>

@@ -189,6 +189,8 @@ namespace WEBtest.Helpers
                 //   DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
                 CreationDateTime = orderDb.CreationDateTime,
                 Status = (OrderStatusViewModel)orderDb.Status,
+                TotalCost = orderDb.TotalCost,
+                ItemsQuantity =  orderDb.ItemsQuantity,
             };
         }
 

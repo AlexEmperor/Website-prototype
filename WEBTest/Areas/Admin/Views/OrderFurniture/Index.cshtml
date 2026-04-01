@@ -1,4 +1,4 @@
-﻿@model List<OrderViewModel>
+﻿@model List<OrderFurnitureViewModel>
 @{
     ViewData["Title"] = "Заказы фурнитуры";
 }
@@ -7,7 +7,7 @@
     @await Html.PartialAsync("SideBar")
     <div class="col-9 mb-3">
         <div class="text-center text-uppercase text-success mb-5 mt-5">
-            <h2 class="row-title">Заказы</h2>
+            <h2 class="row-title">Заказы Фурнитуры</h2>
         </div>
 
         @if (Model != null && Model.Count > 0)
@@ -33,13 +33,13 @@
                             {
                                 <tr align="center" class="align-baseline">
                                     <td class="fw-bold">@(i + 1)</td>
-                                    <td>@Model[i].TotalCost.ToString()</td>
-                                    <td>@Model[i].Status</td>
-                                    <td>@Model[i].UserId</td>
-                                    <td>@Model[i].CreationDateTime.ToShortDateString()</td>
-                                    <td>@Model[i].CreationDateTime.ToShortTimeString()</td>
-                                    <td>@Model[i].ItemsQuantity</td>
-                                    <td>@Model[i].Address</td>
+                                    <td>@Model[i].Id</td>
+                                    <td>@Model[i].Name</td>
+                                    <td>@Model[i].Description</td>
+                                    <td>@Model[i].Price</td>
+                                    <td>@Model[i].OrderPlace</td>
+                                    <td>@Model[i].Products</td>
+                                    <td>@Model[i].OrderFurnitures</td>
                                     <td align="left">
                                         <a class="text-success"
                                            asp-area="Admin"

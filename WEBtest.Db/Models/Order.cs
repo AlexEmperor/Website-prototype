@@ -6,7 +6,7 @@ namespace WEBtest.Db.Models
         public Guid Id { get; set; }  //!!
         public string UserId { get; set; }                           //
         public List<CartItem> Items { get; set; }
-        public DeliveryUser DeliveryUser { get; set; }               //
+        //public DeliveryUser DeliveryUser { get; set; }               //
         public DateTime CreationDateTime { get; set; }               //Время во сколько сделали заказ
         public OrderStatus Status { get; set; }                      //статус заказа
         ///////////////////////////////////////////////////////////////////////////////////
@@ -14,5 +14,6 @@ namespace WEBtest.Db.Models
 
         public decimal? TotalCost { get; set; }                    // 
         public decimal? TotalCostOrder { get; set; }
+        public int? ItemsQuantity { get; set; }
     }
 }

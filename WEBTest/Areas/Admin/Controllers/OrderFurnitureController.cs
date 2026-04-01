@@ -7,12 +7,12 @@ using WEBtest.Models;
 namespace WEBtest.Areas.Admin.Controllers
 {
     [Area(Constants.AdminRoleName)]
-    public class ProductController : Controller
+    public class ProductFurnitureController : Controller
     {
         private readonly IProductsRepository _productsRepository;
         private readonly IWebHostEnvironment _environment;
 
-        public ProductController(IProductsRepository productsRepository, IWebHostEnvironment environment)
+        public ProductFurnitureController(IProductsRepository productsRepository, IWebHostEnvironment environment)
         {
             _productsRepository = productsRepository;
             _environment = environment;

@@ -33,10 +33,10 @@ namespace WEBtest.Models
         public OrderStatusViewModel Status { get; set; }
 
 
-        public decimal? TotalCost => Items?.Sum(item => item.Cost);
+        public decimal? TotalCost { get; set; }
 
 
-        public int? ItemsQuantity => Items?.Sum(item => item.Quantity);
+        public int? ItemsQuantity { get; set; }  //=> Items?.Sum(item => item.Quantity)
 
         ///////////////////////////////////////////////
         [ValidateNever]
