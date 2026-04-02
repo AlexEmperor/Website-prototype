@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WEBtest.Db")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d499f3174b85405ef7e12580033f5ebd07aa3377")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+763feed9187fb9f3d5207f5e7bbda16d2505eff4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WEBtest.Db")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WEBtest.Db")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

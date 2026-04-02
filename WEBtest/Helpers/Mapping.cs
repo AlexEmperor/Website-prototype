@@ -53,7 +53,7 @@ namespace WEBtest.Helpers
             return productsViewModel;
         }
 
-        public static ProductViewModel ToProductViewModel(this Product productDb)
+        public static ProductViewModel ToProductViewModel(this Product productDb) // получаем из БД
         {
             return new ProductViewModel()
             {
@@ -87,7 +87,7 @@ namespace WEBtest.Helpers
                 Cost = product.Cost,
                 Description = product.Description,
                 PhotoPath = product.PhotoPath,
-                Jpeg = product.Jpeg,
+                //Jpeg = product.Jpeg,
                 Article = product.Article,
                 Barcode = product.Barcode,
                 CategoryId = product.CategoryId,

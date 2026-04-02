@@ -26,11 +26,11 @@ namespace WEBtest.Models
         public string? Description { get; set; }
 
 
-        public byte[]? Jpeg { get; set; }
+        public byte[]? Jpeg { get; set; } 
 
 
         // [Required]
-        public string? PhotoPath { get; set; }
+        public string? PhotoPath { get; set; } = "/img/product.png";
         public IFormFile? PhotoFile { get; set; }
 
 
