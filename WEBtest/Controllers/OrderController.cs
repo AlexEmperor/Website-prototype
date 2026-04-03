@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using WEBtest.Db.Interfaces;
 using WEBtest.Db.Models;
@@ -9,26 +10,34 @@ namespace WEBtest.Controllers
 {
     public class OrderController(
         ICartsRepository cartRepository,
-        IOrdersRepository orderRepository) : Controller
+        IOrdersRepository orderRepository, UserManager<UserDTO> userManager) : Controller
     {
         private readonly ICartsRepository _cartRepository = cartRepository;
         private readonly IOrdersRepository _orderRepository = orderRepository;
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var cart = _cartRepository.TryGetByUserId(GetUserId());
+            var appUser = await userManager.GetUserAsync(User);
 
             var order = new OrderViewModel()
             {
+                Items = cart?.Items.ToCartItemViewModels(),
                 DeliveryUser = new DeliveryUserViewModel
                 {
-                    Name = User.FindFirst(ClaimTypes.Name)?.Value
-                   ?? User.Identity?.Name,
-                    Login = User.FindFirst(ClaimTypes.Email)?.Value,
-                    Phone = User.FindFirst(ClaimTypes.MobilePhone)?.Value,
+                    Name = appUser?.FirstName,        // реальное имя из БД
+                    Login = appUser?.Email,           // email
+                    Phone = appUser?.PhoneNumber,     // телефон из БД
+                }
+                /*DeliveryUser = new DeliveryUserViewModel
+                {
+                    Name = !string.IsNullOrEmpty(appUser?.FirstName)
+        ? $"{appUser.FirstName} {appUser.LastName}".Trim()
+        : appUser?.UserName,
+                    Login = appUser?.Email,
+                    Phone = appUser?.PhoneNumber ?? "",
+                }*/
 
-                },
-                Items = cart?.Items.ToCartItemViewModels()
             };
 
             return View(order);
