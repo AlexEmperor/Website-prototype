@@ -20,6 +20,14 @@ namespace WEBtest.Controllers
 
             var order = new OrderViewModel()
             {
+                DeliveryUser = new DeliveryUserViewModel
+                {
+                    Name = User.FindFirst(ClaimTypes.Name)?.Value
+                   ?? User.Identity?.Name,
+                    Login = User.FindFirst(ClaimTypes.Email)?.Value,
+                    Phone = User.FindFirst(ClaimTypes.MobilePhone)?.Value,
+
+                },
                 Items = cart?.Items.ToCartItemViewModels()
             };
 

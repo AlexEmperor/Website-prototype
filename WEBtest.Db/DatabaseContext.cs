@@ -34,11 +34,11 @@ namespace WEBTest.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-        //    modelBuilder.Entity<Order>()
-        //.HasOne(o => o.DeliveryUser)
-        //.WithMany() // или .WithMany(u => u.Orders), если есть обратная навигация
-        //.HasForeignKey("DeliveryUserId") // имя теневого свойства
-        //.IsRequired(false); // 👈 Делаем связь необязательной
+            //    modelBuilder.Entity<Order>()
+            //.HasOne(o => o.DeliveryUser)
+            //.WithMany() // или .WithMany(u => u.Orders), если есть обратная навигация
+            //.HasForeignKey("DeliveryUserId") // имя теневого свойства
+            //.IsRequired(false); // 👈 Делаем связь необязательной
 
             base.OnModelCreating(modelBuilder);
 
@@ -51,10 +51,10 @@ namespace WEBTest.Db
                 new { Id = 4, CategoryName = "Заколки" },
                 new { Id = 5, CategoryName = "Игрушки" },
                 new { Id = 6, CategoryName = "Вязание" },
-                new { Id = 7, CategoryName = "Аксессуары"},
-                new { Id = 8, CategoryName = "Брошь"},
-                new { Id = 9, CategoryName = "Браслеты"},
-                new { Id = 10, CategoryName = "Электроника"}
+                new { Id = 7, CategoryName = "Аксессуары" },
+                new { Id = 8, CategoryName = "Брошь" },
+                new { Id = 9, CategoryName = "Браслеты" },
+                new { Id = 10, CategoryName = "Электроника" }
             );
             // Furniture
             modelBuilder.Entity<Furniture>().HasData(
