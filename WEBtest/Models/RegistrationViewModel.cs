@@ -48,6 +48,7 @@ namespace WEBtest.Models
         [StringLength(25, MinimumLength = 2, ErrorMessage = "Фамилия должна быть от {2} до {1} символов")]
         public string LastName { get; set; }
 
+        public DateTime CreationDateTime => DateTime.Now;
 
         public int ID { get; set; }
 

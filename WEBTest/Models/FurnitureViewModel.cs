@@ -5,7 +5,7 @@ using WEBtest.Db.Models;
 
 namespace WEBtest.Models
 {
-    public class OrderFurnitureViewModel
+    public class FurnitureViewModel
     {
         public int Id { get; set; }
 
@@ -17,13 +17,6 @@ namespace WEBtest.Models
 
         public string OrderPlace { get; set; }
 
-
-        // Навигационные свойства
-        public List<Product>? Products { get; set; }
-        public List<OrderFurniture>? OrderFurnitures { get; set; } // Many-to-Many
-
-        public List<OrderFurnitureItem> OrderItems { get; set; } = [];
-
-
+        //////////////////////////////////////////
     }
 }

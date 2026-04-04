@@ -10,7 +10,7 @@ namespace WEBtest.Models
         [Display(Name = "Обработан")]
         Processed,
 
-        [Display(Name = "В пути")]
+        [Display(Name = "Доставляется")]
         Delivering,
 
         [Display(Name = "Доставлен")]

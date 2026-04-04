@@ -53,7 +53,7 @@ namespace WEBtest.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RegistrationAsync(Registration registration)
+        public async Task<IActionResult> RegistrationAsync(RegistrationViewModel registration)
         {
             if (!ModelState.IsValid)
             {

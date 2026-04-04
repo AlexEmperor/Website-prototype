@@ -14,23 +14,31 @@ namespace WEBTest.Db
         }
 
         //Доступ к таблицам
-        public DbSet<Product> Products { get; set; }                     //Товары
+        public DbSet<Product> Products { get; set; }                      //Товары
+        public DbSet<Order> Orders { get; set; } = null!;                 // Заказы
+        public DbSet<Pictures> Pictures { get; set; } = null!;            // Картинки для сайта
+        public DbSet<Furniture> Furniture { get; set; }                   //Фурнитура(состовляющее продуктов)
+
+
+
         public DbSet<Cart> Carts { get; set; }                           //Корзина
         public DbSet<CartItem> CartItems { get; set; }                   //Лежит в Корзине
         public DbSet<Favourite> Favorites { get; set; } = null!;         //Избранное
         public DbSet<Comparison> Comparisons { get; set; } = null!;      //Сравнение
-        public DbSet<Order> Orders { get; set; } = null!;                // Заказы
+
+
         public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;  // Информация о пользователе заказа (Пользователи сделали заказ)
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Furniture> Furniture { get; set; }
+        public DbSet<Category> Categories { get; set; }                   //Категории товаров
+
+
         public DbSet<OrderFurnitureItem> OrderFurnitureItems { get; set; }
-        public DbSet<OrderFurniture> FurnitureOrders { get; set; }
+        public DbSet<OrderFurniture> FurnitureOrders { get; set; }   
 
         public DbSet<Registration> Registration { get; set; } = null!;   // Пользователи прошедшие регистрацию
 
 
-        public DbSet<Pictures> Pictures { get; set; } = null!;   // Пользователи прошедшие регистрацию
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

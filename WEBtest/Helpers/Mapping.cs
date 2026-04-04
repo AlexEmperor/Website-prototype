@@ -264,34 +264,34 @@ namespace WEBtest.Helpers
                 LastName = registra.LastName,
             };
         }
-        /*
-                public static DeliveryUserViewModel ToDeliveryUserViewModel(this DeliveryUser deliveryUserDb)
-                {
-                    return new DeliveryUserViewModel()
-                    {
-                        Id = deliveryUserDb.Id,
-                        Name = deliveryUserDb.Name,
-                        Address = deliveryUserDb.Address,
-                        Phone = deliveryUserDb.Phone,
-                        Date = DateTime.SpecifyKind(deliveryUserDb.Date, DateTimeKind.Utc),
-                        Comment = deliveryUserDb.Comment
-                    };
-                }
 
-                public static DeliveryUser ToDeliveryUserDb(this DeliveryUserViewModel deliveryUser)  // получение данных при "Оформление заказа"
-                {
-                    return new DeliveryUser()
-                    {
-                        Id = deliveryUser.Id,
-                        Name = deliveryUser.Name,
-                        Address = deliveryUser.Address,
-                        Phone = deliveryUser.Phone,
-                        Date = DateTime.SpecifyKind(deliveryUser.Date, DateTimeKind.Utc),
-                        Comment = deliveryUser.Comment
-                    };
-                }
-            */
         #endregion
+    
+        #region Furniture  //Фурнитура
+
+        public static List<FurnitureViewModel> ToFurnitureViewModels(this List<Furniture> furnituresDb)
+        {
+            var furnituresViewModel = new List<FurnitureViewModel>();
+
+            foreach (var furnitureDb in furnituresDb)  // Вывод на панель Администратора текущие заказы
+            {
+                furnituresViewModel.Add(furnitureDb.ToFurnitureViewModel());   // добавляем  !!!
+            }
+
+            return furnituresViewModel;
+        }
+
+        public static FurnitureViewModel ToFurnitureViewModel(this Furniture furnitureDb) // !!!!передача 
+        {
+            return new FurnitureViewModel()
+            {
+                Id = furnitureDb.Id,
+                Price = furnitureDb.Price,
+            };
+        }
+
+        #endregion
+
 
     }
 }

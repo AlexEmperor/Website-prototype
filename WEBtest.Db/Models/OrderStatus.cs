@@ -2,8 +2,8 @@
 {
     public enum OrderStatus
     {
-        Created,
-        Processed,
+        Создан,
+        Обработан,
         Delivering,
         Delivered,
         Canceled

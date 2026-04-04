@@ -10,7 +10,8 @@ namespace WEBtest.Controllers
 {
     public class OrderController(
         ICartsRepository cartRepository,
-        IOrdersRepository orderRepository, UserManager<UserDTO> userManager) : Controller
+        IOrdersRepository orderRepository,
+        UserManager<UserDTO> userManager) : Controller
     {
         private readonly ICartsRepository _cartRepository = cartRepository;
         private readonly IOrdersRepository _orderRepository = orderRepository;
@@ -29,14 +30,6 @@ namespace WEBtest.Controllers
                     Login = appUser?.Email,           // email
                     Phone = appUser?.PhoneNumber,     // телефон из БД
                 }
-                /*DeliveryUser = new DeliveryUserViewModel
-                {
-                    Name = !string.IsNullOrEmpty(appUser?.FirstName)
-        ? $"{appUser.FirstName} {appUser.LastName}".Trim()
-        : appUser?.UserName,
-                    Login = appUser?.Email,
-                    Phone = appUser?.PhoneNumber ?? "",
-                }*/
 
             };
 

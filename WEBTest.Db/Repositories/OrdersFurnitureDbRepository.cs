@@ -5,21 +5,20 @@ using WEBTest.Db;
 
 namespace WEBtest.Db.Repositories
 {
-    public class OrdersDbRepository(DatabaseContext databaseContext) : IOrdersRepository
+    public class OrdersFurnitureDbRepository(DatabaseContext databaseContext) : IOrdersRepository
     {
         private readonly DatabaseContext _databaseContext = databaseContext;
 
-        public void Add(Order order)  // передаем полученные данные об заказе  в Таблицу "Order"!!!
+        public void Add(Order orderfurniture)  // передаем полученные данные об заказе  в Таблицу "Order"!!!
         {
             try
             {
-                order.Id = Guid.NewGuid();
-                order.CreationDateTime = DateTime.UtcNow;
-                order.DeliveryUser.Id = Guid.NewGuid();
-                order.Status = OrderStatus.Создан;
+                orderfurniture.Id = Guid.NewGuid();
+                orderfurniture.CreationDateTime = DateTime.UtcNow;
+                orderfurniture.DeliveryUser.Id = Guid.NewGuid();
+                orderfurniture.Status = OrderStatus.Создан;
 
-                _databaseContext.Orders.Add(order);
-
+                _databaseContext.Orders.Add(orderfurniture);
                 _databaseContext.SaveChanges();
             }
             catch (Exception ex)

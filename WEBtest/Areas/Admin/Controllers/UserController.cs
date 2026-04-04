@@ -39,6 +39,8 @@ namespace WEBtest.Areas.Admin.Controllers
                     Phone = user.PhoneNumber,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
+
+                    CreationDateTime = user.CreationDateTime,
                     Login = user.Email,
                     Role = roles.FirstOrDefault() ?? "User" // берём первую роль или дефолт
                 });
