@@ -10,7 +10,8 @@ namespace WEBtest.Controllers
 {
     public class OrderController(
         ICartsRepository cartRepository,
-        IOrdersRepository orderRepository, UserManager<UserDTO> userManager) : Controller
+        IOrdersRepository orderRepository,
+        UserManager<UserDTO> userManager) : Controller
     {
         private readonly ICartsRepository _cartRepository = cartRepository;
         private readonly IOrdersRepository _orderRepository = orderRepository;

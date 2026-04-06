@@ -7,39 +7,21 @@ using WEBtest.Models;
 
 namespace WEBtest.Areas.Admin.Controllers
 {
-    [Area("Admin")]
     public class MyOrderController(IOrdersRepository ordersRepository) : Controller
     {
         private readonly IOrdersRepository _ordersRepository = ordersRepository;
 
 
-        public IActionResult Index()
+
+
+        public IActionResult MyOrderVie()   // Вызов страницы категория Сережек
         {
             var orders = _ordersRepository.GetAll();
-
             return View(orders.ToOrderViewModels().OrderByDescending(x => x.CreationDateTime).ToList());
+
+            //return View(_ordersRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
         }
 
-        public IActionResult Detail(Guid orderId)
-        {
-            var order = _ordersRepository.TryGetById(orderId);
 
-            return View(order?.ToOrderViewModel());
-        }
-
-        [HttpPost]
-        public IActionResult UpdateStatus(Guid orderId, OrderStatusViewModel status)
-        {
-            _ordersRepository.UpdateStatus(orderId, (OrderStatus)status);
-
-            return RedirectToAction(nameof(Index));
-        }
-
-        public IActionResult Delete(Guid id)
-        {
-            _ordersRepository.Delete(id);
-
-            return RedirectToAction(nameof(Index));
-        }
     }
 }

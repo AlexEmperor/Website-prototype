@@ -12,6 +12,8 @@ namespace WEBtest.Controllers
     {
         private readonly IProductsRepository _productRepository;
         private readonly IPicturesRepository _picturesRepository;
+
+
         private bool _sorted {get; set;}
 
         public HomeController(IProductsRepository productRepository, IPicturesRepository picturesRepository)
@@ -96,11 +98,7 @@ namespace WEBtest.Controllers
             return View(_productRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
         }
 
-
-        
-
-
-
+        ///
 
 
         public IActionResult Search(string query)
