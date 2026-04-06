@@ -53,5 +53,16 @@ namespace WEBtest.Db.Repositories
                 _databaseContext.SaveChanges();
             }
         }
+
+        public void Delete(Guid orderId)
+        {
+            var existingOrder = TryGetById(orderId);
+
+            if (existingOrder != null)
+            {
+                _databaseContext.Orders.Remove(existingOrder);
+                _databaseContext.SaveChanges();  // Сохраняем изменения в БД
+            }
+        }
     }
 }

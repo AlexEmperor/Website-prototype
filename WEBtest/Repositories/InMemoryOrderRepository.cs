@@ -1,4 +1,5 @@
-﻿using WEBtest.Interfaces;
+﻿using WEBtest.Db.Models;
+using WEBtest.Interfaces;
 using WEBtest.Models;
 
 namespace WEBtest.Repositories
@@ -24,6 +25,15 @@ namespace WEBtest.Repositories
             if (existingOrder != null)
             {
                 existingOrder.Status = newStatus;
+            }
+        }
+        public void Delete(Guid orderId)
+        {
+            var existingProduct = TryGetById(orderId);
+
+            if (existingProduct != null)
+            {
+                _orders.Remove(existingProduct);
             }
         }
     }

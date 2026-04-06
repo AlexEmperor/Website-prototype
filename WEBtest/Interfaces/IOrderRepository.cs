@@ -8,5 +8,6 @@ namespace WEBtest.Interfaces
         List<OrderViewModel> GetAll();
         OrderViewModel? TryGetById(Guid orderId);
         void UpdateStatus(Guid orderId, OrderStatusViewModel status);
+        void Delete(Guid productId);
     }
 }

@@ -1,13 +1,13 @@
 ﻿@model List<OrderViewModel>
 @{
-    ViewData["Title"] = "Заказы";
+    ViewData["Title"] = "Мои заказы";
 }
 
 <div class="row mt-3">
     @await Html.PartialAsync("SideBar")
     <div class="col-9 mb-3">
         <div class="text-center text-uppercase text-success mb-5 mt-5">
-            <h2 class="row-title">Заказы</h2>
+            <h2 class="row-title">Мои заказы</h2>
         </div>
 
         @if (Model != null && Model.Count > 0)
@@ -22,7 +22,7 @@
                                 <th scope="col">Статус</th>
                                 <th scope="col">Пользователь (логин)</th>
                                 <th scope="col">Заказано</th>
-                                 <th scope="col">Дата доставки</th>
+                                <th scope="col">Дата доставки</th>
                                 <th scope="col">Общ.кол</th>
                                 <th scope="col">Адрес</th>
                                 <th scope="col"></th>
@@ -36,31 +36,12 @@
                                     <td style="white-space: nowrap;">@Model[i].TotalCost?.ToString("c")</td>
                                     <td>@Html.DisplayFor(model => Model[i].Status)</td>
                                     <td>@Model[i].DeliveryUser.Login</td>
-                                    <td style ="white-space: nowrap;">@Model[i].CreationDateTime.ToShortDateString()  @Model[i].CreationDateTime.ToShortTimeString()</td>
+                                    <td style="white-space: nowrap;">@Model[i].CreationDateTime.ToShortDateString()  @Model[i].CreationDateTime.ToShortTimeString()</td>
                                     <td>@Model[i].DeliveryUser.Date.ToShortDateString()</td>
                                     <td>@Model[i].ItemsQuantity</td>
                                     <td>@Model[i].DeliveryUser.Address</td>
-                                    <td align="left">
-                                        <a class="text-success"
-                                           asp-area="Admin"
-                                           asp-controller="Order"
-                                           asp-action="Detail"
-                                           asp-route-OrderId="@Model[i].Id">
-                                            Подробнее
-                                        </a>
-                                    </td>
-                                    <td align="left">
-                                         <a class="text-success"
-                                            asp-area="Admin"
-                                            asp-controller="Order"
-                                            asp-action="Delete"
-                                            asp-route-Id=@Model[i].Id>
-                                            Удалить
-                                        </a>
-                                    </td>
                                 </tr>
                             }
-
                         </tbody>
                         <tfoot>
                             <tr align="center">

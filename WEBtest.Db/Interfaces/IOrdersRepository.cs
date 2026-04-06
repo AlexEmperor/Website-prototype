@@ -8,5 +8,6 @@ namespace WEBtest.Db.Interfaces
         List<Order> GetAll();
         Order? TryGetById(Guid orderId);
         void UpdateStatus(Guid orderId, OrderStatus status);
+        void Delete(Guid orderId);
     }
 }

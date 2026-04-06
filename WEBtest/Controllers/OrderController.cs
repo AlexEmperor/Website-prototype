@@ -29,15 +29,6 @@ namespace WEBtest.Controllers
                     Login = appUser?.Email,           // email
                     Phone = appUser?.PhoneNumber,     // телефон из БД
                 }
-                /*DeliveryUser = new DeliveryUserViewModel
-                {
-                    Name = !string.IsNullOrEmpty(appUser?.FirstName)
-        ? $"{appUser.FirstName} {appUser.LastName}".Trim()
-        : appUser?.UserName,
-                    Login = appUser?.Email,
-                    Phone = appUser?.PhoneNumber ?? "",
-                }*/
-
             };
 
             return View(order);

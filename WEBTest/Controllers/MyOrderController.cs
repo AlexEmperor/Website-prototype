@@ -8,9 +8,10 @@ using WEBtest.Models;
 namespace WEBtest.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class OrderController(IOrdersRepository ordersRepository) : Controller
+    public class MyOrderController(IOrdersRepository ordersRepository) : Controller
     {
         private readonly IOrdersRepository _ordersRepository = ordersRepository;
+
 
         public IActionResult Index()
         {
