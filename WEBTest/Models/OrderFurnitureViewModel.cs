@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
-using WEBtest.Db.Models;
+﻿using WEBtest.Db.Models;
 
 namespace WEBtest.Models
 {
@@ -23,6 +20,7 @@ namespace WEBtest.Models
         public List<OrderFurniture>? OrderFurnitures { get; set; } // Many-to-Many
 
         public List<OrderFurnitureItem> OrderItems { get; set; } = [];
+
 
     }
 }

@@ -76,7 +76,7 @@ namespace WEBtest.Db.Repositories
             return _databaseContext.Products
                 .Include(p => p.Category)
                 .Include(p => p.FurnitureOrder)
-                    .ThenInclude(fo => fo.Furnitures)
+                    //.ThenInclude(fo => fo.Furnitures)
                 .Where(product => product.Name!.Contains(text, StringComparison.CurrentCultureIgnoreCase))
                 .ToList();
         }

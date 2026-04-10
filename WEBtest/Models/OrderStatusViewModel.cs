@@ -7,14 +7,11 @@ namespace WEBtest.Models
         [Display(Name = "Создан")]
         Created,
 
-        [Display(Name = "Ожидает отгрузки")]
+        [Display(Name = "Обработан")]
         Processed,
 
         [Display(Name = "Доставляется")]
         Delivering,
-
-        [Display(Name = "Ожидает в ПВЗ")]
-        Awaiting,
 
         [Display(Name = "Доставлен")]
         Delivered,

@@ -1,0 +1,60 @@
+﻿@model List<FurnitureViewModel>
+@{
+    ViewData["Title"] = "Фурнитура";
+}
+
+<div class="row mt-3">
+    @await Html.PartialAsync("SideBar")
+    <div class="col-9 mb-3">
+        <div class="text-center text-uppercase text-success mb-5 mt-5">
+            <h2 class="row-title">Фурнитура</h2>
+        </div>
+
+        @if (Model != null && Model.Count > 0)
+        {
+            <div class="row justify-content-center mt-3">
+                <div class="col-12">
+                    <table class="table table-responsive table-striped table-hover mb-5">
+                        <thead>
+                            <tr align="center">
+                                <th scope="col">#</th>
+                                <th scope="col">Номер заказа</th>
+                                <th scope="col">Описание</th>
+                                <th scope="col">Цена</th>
+                                <th scope="col">Где заказано</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.Count; i++)
+                            {
+                                <tr align="center" class="align-baseline">
+                                    <td class="fw-bold">@(i + 1)</td>
+                                    <td>@Model[i].Id</td>
+                                    <td>@Model[i].Description</td>
+                                    <td>@Model[i].Price.ToString("c")</td>
+                                    <td>@Model[i].OrderPlace</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr align="center">
+                                <th colspan="3"></th>
+                                <th colspan="4">
+                                    Общее количество фурнитуры: @Model.Count
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="text-center">
+                <h2 class="row-title">В хранилище нет фурнитуры!</h2>
+            </div>
+        }
+
+    </div>
+</div>
+

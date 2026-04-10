@@ -293,5 +293,59 @@ namespace WEBtest.Helpers
             */
         #endregion
 
+        #region OrderFurniture  //Заказы фурнитуры
+
+        public static List<OrderFurnitureViewModel> ToOrderFurnitureViewModels(this List<OrderFurniture> furnituresDb)
+        {
+            var furnituresViewModel = new List<OrderFurnitureViewModel>();
+
+            foreach (var furnitureDb in furnituresDb)  // Вывод на панель Администратора текущие заказы
+            {
+                furnituresViewModel.Add(furnitureDb.ToOrderFurnitureViewModel());   // добавляем  !!!
+            }
+
+            return furnituresViewModel;
+        }
+
+        public static OrderFurnitureViewModel ToOrderFurnitureViewModel(this OrderFurniture furnitureDb) // !!!!передача 
+        {
+            return new OrderFurnitureViewModel()
+            {
+                Id = furnitureDb.Id,
+                Price = furnitureDb.Price,
+                Description = furnitureDb.Description,
+                OrderPlace = furnitureDb.OrderPlace
+            };
+        }
+
+        #endregion
+
+        #region Furniture  //Фурнитура
+
+        public static List<FurnitureViewModel> ToFurnitureViewModels(this List<Furniture> furnituresDb)
+        {
+            var furnituresViewModel = new List<FurnitureViewModel>();
+
+            foreach (var furnitureDb in furnituresDb)  // Вывод на панель Администратора текущие заказы
+            {
+                furnituresViewModel.Add(furnitureDb.ToFurnitureViewModel());   // добавляем  !!!
+            }
+
+            return furnituresViewModel;
+        }
+
+        public static FurnitureViewModel ToFurnitureViewModel(this Furniture furnitureDb) // !!!!передача 
+        {
+            return new FurnitureViewModel()
+            {
+                Id = furnitureDb.Id,
+                Price = furnitureDb.Price,
+                Description = furnitureDb.Description,
+                OrderPlace = furnitureDb.OrderPlace
+            };
+        }
+
+        #endregion
+
     }
 }
