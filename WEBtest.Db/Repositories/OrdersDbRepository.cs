@@ -64,5 +64,26 @@ namespace WEBtest.Db.Repositories
                 _databaseContext.SaveChanges();  // Сохраняем изменения в БД
             }
         }
+
+        public List<Order> Find(string user) => _databaseContext.Orders.Include(x => x.DeliveryUserId).ToList();
+        // Правильный метод для поиска заказов по UserName владельца
+
+        /*
+        public List<Order> GetOrdersByUserUserName(Guid orderId)
+        {
+            // Ищем пользователя с таким userName
+            var user = _databaseContext.Orders.FirstOrDefault(u => u.DeliveryUserId == orderId);
+
+            if (user == null)
+            {
+                return new List<Order>(); // Пользователь не найден, возвращаем пустой список
+            }
+
+            // Находим все заказы, принадлежащие этому пользователю
+            // Предполагается, что у Order есть свойство 'UserId' (FK) и 'User' (Navigation Property)
+            var orders = _databaseContext.Orders.Where(o => o.UserId == orderId).ToList();
+            return orders;
+        }
+        */
     }
 }

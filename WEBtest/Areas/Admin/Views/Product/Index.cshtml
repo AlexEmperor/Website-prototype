@@ -51,7 +51,7 @@
                             {
                                 <tr align="center" class="align-baseline">
                                     <td class="fw-bold">@Model[i].Id</td>
-                                    <td>@Model[i].Article</td>
+                                    <td style ="white-space: nowrap;">@Model[i].Article</td>
                                     <td>@Model[i].Barcode</td>
                                     <td>@Model[i].Category?.CategoryName</td>
                                     <td align="left">
@@ -74,19 +74,35 @@
 
 
                                     <td>
-                                        <a class="btn btn-outline-success"
-                                           asp-area="Admin"
-                                           asp-controller="Product"
-                                           asp-action="Update"
-                                           asp-route-Id="@Model[i].Id">
+                                        <button class="btn btn-outline-success dropdown-toggle" role="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            Действия
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <li>
+                                                <a class="dropdown-item"
+                                            asp-area="Admin"
+                                            asp-controller="Product"
+                                            asp-action="Update"
+                                            asp-route-Id="@Model[i].Id">
                                             Редактировать
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-outline-success" data-bs-target="#Returned_@i" data-bs-toggle="modal">
-                                            Удалить
-                                        </a>
-
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a class="dropdown-item"
+                                            asp-area="Admin"
+                                            asp-controller="Product"
+                                            asp-action="Update"
+                                            asp-route-id="@Model[i].Id">
+                                              Медия
+                                            </a>
+                                          </li>
+                                          <li>
+                                                <a class="dropdown-item" data-bs-target="#Returned_@i" data-bs-toggle="modal">
+                                                Удалить
+                                            </a>
+                                          </li>
+                                        </ul>
                                         <div class="modal fade" id="Returned_@i" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalWindow" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -118,7 +134,9 @@
                                             </div>
                                         </div>
                                     </td>
+                                  
                                 </tr>
+
                             }
                         </tbody>
                         <tfoot>

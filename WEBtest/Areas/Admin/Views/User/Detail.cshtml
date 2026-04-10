@@ -86,7 +86,7 @@
                     </tr>
                     <tr>
                         <td class="w-25"><span>Дата регистрации</span></td>
-                        <td class="w-auto">@Model.CreationDateTime</td>
+                        <td class="w-auto">@Model.CreationDateTime.ToShortDateString()</td>
                     </tr>
                 </table>
             }

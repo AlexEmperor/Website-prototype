@@ -109,7 +109,7 @@ namespace WEBtest.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
+            /*
             // ===== Фото =====
             if (product.PhotoFile != null)
             {
@@ -129,6 +129,7 @@ namespace WEBtest.Areas.Admin.Controllers
                     productDb.PhotoPath = newPhoto;
                 }
             }
+            */
             _productsRepository.Update(product.ToProductDb());
 
             return RedirectToAction(nameof(Index));

@@ -65,6 +65,7 @@ namespace WEBtest.Repositories
             {
                 excitingProduct.Name = product.Name;
                 excitingProduct.Cost = product.Cost;
+                //excitingProduct.Jpeg = product.Jpeg;
                 excitingProduct.Description = product.Description;
             }
         }

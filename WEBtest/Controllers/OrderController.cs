@@ -65,6 +65,9 @@ namespace WEBtest.Controllers
                 DeliveryUser = order.DeliveryUser.ToDeliveryUserDb()
             };
 
+            orderDb.Items[0].Product.Storage_FBS1 = orderDb.Items[0].Product.Storage_FBS1 - orderDb.Items[0].Quantity;
+
+
             _orderRepository.Add(orderDb);
 
             _cartRepository.Clear(GetUserId());

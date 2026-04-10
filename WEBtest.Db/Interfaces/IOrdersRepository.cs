@@ -9,5 +9,8 @@ namespace WEBtest.Db.Interfaces
         Order? TryGetById(Guid orderId);
         void UpdateStatus(Guid orderId, OrderStatus status);
         void Delete(Guid orderId);
+        //List<Order> Find(string user);
+       // List<Order> GetOrdersByUserUserName(Guid orderId);
+
     }
 }

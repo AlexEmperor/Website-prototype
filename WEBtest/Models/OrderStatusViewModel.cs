@@ -7,7 +7,7 @@ namespace WEBtest.Models
         [Display(Name = "Создан")]
         Created,
 
-        [Display(Name = "Обработан")]
+        [Display(Name = "Ожидает отгрузки")]
         Processed,
 
         [Display(Name = "Доставляется")]

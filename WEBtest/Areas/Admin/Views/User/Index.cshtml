@@ -31,6 +31,7 @@
                                 <th scope="col">Имя</th>
                                 <th scope="col">Фамилия</th>
                                 <th scope="col">Телефон</th>
+                                <th scope="col">Дата регистрации</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -52,7 +53,7 @@
                                     <td>@Model[i].FirstName</td>
                                     <td>@Model[i].LastName</td>
                                     <td>@Model[i].Phone</td>
-                                    <td>@Model[i].CreationDateTime</td>
+                                    <td>@Model[i].CreationDateTime.ToShortDateString()</td>
                                     <td>@Model[i].Password</td>
                                     <td align="left">
                                         <a class="text-success"

@@ -47,14 +47,21 @@ namespace WEBTest.Db
             modelBuilder.Entity<Category>().HasData(
                 new { Id = 1, CategoryName = "Сережки" },
                 new { Id = 2, CategoryName = "Стройка" },
-                new { Id = 3, CategoryName = "Брошь" },
+                new { Id = 3, CategoryName = "Брелки" },
                 new { Id = 4, CategoryName = "Заколки" },
                 new { Id = 5, CategoryName = "Игрушки" },
                 new { Id = 6, CategoryName = "Вязание" },
                 new { Id = 7, CategoryName = "Аксессуары" },
                 new { Id = 8, CategoryName = "Брошь" },
                 new { Id = 9, CategoryName = "Браслеты" },
-                new { Id = 10, CategoryName = "Электроника" }
+                new { Id = 10, CategoryName = "Электроника" },
+                new { Id = 11, CategoryName = "Подвески" },
+                new { Id = 12, CategoryName = "Комплекты" },
+                new { Id = 13, CategoryName = "Интерьер" },
+                new { Id = 14, CategoryName = "Кольца" },
+                new { Id = 15, CategoryName = "Ёлочные игрушки" },
+                new { Id = 16, CategoryName = "Романтика 8 марта" }
+
             );
             // Furniture
             modelBuilder.Entity<Furniture>().HasData(

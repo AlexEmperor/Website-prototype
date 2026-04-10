@@ -26,7 +26,7 @@ namespace WEBtest.Models
         public string? Description { get; set; }
 
 
-        public byte[]? Jpeg { get; set; } 
+        public byte[]? Jpeg { get; set; }   //Jpeg
 
 
         // [Required]
@@ -78,7 +78,7 @@ namespace WEBtest.Models
             Name = name;
             Cost = cost;
             Description = description;
-            Jpeg = jpeg;
+           // Jpeg = jpeg;
             PhotoPath = PhotoPath;
         }
 
