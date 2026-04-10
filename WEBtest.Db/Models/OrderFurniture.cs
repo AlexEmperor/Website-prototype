@@ -4,6 +4,8 @@
     {
         public int Id { get; set; }
         public decimal Price { get; set; }
+        public string Description { get; set; }
+        public string OrderPlace { get; set; }
         public List<Furniture> Furnitures { get; set; } = [];
 
         public string Provider { get; set; }

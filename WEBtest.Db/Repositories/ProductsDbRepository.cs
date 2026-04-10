@@ -19,7 +19,7 @@ namespace WEBtest.Db.Repositories
             _databaseContext.Products
                 .Include(p => p.Category)
                 .Include(p => p.FurnitureOrder)
-                .ThenInclude(fo => fo.Furnitures)
+                //.ThenInclude(fo => fo.Furnitures)
                 .ToList();
 
         public Product? TryGetById(int productId) =>

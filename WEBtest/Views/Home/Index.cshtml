@@ -11,7 +11,7 @@
       @if (Model?.Pictures?.Count > 1 && Model.Pictures[1]?.Point != null)
      {
       <center>
-            <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures.Find(p => p.Id == 1).Point)"
+             <img src="data:image/jpeg;base64,@Convert.ToBase64String(@Model.Pictures.Find(p => p.Id == 1).Point)"
          alt="Product Image"
          class="img-fluid"
          width="900" height="300" />

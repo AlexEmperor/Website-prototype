@@ -11,16 +11,16 @@ using WEBtest.Models;
 namespace WEBtest.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class OrderFurnitureController(IOrderFurnitureRepository ordersFurnitureRepository) : Controller
+    public class OrderFurnitureController(IFurnituresRepository furnitureRepository) : Controller
     {
-        private readonly IOrderFurnitureRepository _ordersfurnitureRepository = ordersFurnitureRepository;
+        private readonly IFurnituresRepository _furnitureRepository = furnitureRepository;
 
         public IActionResult Index()
         {
-            var ordersfurniture = _ordersfurnitureRepository.GetAll();
+            var orders = _furnitureRepository.GetAll();
 
-            return View(ordersfurniture); //!!!
-           // return View(ordersfurniture.OrderByDescending(x => x.CreationDateTime).ToOrderFurnitureViewModels().ToList());
+            return View(orders.ToOrderFurnitureViewModels());
+            //return View(orders.ToOrderFurnitureViewModels().OrderByDescending(x => x.CreationDateTime).ToList());
         }
 
     }

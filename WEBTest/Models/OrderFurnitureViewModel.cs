@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
-using WEBtest.Db.Models;
+﻿using WEBtest.Db.Models;
 
 namespace WEBtest.Models
 {
