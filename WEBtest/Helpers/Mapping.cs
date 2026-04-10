@@ -5,7 +5,7 @@ namespace WEBtest.Helpers
 {
     public static class Mapping
     {
-        #region Picturs // Товар
+        #region Pictures // Товар
 
         public static List<PicturesViewModel> ToPicturesViewModels(this List<Pictures> picturesDb)
         {
