@@ -19,7 +19,7 @@ namespace WEBtest.Areas.Admin.Controllers
         }
 
 
-        public IActionResult Index()
+        public IActionResult Index()  // вывоит таблицу товара
         {
             return View(_productsRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
             //return View(products);
@@ -42,7 +42,7 @@ namespace WEBtest.Areas.Admin.Controllers
     }).ToList();
             return View();
         }
-
+        
 
         [HttpPost]
         public async Task<IActionResult> Add(ProductViewModel model)
@@ -69,14 +69,14 @@ namespace WEBtest.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
         public IActionResult Delete(int id)
         {
             _productsRepository.Delete(id);
 
             return RedirectToAction(nameof(Index));
         }
+
+        
         public IActionResult Update(int id)
         {
             var product = _productsRepository.TryGetById(id);
@@ -95,7 +95,7 @@ namespace WEBtest.Areas.Admin.Controllers
     }).ToList();
             return View(product?.ToProductViewModel());
         }
-
+        
 
         [HttpPost]
         public IActionResult Update(ProductViewModel product)

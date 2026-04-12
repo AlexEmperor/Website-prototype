@@ -28,7 +28,9 @@ namespace WEBtest.Controllers
 
         public string GetUserId()
         {
+#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
             return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
         }
 
         public IActionResult Add(int productId)
@@ -44,7 +46,9 @@ namespace WEBtest.Controllers
 
         public IActionResult AddInCart(int productId)
         {
+#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
             _cartRepository.Add(_productRepository.TryGetById(productId), GetUserId());
+#pragma warning restore CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
 
             return RedirectToAction(nameof(Index));
         }

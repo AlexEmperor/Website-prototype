@@ -18,7 +18,9 @@ namespace WEBtest.Views.Shared.Components.Favorite
 
         public string GetUserId()
         {
+#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
             return HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
         }
 
         public IViewComponentResult Invoke()

@@ -193,7 +193,8 @@ namespace WEBtest.Helpers
                 Items = orderDb.Items.ToCartItemViewModels(),
                 DeliveryUser = orderDb.DeliveryUser.ToDeliveryUserViewModel(),
                 CreationDateTime = orderDb.CreationDateTime,
-                Status = (OrderStatusViewModel)orderDb.Status
+                Status = (OrderStatusViewModel)orderDb.Status,
+                DeparNumbe = orderDb.DeparNumbe
             };
         }
 
@@ -334,14 +335,27 @@ namespace WEBtest.Helpers
             return furnituresViewModel;
         }
 
-        public static FurnitureViewModel ToFurnitureViewModel(this Furniture furnitureDb) // !!!!передача 
+        public static FurnitureViewModel ToFurnitureViewModel(this Furniture furnitureDb) // !!!!получить с БД
         {
             return new FurnitureViewModel()
             {
                 Id = furnitureDb.Id,
                 Price = furnitureDb.Price,
                 Description = furnitureDb.Description,
-                OrderPlace = furnitureDb.OrderPlace
+                OrderPlace = furnitureDb.OrderPlace,
+                Name = furnitureDb.Name,
+                HardNumber = furnitureDb.HardNumber
+            };
+        }
+        public static Furniture ToFurnitureProductDb(this FurnitureViewModel furniture)  // передача в БД  furniture
+        {
+            return new Furniture()
+            {
+                Id = furniture.Id,
+                Name = furniture.Name,
+                OrderPlace = furniture.OrderPlace,
+                HardNumber = furniture.HardNumber,
+                Description = furniture.Description
             };
         }
 

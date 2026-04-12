@@ -11,14 +11,11 @@ namespace WEBtest.Db.Repositories
         public List<OrderFurniture> GetAll() => _databaseContext.FurnitureOrders.ToList();
         public List<Furniture> GetAllFurniture() => _databaseContext.Furniture.ToList();
 
-
-        //    public List<Furniture> GetAll() => _databaseContext.FurnitureOrdersFurniture
-        //.Include(x => x.DeliveryUser)
-        //.Include(x => x.Items)
-        //.ThenInclude(x => x.Product)
-        //.OrderByDescending(x => x.CreationDateTime)
-        //.ToList();
-
+        public void Add(Furniture furniture)
+        {
+            _databaseContext.Furniture.Add(furniture);
+            _databaseContext.SaveChanges();  // Сохраняем изменения в БД
+        }
 
     }
 }

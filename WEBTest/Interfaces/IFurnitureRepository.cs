@@ -6,8 +6,7 @@ namespace WEBtest.Interfaces
     {
         List<FurnitureViewModel> GetAll();
         FurnitureViewModel? TryGetById(Guid furnitureId);
-
-        //void Add(FurnitureViewModel orderfurniture);
+        void Add(FurnitureViewModel furniture);
 
     }
 }

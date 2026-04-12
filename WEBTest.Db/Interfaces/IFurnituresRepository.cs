@@ -7,6 +7,6 @@ namespace WEBtest.Db.Interfaces
         List<OrderFurniture> GetAll();
         List<Furniture> GetAllFurniture();
         //Furniture? TryGetById(Guid furnitureId);
-        //void Add(Furniture furniture);
+       void Add(Furniture furniture);
     }
 }

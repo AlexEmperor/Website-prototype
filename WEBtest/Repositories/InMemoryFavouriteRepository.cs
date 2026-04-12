@@ -40,12 +40,16 @@ namespace WEBtest.Repositories
         {
             var existingFavor = TryGetByUserId(userId);
 
+#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
             var existingFavorItem = existingFavor?.Items
                 .FirstOrDefault(item => item.Id == product.Id);
+#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
 
             if (existingFavor != null)
             {
+#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
                 existingFavor.Items.Remove(existingFavorItem);
+#pragma warning restore CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
             }
 
         }

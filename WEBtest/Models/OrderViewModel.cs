@@ -41,7 +41,6 @@ namespace WEBtest.Models
         [ValidateNever]
         [AllowNull]
         public string Address { get; set; }
-
-
+        public int? DeparNumbe { get; set; }
     }
 }

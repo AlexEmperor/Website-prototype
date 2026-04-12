@@ -16,5 +16,6 @@ namespace WEBtest.Db.Models
         public decimal? TotalCost { get; set; }                    // 
         public decimal? TotalCostOrder { get; set; }
         public int? ItemsQuantity { get; set; }
+        public int? DeparNumbe { get; set; }
     }
 }

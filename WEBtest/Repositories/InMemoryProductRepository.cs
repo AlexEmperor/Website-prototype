@@ -42,6 +42,7 @@ namespace WEBtest.Repositories
 
             _products.Add(product);
         }
+ 
         public void Add(ProductViewModel product)
         {
             product.Id = ++_instanceCounter;

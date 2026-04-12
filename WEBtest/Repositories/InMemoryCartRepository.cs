@@ -60,14 +60,18 @@ namespace WEBtest.Repositories
         {
             var existingCart = TryGetByUserId(userId);
 
+#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
             var existingCartItem = existingCart?.Items
                 .FirstOrDefault(item => item.Product.Id == product.Id);
+#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
             if (existingCart == null)
             {
                 return;
             }
 
+#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
             existingCartItem.Quantity -= 1;
+#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
             
             if (existingCartItem.Quantity == 0)
             {

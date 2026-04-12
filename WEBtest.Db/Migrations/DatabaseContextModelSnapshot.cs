@@ -160,6 +160,9 @@ namespace WEBtest.Db.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<int>("HardNumber")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -192,6 +195,9 @@ namespace WEBtest.Db.Migrations
 
                     b.Property<Guid?>("DeliveryUserId")
                         .HasColumnType("uuid");
+
+                    b.Property<int?>("DeparNumbe")
+                        .HasColumnType("integer");
 
                     b.Property<int?>("ItemsQuantity")
                         .HasColumnType("integer");

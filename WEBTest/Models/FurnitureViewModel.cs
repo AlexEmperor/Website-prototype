@@ -9,14 +9,15 @@ namespace WEBtest.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Наименование товара", Prompt = "Наименование товара")]
         public string Name { get; set; }
-
         public string? Description { get; set; }
-
         public decimal Price { get; set; }
-
         public string OrderPlace { get; set; }
-
         //////////////////////////////////////////
+        public int HardNumber { get; set; }
+
+
+
     }
 }

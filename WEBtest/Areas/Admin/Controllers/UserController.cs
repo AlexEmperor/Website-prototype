@@ -67,7 +67,6 @@ namespace WEBtest.Areas.Admin.Controllers
             }
 
             var roles = await _userManager.GetRolesAsync(user);
-
             var model = new AdminUserViewModel
             {
                 Id = user.Id,
@@ -147,7 +146,6 @@ namespace WEBtest.Areas.Admin.Controllers
                 LastName = user.LastName,
                 Role = roles.FirstOrDefault() ?? "User"
             };
-
             return View(model);
         }
 
@@ -159,7 +157,9 @@ namespace WEBtest.Areas.Admin.Controllers
                 return View(model);
             }
 
+
             var user = await _userManager.FindByIdAsync(model.Id);
+
             if (user == null)
             {
                 return RedirectToAction(nameof(Index));
