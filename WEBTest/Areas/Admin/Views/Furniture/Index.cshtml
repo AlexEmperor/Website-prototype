@@ -32,6 +32,7 @@
                                 <th scope="col">Описание</th>
                                 <th scope="col">Где заказано</th>
                                 <th scope="col">Последняя цена</th>
+                                <th scope="col">Кол-во в заказе</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,10 +42,19 @@
                                    @*  <td class="fw-bold">@(i + 1)</td> *@
                                     <td>@Model[i].Id</td>
                                     <td>@Model[i].HardNumber</td>
+  @*                                   <td>
+                                        <a href="https://www.thingiverse.com/search?q=printer+3D+beare&page=8"
+                                       target="_blank"
+                                       class="text-decoration-none">
+                                        @Model[i].HardNumber
+                                    </a>
+                                    </td> *@
                                     <td>@Model[i].Name</td>
                                     <td>@Model[i].Description</td>
                                     <td>@Model[i].OrderPlace</td>
                                     <td>@Model[i].Price.ToString("c")</td>
+                                    <td>@Model[i].Quantity</td>
+                                    
                                 </tr>
                             }
                         </tbody>

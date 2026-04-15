@@ -23,9 +23,9 @@ namespace WEBtest.Controllers
         }
         public IActionResult Add(int productId)
         {
-#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
+
             _favouriteRepository.Add(_productRepository.TryGetById(productId), Constants.UserId);
-#pragma warning restore CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
+
 
             return RedirectToAction(nameof(Index));
             //return View("../Home/index", ProductRepository.GetAll());

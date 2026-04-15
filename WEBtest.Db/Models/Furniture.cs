@@ -14,6 +14,7 @@
 
         ////////////////////////////////////////////////////////////////////
         public int HardNumber { get; set; }
+        public int Quantity { get; set; }
 
     }
 }

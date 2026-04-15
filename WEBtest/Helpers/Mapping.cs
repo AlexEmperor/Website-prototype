@@ -344,7 +344,8 @@ namespace WEBtest.Helpers
                 Description = furnitureDb.Description,
                 OrderPlace = furnitureDb.OrderPlace,
                 Name = furnitureDb.Name,
-                HardNumber = furnitureDb.HardNumber
+                HardNumber = furnitureDb.HardNumber,
+                Quantity= furnitureDb.Quantity
             };
         }
         public static Furniture ToFurnitureProductDb(this FurnitureViewModel furniture)  // передача в БД  furniture
@@ -355,7 +356,8 @@ namespace WEBtest.Helpers
                 Name = furniture.Name,
                 OrderPlace = furniture.OrderPlace,
                 HardNumber = furniture.HardNumber,
-                Description = furniture.Description
+                Description = furniture.Description,
+                Quantity = furniture.Quantity
             };
         }
 

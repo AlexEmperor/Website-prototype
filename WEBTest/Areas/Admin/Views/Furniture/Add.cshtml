@@ -11,11 +11,13 @@
     <div class="row justify-content-center mt-3">
         <div class="col-6 mb-3">
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
-            <p>
+@*             <p>
                 <label>ID</label><br />
                 <textarea class="form-control" asp-for="Id"></textarea>
                 <span asp-validation-for="Id"></span>
-            </p>
+            </p> 
+ *@
+
             <p>
                 <label>Номер фурнитуры</label><br />
                 <textarea class="form-control" asp-for="HardNumber"></textarea>
@@ -40,6 +42,11 @@
                 <label>Последняя цена</label><br />
                 <textarea class="form-control" asp-for="Price"></textarea>
                 <span asp-validation-for="Price"></span>
+            </p>
+            <p>
+                <label>Кол-во в заказе</label><br />
+                <textarea class="form-control" asp-for="Quantity"></textarea>
+                <span asp-validation-for="Quantity"></span>
             </p>
 
         </div>

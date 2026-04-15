@@ -21,9 +21,7 @@ namespace WEBtest.Controllers
             var cart = _cartRepository.TryGetByUserId(GetUserId());
             var appUser = await userManager.GetUserAsync(User);
 
-//#pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
-//#pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
-//#pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
+
             var order = new OrderViewModel()
             {
                 Items = cart?.Items.ToCartItemViewModels(),
@@ -34,18 +32,14 @@ namespace WEBtest.Controllers
                     Phone = appUser?.PhoneNumber,     // телефон из БД
                 }
             };
-//#pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
-//#pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
-//#pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
 
             return View(order);
         }
 
         public string GetUserId()
         {
-//#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+
             return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-//#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
         }
 
         [HttpPost]

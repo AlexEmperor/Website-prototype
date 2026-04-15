@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using WEBtest.Db.Interfaces;
 using WEBtest.Db.Models;
 using WEBtest.Helpers;
@@ -38,17 +39,20 @@ namespace WEBtest.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var furnitures = _furnituresRepository.GetAllFurniture();
+                int maxId = furnitures.Max(f => (int?)f.Id) ?? 0;
 
                 // Id обычно не задаём вручную — он генерируется БД
                 // Если нужно, установите другие свойства из модели
                 _furnituresRepository.Add(new Furniture
                 {
-                    Id = furniture.Id,
+                    Id = maxId+1, //
                     Name = furniture.Name,
                     Price = furniture.Price,
                     Description = furniture.Description,
                     OrderPlace= furniture.OrderPlace,
-                    HardNumber= furniture.HardNumber
+                    HardNumber= furniture.HardNumber,
+                    Quantity= furniture.Quantity,
                 });
 
                 //_furnituresRepository.Save(); // если требуется явное сохранение

@@ -22,8 +22,8 @@ namespace WEBTest.Db
         public DbSet<Order> Orders { get; set; } = null!;                // Заказы
         public DbSet<DeliveryUser> DeliveryUsers { get; set; } = null!;  // Информация о пользователе заказа (Пользователи сделали заказ)
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Furniture> Furniture { get; set; }
+        public DbSet<Category> Categories { get; set; }                 //Категории товаров
+        public DbSet<Furniture> Furniture { get; set; }                 //Фурнитура
         public DbSet<OrderFurnitureItem> OrderFurnitureItems { get; set; }
         public DbSet<OrderFurniture> FurnitureOrders { get; set; }
 
