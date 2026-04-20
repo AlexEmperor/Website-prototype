@@ -14,11 +14,9 @@
 
         public byte[]? Jpeg { get; set; }   //set;
 
-        public List<CartItem>? CartItems { get; set; }
 
-        public int? FurnitureOrderId { get; set; }
 
-        public OrderFurniture? FurnitureOrder { get; set; }
+
 
         public int? CategoryId { get; set; }
 
@@ -39,5 +37,10 @@
         public int? Margin_FBO1 { get; set; }
 
         public int? Margin_FBS1 { get; set; }
+
+
+        public int? FurnitureOrderId { get; set; }
+
+        public OrderFurniture? FurnitureOrder { get; set; }
     }
 }
