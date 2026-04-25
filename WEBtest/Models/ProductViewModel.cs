@@ -33,15 +33,13 @@ namespace WEBtest.Models
         public string? PhotoPath { get; set; } = "/img/product.png";
         public IFormFile? PhotoFile { get; set; }
 
+        public int? CategoryId { get; set; }
+        public Category? Category { get; set; }
+
 
         public int? FurnitureOrderId { get; set; }
 
         public OrderFurniture? FurnitureOrder { get; set; }
-
-        public int? CategoryId { get; set; }
-
-        public Category? Category { get; set; }
-
 
 
 
@@ -67,6 +65,8 @@ namespace WEBtest.Models
 
         [Required]
         public int? Margin_FBS1 { get; set; }
+
+
 
 
 

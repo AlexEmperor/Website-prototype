@@ -24,6 +24,39 @@
 
                             <table class="table table-hover">
                                 <tr>
+                                    <td class="w-25"><span>Статус заказа</span></td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <select asp-for="@Model.Status" class="form-select list-group-item-success w-50"
+                                                    asp-items="@Html.GetEnumSelectList<OrderStatusViewModel>()">
+                                            </select>
+                                            <button class="btn btn-outline-success" type="submit"
+                                                asp-area="Admin"
+                                                asp-controller="Order"
+                                                asp-action="UpdateStatus"
+                                                asp-route-orderId=@Model.Id>
+                                                Обновить статус
+                                            </button>
+                                        </div>
+                                </tr>
+
+                                <tr>
+                               
+                                  <div class="d-flex align-items-center gap-2">
+                                    <label class="form-label" asp-for="@Model.DeparNumbeS">Номер заказа</label><br />
+                                    <input class="form-control" asp-for="@Model.DeparNumbeS" />
+                                    <span asp-validation-for="@Model.DeparNumbeS"></span>
+                                    <button class="btn btn-outline-success" type="submit"
+                                                asp-area="Admin"
+                                                asp-controller="Order"
+                                                asp-action="UpdateOrderDeparNumbeS"
+                                                asp-route-orderId=@Model.Id>
+                                    Обновить номер
+                                     </button>
+                                   </div>
+                             
+                                </tr>
+
+                                <tr>
                                     <td class="w-25"><span>ID</span></td>
                                     <td class="w-auto">@Model.Id</td>
                                 </tr>
@@ -39,17 +72,7 @@
                                     <td class="w-25"><span>Количество товаров</span></td>
                                     <td class="w-auto">@Model.ItemsQuantity</td>
                                 </tr>
-                                <tr>
-                                    <td class="w-25"><span>Статус заказа</span></td>
-                                    <td class="w-auto">
-                                        <p>
-                                            <select asp-for="@Model.Status" class="form-select list-group-item-success w-50"
-                                                    asp-items="@Html.GetEnumSelectList<OrderStatusViewModel>()">
-                                            </select>
-                                        </p>
 
-                                    </td>
-                                </tr>
                                 <tr>
                                     <td class="w-25"><span>Время создания заказа</span></td>
                                     <td class="w-auto">@Model.CreationDateTime</td>
@@ -129,15 +152,7 @@
                     </tr>
                 </table>
 
-                <div class="text-center mt-5">
-                    <button class="btn btn-outline-success" type="submit"
-                            asp-area="Admin"
-                            asp-controller="Order"
-                            asp-action="UpdateStatus"
-                            asp-route-orderId=@Model.Id>
-                        Обновить статус
-                    </button>
-                </div>
+
             }
             else
             {

@@ -53,6 +53,17 @@ namespace WEBtest.Db.Repositories
                 _databaseContext.SaveChanges();
             }
         }
+        public void UpdateOrderDeparNumbeS(Guid orderId, Order stolbec)
+        {
+            var existingOrder = TryGetById(orderId);
+
+            if (existingOrder != null)
+            {
+                existingOrder.DeparNumbeS = stolbec.DeparNumbeS;
+
+                _databaseContext.SaveChanges();
+            }
+        }
 
         public void Delete(Guid orderId)
         {

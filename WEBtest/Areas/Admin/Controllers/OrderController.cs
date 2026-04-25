@@ -30,7 +30,12 @@ namespace WEBtest.Areas.Admin.Controllers
         public IActionResult UpdateStatus(Guid orderId, OrderStatusViewModel status)
         {
             _ordersRepository.UpdateStatus(orderId, (OrderStatus)status);
+            return RedirectToAction(nameof(Index));
+        }
 
+        public IActionResult UpdateOrderDeparNumbeS(Guid orderId, Order stolbec)
+        {
+            _ordersRepository.UpdateOrderDeparNumbeS(orderId, stolbec);
             return RedirectToAction(nameof(Index));
         }
 

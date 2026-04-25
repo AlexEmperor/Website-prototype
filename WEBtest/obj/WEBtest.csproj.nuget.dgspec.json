@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\Website-prototype\\WEBTest\\WEBtest.csproj": {}
+    "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj": {}
   },
   "projects": {
     "C:\\Git\\Website-prototype\\WEBtest.Db\\WEBtest.Db.csproj": {
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Git\\Website-prototype\\WEBTest\\WEBtest.csproj": {
+    "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\Website-prototype\\WEBTest\\WEBtest.csproj",
+        "projectUniqueName": "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj",
         "projectName": "WEBtest",
-        "projectPath": "C:\\Git\\Website-prototype\\WEBTest\\WEBtest.csproj",
+        "projectPath": "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj",
         "packagesPath": "C:\\Users\\ррр\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\Website-prototype\\WEBTest\\obj\\",
+        "outputPath": "C:\\Git\\Website-prototype\\WEBtest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

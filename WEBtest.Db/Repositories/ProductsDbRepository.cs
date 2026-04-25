@@ -71,15 +71,28 @@ namespace WEBtest.Db.Repositories
             }
         }
 
+
+     //   public Task<List<Product>> SearchAsync(string text) => _databaseContext.Products
+   // .Include(p => p.Category)
+    //.Where(p => p.Name!.Contains(text, StringComparison.OrdinalIgnoreCase))
+ //   .ToListAsync();
+
         public List<Product> Search(string text)
         {
+            var nn = _databaseContext.Products;
+
+
+
             return _databaseContext.Products
-                .Include(p => p.Category)
-                .Include(p => p.FurnitureOrder)
-                    //.ThenInclude(fo => fo.Furnitures)
-                .Where(product => product.Name!.Contains(text, StringComparison.CurrentCultureIgnoreCase))
+                //.Where(product => product.Name==text)
+                .Where(product => product.Article == text ||  product.Name == text)
                 .ToList();
         }
+
+
+        //.Include(p => p.FurnitureOrder)
+        //.ThenInclude(fo => fo.Furnitures)
+
 
         public List<Category> GetAllCategories() => _databaseContext.Categories.ToList();
 

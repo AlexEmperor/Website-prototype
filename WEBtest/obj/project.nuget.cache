@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8n0ogcVXdTYzf6v/1gu+Vc9YSFz5xCDu8kscyge/f/OBCMnckpP+l14LAzz9AHvsHWVTRCGSq71Vs2nAyz+APw==",
+  "dgSpecHash": "a2v16DeLlyv749k8x2Z5rkbkIXIVqjLg3JxGM2J7yYQTDrP9BtKaT3hOdQZtbG2EPB3OzdR1rT137P7xBVdhFw==",
   "success": true,
-  "projectFilePath": "C:\\Git\\Website-prototype\\WEBTest\\WEBtest.csproj",
+  "projectFilePath": "C:\\Git\\Website-prototype\\WEBtest\\WEBtest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ррр\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ррр\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

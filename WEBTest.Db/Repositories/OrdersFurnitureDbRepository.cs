@@ -5,7 +5,7 @@ using WEBTest.Db;
 
 namespace WEBtest.Db.Repositories
 {
-    public class OrdersFurnitureDbRepository(DatabaseContext databaseContext) : IOrdersRepository
+    public class OrdersFurnitureDbRepository(DatabaseContext databaseContext) //: IOrdersRepository
     {
         private readonly DatabaseContext _databaseContext = databaseContext;
 
