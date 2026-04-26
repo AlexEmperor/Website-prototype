@@ -50,7 +50,7 @@ namespace WEBtest.Areas.Admin.Controllers
                     Name = furniture.Name,
                     Price = furniture.Price,
                     Description = furniture.Description,
-                    OrderPlace= furniture.OrderPlace,
+                    //OrderPlace= furniture.OrderPlace,
                     HardNumber= furniture.HardNumber,
                     Quantity= furniture.Quantity,
                 });
@@ -62,25 +62,5 @@ namespace WEBtest.Areas.Admin.Controllers
             // Если валидация не прошла — возвращаем форму с ошибками
             return View(furniture);
         }
-
-
-
-
-
-
-
-        /*
-        public Task<IActionResult> Add(FurnitureViewModel model)
-        {
-    
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-          //  _furnituresRepository.Add(model.ToFurnitureProductDb());
-
-            return RedirectToAction(nameof(Index));
-        }
-        */
     }
 }

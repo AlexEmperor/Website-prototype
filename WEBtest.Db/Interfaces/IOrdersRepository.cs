@@ -10,6 +10,7 @@ namespace WEBtest.Db.Interfaces
         void UpdateStatus(Guid orderId, OrderStatus status);
         void UpdateOrderDeparNumbeS(Guid orderId, Order stolbec);
         void Delete(Guid orderId);
+
         //List<Order> Find(string user);
        // List<Order> GetOrdersByUserUserName(Guid orderId);
 

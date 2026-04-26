@@ -4,7 +4,7 @@ using WEBtest.Models;
 
 namespace WEBtest.Repositories
 {
-    public class InMemoryOrderRepository : IOrderRepository   //!!!
+    public class InMemoryOrderRepository  //: IOrderRepository   //!!!
     {
         public readonly List<OrderViewModel> _orders = [];
         public void Add(OrderViewModel order)
@@ -15,7 +15,7 @@ namespace WEBtest.Repositories
             _orders.Add(order);
         }
 
-        public List<OrderViewModel> GetAll() => _orders;
+      //  public List<OrderViewModel> GetAll() => _orders;
 
         public OrderViewModel? TryGetById(Guid orderId) => _orders.FirstOrDefault(order => order.Id == orderId);
         public void UpdateStatus(Guid orderId, OrderStatusViewModel newStatus)

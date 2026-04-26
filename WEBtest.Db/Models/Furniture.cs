@@ -13,7 +13,7 @@
         public string OrderPlace { get; set; }
 
         ////////////////////////////////////////////////////////////////////
-        public int HardNumber { get; set; }
+        public int HardNumber { get; set; }  // номер
         public int Quantity { get; set; }
 
     }

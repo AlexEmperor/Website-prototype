@@ -8,7 +8,7 @@ namespace WEBtest.Db.Repositories
     public class FurnitureDbRepository(DatabaseContext databaseContext) : IFurnituresRepository
     {
         private readonly DatabaseContext _databaseContext = databaseContext;
-        public List<OrderFurniture> GetAll() => _databaseContext.FurnitureOrders.ToList();
+
         public List<Furniture> GetAllFurniture() => _databaseContext.Furniture.ToList();
 
         public void Add(Furniture furniture)

@@ -296,26 +296,30 @@ namespace WEBtest.Helpers
 
         #region OrderFurniture  //Заказы фурнитуры
 
-        public static List<OrderFurnitureViewModel> ToOrderFurnitureViewModels(this List<OrderFurniture> furnituresDb)
+        public static List<OrderFurnitureViewModel> ToOrderFurnitureViewModels(this List<OrderFurniture> orderfurnituresDb)
         {
-            var furnituresViewModel = new List<OrderFurnitureViewModel>();
+            var orderfurnituresViewModel = new List<OrderFurnitureViewModel>();
 
-            foreach (var furnitureDb in furnituresDb)  // Вывод на панель Администратора текущие заказы
+            foreach (var furnitureDb in orderfurnituresDb)  // Вывод на панель Администратора текущие заказы
             {
-                furnituresViewModel.Add(furnitureDb.ToOrderFurnitureViewModel());   // добавляем  !!!
+                orderfurnituresViewModel.Add(furnitureDb.ToOrderFurnitureViewModel());   // добавляем  !!!
             }
 
-            return furnituresViewModel;
+            return orderfurnituresViewModel;
         }
 
-        public static OrderFurnitureViewModel ToOrderFurnitureViewModel(this OrderFurniture furnitureDb) // !!!!передача 
+        public static OrderFurnitureViewModel ToOrderFurnitureViewModel(this OrderFurniture orderfurnitureDb) // !!!!передача 
         {
             return new OrderFurnitureViewModel()
             {
-                Id = furnitureDb.Id,
-                Price = furnitureDb.Price,
-                Description = furnitureDb.Description,
-                OrderPlace = furnitureDb.OrderPlace
+                Id = orderfurnitureDb.Id,
+                Price = orderfurnitureDb.Price,
+                Description = orderfurnitureDb.Description,
+                OrderPlace = orderfurnitureDb.OrderPlace,
+                Provider = orderfurnitureDb.Provider,
+                OrderCreationDateTime = orderfurnitureDb.OrderCreationDateTime,
+                OrderDeliveryDateTime = orderfurnitureDb.OrderDeliveryDateTime,
+                Volume = orderfurnitureDb.Volume
             };
         }
 

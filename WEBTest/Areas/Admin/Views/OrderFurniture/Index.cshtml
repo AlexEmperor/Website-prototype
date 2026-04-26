@@ -12,19 +12,30 @@
 
         @if (Model != null && Model.Count > 0)
         {
+
+            <div class="text-end">
+                <a class="btn btn-outline-success mb-2 mt-2"
+                   asp-area="Admin"
+                   asp-controller="Furniture"
+                   asp-action="Add">
+                    Заказать фурнитуру
+                </a>
+            </div>
+
             <div class="row justify-content-center mt-3">
                 <div class="col-12">
                     <table class="table table-responsive table-striped table-hover mb-5">
                         <thead>
                             <tr align="center">
                                 <th scope="col">#</th>
-                                <th scope="col">Сумма</th>
-                                <th scope="col">Статус</th>
-                                <th scope="col">Пользователь (логин)</th>
-                                <th scope="col">Дата</th>
-                                <th scope="col">Время</th>
-                                <th scope="col">Общ.кол</th>
-                                <th scope="col">Адрес</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Цена</th>
+                                <th scope="col">Где заказано</th>
+                                <th scope="col">Заказано</th>
+                                <th scope="col">Получено</th>
+                                <th scope="col">Примечание</th>
+                                <th scope="col">Производитель</th>
+                                <th scope="col">Объем</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -34,21 +45,15 @@
                                 <tr align="center" class="align-baseline">
                                     <td class="fw-bold">@(i + 1)</td>
                                     <td>@Model[i].Id</td>
-                                    <td>@Model[i].Name</td>
-                                    <td>@Model[i].Description</td>
                                     <td>@Model[i].Price</td>
                                     <td>@Model[i].OrderPlace</td>
+                                    <td>@Model[i].OrderCreationDateTime.ToShortDateString()</td>
+                                    <td>@Model[i].OrderDeliveryDateTime.ToShortDateString()</td>
+                                    <td>@Model[i].Description</td>
+                                    <td>@Model[i].Provider</td>
+                                    <td>@Model[i].Volume</td>
                                     <td>@Model[i].Products</td>
                                     <td>@Model[i].OrderFurnitures</td>
-                                    <td align="left">
-                                        <a class="text-success"
-                                           asp-area="Admin"
-                                           asp-controller="Order"
-                                           asp-action="Detail"
-                                           asp-route-OrderId="@Model[i].Id">
-                                            Подробнее
-                                        </a>
-                                    </td>
                                 </tr>
                             }
                         </tbody>

@@ -67,6 +67,7 @@ namespace WEBtest.Models
         public int? Margin_FBS1 { get; set; }
 
 
+        public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
 
 
 

@@ -3,7 +3,6 @@
     public class Product
     {
 
-
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -42,5 +41,8 @@
         public int? FurnitureOrderId { get; set; }
 
         public OrderFurniture? FurnitureOrder { get; set; }
+
+        public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
+
     }
 }

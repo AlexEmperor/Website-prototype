@@ -4,9 +4,10 @@ namespace WEBtest.Db.Interfaces
 {
     public interface IFurnituresRepository
     {
-        List<OrderFurniture> GetAll();
-        List<Furniture> GetAllFurniture();
-        //Furniture? TryGetById(Guid furnitureId);
+
+
+       List<Furniture> GetAllFurniture();
        void Add(Furniture furniture);
+
     }
 }

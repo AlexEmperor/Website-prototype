@@ -12,6 +12,11 @@
 
         public DateTime OrderCreationDateTime { get; set; }
         public DateTime OrderDeliveryDateTime { get; set; }
-        public List<OrderFurnitureItem> Items { get; set; } = [];
+
+        public int Volume { get; set; }
+
+
+    //public List<OrderFurnitureItem> Items { get; set; } = [];
+
     }
 }

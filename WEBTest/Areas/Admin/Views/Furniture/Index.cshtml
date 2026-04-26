@@ -30,9 +30,9 @@
                                 <th scope="col">Номер</th>
                                 <th scope="col">Наименование</th>
                                 <th scope="col">Описание</th>
-                                <th scope="col">Где заказано</th>
+                           @*      <th scope="col">Где заказано</th> *@
                                 <th scope="col">Последняя цена</th>
-                                <th scope="col">Кол-во в заказе</th>
+                                <th scope="col">Кол-во осталось</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,7 +51,7 @@
                                     </td> *@
                                     <td>@Model[i].Name</td>
                                     <td>@Model[i].Description</td>
-                                    <td>@Model[i].OrderPlace</td>
+                                   @*  <td>@Model[i].OrderPlace</td> *@
                                     <td>@Model[i].Price.ToString("c")</td>
                                     <td>@Model[i].Quantity</td>
                                     

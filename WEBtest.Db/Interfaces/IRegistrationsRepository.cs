@@ -10,6 +10,7 @@ namespace WEBtest.Db.Interfaces
         void Add(Registration registration);
         void Delete(int registrationId);
         void Update(Registration registration);
+
        // List<Registration> Search(string text);
 
     }
