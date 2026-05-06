@@ -4,7 +4,7 @@ namespace WEBtest.Db.Interfaces
 {
     public interface IOrderFurnituresRepository
     {
-        List<OrderFurniture> GetAllOrderFurniture();
+       List<OrderFurniture> GetAllOrderFurniture();
        void Add(OrderFurniture orderfurniture);
 
     }

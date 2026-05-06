@@ -7,7 +7,7 @@
     @await Html.PartialAsync("SideBar")
     <div class="col-9 mb-3">
         <div class="text-center text-uppercase text-success mb-5 mt-5">
-            <h2 class="row-title">Заказы Фурнитуры</h2>
+            <h2 class="row-title">Заказы Фурнитуры2</h2>
         </div>
 
         @if (Model != null && Model.Count > 0)
@@ -16,7 +16,7 @@
             <div class="text-end">
                 <a class="btn btn-outline-success mb-2 mt-2"
                    asp-area="Admin"
-                   asp-controller="Furniture"
+                   asp-controller="OrderFurniture"
                    asp-action="Add">
                     Заказать фурнитуру
                 </a>
@@ -28,7 +28,7 @@
                         <thead>
                             <tr align="center">
                                 <th scope="col">#</th>
-                                <th scope="col">ID</th>
+                                <th scope="col">Фурнитура</th>
                                 <th scope="col">Цена</th>
                                 <th scope="col">Где заказано</th>
                                 <th scope="col">Заказано</th>
@@ -36,6 +36,7 @@
                                 <th scope="col">Примечание</th>
                                 <th scope="col">Производитель</th>
                                 <th scope="col">Объем</th>
+
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -43,8 +44,8 @@
                             @for (var i = 0; i < Model.Count; i++)
                             {
                                 <tr align="center" class="align-baseline">
-                                    <td class="fw-bold">@(i + 1)</td>
                                     <td>@Model[i].Id</td>
+                                    <td>@Model[i].Furnitures?.Name</td>
                                     <td>@Model[i].Price</td>
                                     <td>@Model[i].OrderPlace</td>
                                     <td>@Model[i].OrderCreationDateTime.ToShortDateString()</td>
@@ -52,11 +53,12 @@
                                     <td>@Model[i].Description</td>
                                     <td>@Model[i].Provider</td>
                                     <td>@Model[i].Volume</td>
-                                    <td>@Model[i].Products</td>
-                                    <td>@Model[i].OrderFurnitures</td>
+                                 @*    <td>@Model[i].FurnituresId</td> *@
+                                    
                                 </tr>
                             }
                         </tbody>
+
                         <tfoot>
                             <tr align="center">
                                 <th colspan="4"></th>

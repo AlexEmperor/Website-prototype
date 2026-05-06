@@ -167,9 +167,6 @@ namespace WEBtest.Db.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("OrderFurnitureId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("OrderPlace")
                         .IsRequired()
                         .HasColumnType("text");
@@ -184,8 +181,6 @@ namespace WEBtest.Db.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("OrderFurnitureId");
 
                     b.HasIndex("ProductId");
 
@@ -242,6 +237,9 @@ namespace WEBtest.Db.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int?>("FurnituresId")
+                        .HasColumnType("integer");
+
                     b.Property<DateTime>("OrderCreationDateTime")
                         .HasColumnType("timestamp without time zone");
 
@@ -263,6 +261,8 @@ namespace WEBtest.Db.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FurnituresId");
 
                     b.ToTable("FurnitureOrders");
                 });
@@ -315,6 +315,9 @@ namespace WEBtest.Db.Migrations
                     b.Property<string>("Barcode")
                         .HasColumnType("text");
 
+                    b.Property<int?>("Cancelled")
+                        .HasColumnType("integer");
+
                     b.Property<int?>("CategoryId")
                         .HasColumnType("integer");
 
@@ -359,6 +362,9 @@ namespace WEBtest.Db.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int?>("Storage_Ozon")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Wasordered")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -434,10 +440,6 @@ namespace WEBtest.Db.Migrations
 
             modelBuilder.Entity("WEBtest.Db.Models.Furniture", b =>
                 {
-                    b.HasOne("WEBtest.Db.Models.OrderFurniture", null)
-                        .WithMany("Furnitures")
-                        .HasForeignKey("OrderFurnitureId");
-
                     b.HasOne("WEBtest.Db.Models.Product", null)
                         .WithMany("FurnituraList")
                         .HasForeignKey("ProductId");
@@ -452,6 +454,15 @@ namespace WEBtest.Db.Migrations
                     b.Navigation("DeliveryUser");
                 });
 
+            modelBuilder.Entity("WEBtest.Db.Models.OrderFurniture", b =>
+                {
+                    b.HasOne("WEBtest.Db.Models.Furniture", "Furnitures")
+                        .WithMany()
+                        .HasForeignKey("FurnituresId");
+
+                    b.Navigation("Furnitures");
+                });
+
             modelBuilder.Entity("WEBtest.Db.Models.OrderFurnitureItem", b =>
                 {
                     b.HasOne("WEBtest.Db.Models.Furniture", "Furniture")
@@ -461,7 +472,7 @@ namespace WEBtest.Db.Migrations
                         .IsRequired();
 
                     b.HasOne("WEBtest.Db.Models.OrderFurniture", "OrderFurniture")
-                        .WithMany("Items")
+                        .WithMany()
                         .HasForeignKey("OrderFurnitureId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -516,13 +527,6 @@ namespace WEBtest.Db.Migrations
 
             modelBuilder.Entity("WEBtest.Db.Models.Order", b =>
                 {
-                    b.Navigation("Items");
-                });
-
-            modelBuilder.Entity("WEBtest.Db.Models.OrderFurniture", b =>
-                {
-                    b.Navigation("Furnitures");
-
                     b.Navigation("Items");
                 });
 

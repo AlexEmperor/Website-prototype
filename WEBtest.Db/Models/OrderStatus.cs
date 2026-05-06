@@ -6,6 +6,8 @@
         Processed,
         Delivering,
         Delivered,
-        Canceled
+        Canceled,
+        Returning,
+        Returned
     }
 }

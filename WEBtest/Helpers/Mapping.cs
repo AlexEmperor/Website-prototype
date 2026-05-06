@@ -64,9 +64,9 @@ namespace WEBtest.Helpers
                 Article = productDb.Article,
                 Barcode = productDb.Barcode,
                 CategoryId = productDb.CategoryId,
-                Category = productDb.Category, // ← добавляем объект
+                Category = productDb.Category,                       // ← добавляем объект
                 FurnitureOrderId = productDb.FurnitureOrderId,
-                FurnitureOrder = productDb.FurnitureOrder, // ← добавляем объект
+                FurnitureOrder = productDb.FurnitureOrder,           // ← добавляем объект
                 PhotoPath = productDb.PhotoPath,
                 Jpeg = productDb.Jpeg,
                 Storage_Ozon = productDb.Storage_Ozon,
@@ -75,6 +75,8 @@ namespace WEBtest.Helpers
                 Costs_Ozon = productDb.Costs_Ozon,
                 Margin_FBO1 = productDb.Margin_FBO1,
                 Margin_FBS1 = productDb.Margin_FBS1,
+                Wasordered=productDb.Wasordered,
+                Cancelled=productDb.Cancelled,
             };
         }
 
@@ -319,7 +321,25 @@ namespace WEBtest.Helpers
                 Provider = orderfurnitureDb.Provider,
                 OrderCreationDateTime = orderfurnitureDb.OrderCreationDateTime,
                 OrderDeliveryDateTime = orderfurnitureDb.OrderDeliveryDateTime,
-                Volume = orderfurnitureDb.Volume
+                Volume = orderfurnitureDb.Volume,
+                Furnitures = orderfurnitureDb.Furnitures,
+                //FurnituresId = orderfurnitureDb.FurnituresId
+            };
+        }
+        public static OrderFurniture ToOrderProductDb(this OrderFurnitureViewModel orderFurniture)  // передача в БД  Product
+        {
+            return new OrderFurniture()
+            {
+                Id = orderFurniture.Id,
+                Price = orderFurniture.Price,
+                Description = orderFurniture.Description,
+                OrderPlace = orderFurniture.OrderPlace,
+                Provider = orderFurniture.Provider,
+                OrderCreationDateTime = orderFurniture.OrderCreationDateTime,
+                OrderDeliveryDateTime = orderFurniture.OrderDeliveryDateTime,
+                Volume = orderFurniture.Volume,
+                Furnitures = orderFurniture.Furnitures,
+               // FurnituresId = orderFurniture.FurnituresId
             };
         }
 
@@ -344,11 +364,11 @@ namespace WEBtest.Helpers
             return new FurnitureViewModel()
             {
                 Id = furnitureDb.Id,
-                Price = furnitureDb.Price,
-                Description = furnitureDb.Description,
-                OrderPlace = furnitureDb.OrderPlace,
                 Name = furnitureDb.Name,
+                OrderPlace = furnitureDb.OrderPlace,
                 HardNumber = furnitureDb.HardNumber,
+                Description = furnitureDb.Description,
+                Price = furnitureDb.Price,
                 Quantity= furnitureDb.Quantity
             };
         }
@@ -361,6 +381,7 @@ namespace WEBtest.Helpers
                 OrderPlace = furniture.OrderPlace,
                 HardNumber = furniture.HardNumber,
                 Description = furniture.Description,
+                Price = furniture.Price,
                 Quantity = furniture.Quantity
             };
         }

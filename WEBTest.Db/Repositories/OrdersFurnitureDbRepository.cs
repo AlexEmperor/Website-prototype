@@ -10,7 +10,16 @@ namespace WEBtest.Db.Repositories
         private readonly DatabaseContext _databaseContext = databaseContext;
 
 
+        /*
         public List<OrderFurniture> GetAllOrderFurniture() => _databaseContext.FurnitureOrders.ToList();
+        */
+        
+        public List<OrderFurniture> GetAllOrderFurniture() => 
+            _databaseContext.FurnitureOrders
+            //.Include(p => p.FurnituresId)
+            .Include(fo => fo.Furnitures)
+            .ToList();
+        
 
         public void Add(OrderFurniture orderfurniture)
         {

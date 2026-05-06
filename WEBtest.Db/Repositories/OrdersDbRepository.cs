@@ -49,7 +49,18 @@ namespace WEBtest.Db.Repositories
             if (existingOrder != null)
             {
                 existingOrder.Status = newStatus;
-
+                if (existingOrder.Status.ToString() == "Delivered")
+                {
+                    existingOrder.Items[0].Product.Wasordered = existingOrder.Items[0].Product.Wasordered + existingOrder.Items[0].Quantity;
+                }
+                if (existingOrder.Status.ToString() == "Canceled")
+                {
+                    existingOrder.Items[0].Product.Cancelled = existingOrder.Items[0].Product.Wasordered + existingOrder.Items[0].Quantity;
+                }
+                if (existingOrder.Status.ToString() == "Returned")
+                {
+                    existingOrder.Items[0].Product.Storage_FBS1 = existingOrder.Items[0].Product.Storage_FBS1 + existingOrder.Items[0].Quantity;
+                }
                 _databaseContext.SaveChanges();
             }
         }

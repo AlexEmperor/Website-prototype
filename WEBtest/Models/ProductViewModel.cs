@@ -65,6 +65,12 @@ namespace WEBtest.Models
 
         [Required]
         public int? Margin_FBS1 { get; set; }
+        [Required]
+        public int? Wasordered { get; set; } = 0;
+
+        public int? Cancelled { get; set; } = 0;
+
+
 
 
         public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();

@@ -44,5 +44,9 @@
 
         public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
 
+        public int? Wasordered { get; set; } = 0;
+        public int? Cancelled { get; set; } = 0;
+
+
     }
 }

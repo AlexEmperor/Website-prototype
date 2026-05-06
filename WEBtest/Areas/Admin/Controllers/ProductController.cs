@@ -21,54 +21,42 @@ namespace WEBtest.Areas.Admin.Controllers
 
         public IActionResult Index()  // вывоит таблицу товара
         {
-            return View(_productsRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList());
+            var products = _productsRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList();
+
+            return View(products);
             //return View(products);
         }
+        public IActionResult Statistica()  // вывоит таблицу товара
+        {
+            var products = _productsRepository.GetAll().ToProductViewModels().OrderBy(product => product.Id).ToList();
+
+            return View(products);
+        }
+
 
 
         public IActionResult Add()
         {
-            ViewBag.Categories = _productsRepository.GetAllCategories()
+
+                ViewBag.Categories = _productsRepository.GetAllCategories()
         .Select(c => new SelectListItem
         {
             Value = c.Id.ToString(),
             Text = c.CategoryName
         }).ToList();
-            ViewBag.FurnitureOrders = _productsRepository.GetAllFurnitureOrders()
-    .Select(fo => new SelectListItem
-    {
-        Value = fo.Id.ToString(),
-        Text = $"{fo.Provider} ({fo.OrderCreationDateTime:dd.MM.yyyy})"
-    }).ToList();
+                ViewBag.FurnitureOrders = _productsRepository.GetAllFurnitureOrders()
+        .Select(fo => new SelectListItem
+        {
+            Value = fo.Id.ToString(),
+            Text = $"{fo.Provider} ({fo.OrderCreationDateTime:dd.MM.yyyy})"
+        }).ToList();
+            
             return View();
+            
         }
         
 
-        [HttpPost]
-        public async Task<IActionResult> Add(ProductViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            /*
-            // Фото ОБЯЗАТЕЛЬНО при создании
-            if (model.PhotoFile == null)
-            {
-                ModelState.AddModelError("PhotoFile", "Необходимо загрузить фото товара");
-                return View(model);
-            }
-            */
-            model.PhotoPath = await FileSaver.SaveFileAsync(
-                model.PhotoFile,
-                "img",
-                _environment,
-                model.Name);
 
-            _productsRepository.Add(model.ToProductDb());
-
-            return RedirectToAction(nameof(Index));
-        }
         public IActionResult Delete(int id)
         {
             _productsRepository.Delete(id);
@@ -110,27 +98,6 @@ namespace WEBtest.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            /*
-            // ===== Фото =====
-            if (product.PhotoFile != null)
-            {
-                // Удаляем старый файл
-                if (!string.IsNullOrEmpty(productDb.PhotoPath))
-                {
-                    var oldPhotoPath = Path.Combine(_environment.WebRootPath, productDb.PhotoPath.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
-                    if (System.IO.File.Exists(oldPhotoPath))
-                    {
-                        System.IO.File.Delete(oldPhotoPath);
-                    }
-                }
-
-                var newPhoto = FileSaver.SaveFileAsync(product.PhotoFile, "img", _environment, product.Name).Result;
-                if (newPhoto != null)
-                {
-                    productDb.PhotoPath = newPhoto;
-                }
-            }
-            */
 
             _productsRepository.Update(product.ToProductDb());
 

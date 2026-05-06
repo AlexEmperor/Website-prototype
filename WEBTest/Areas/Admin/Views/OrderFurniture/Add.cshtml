@@ -12,18 +12,36 @@
         <div class="col-6 mb-3">
 
             <div class="text-danger fw-bold text-uppercase" asp-validation-summary="All"></div>
+
             <p>
-                <label>ID</label><br />
-                <textarea class="form-control" asp-for="Id"></textarea>
-                <span asp-validation-for="Id"></span>
-            </p> 
+                <label>Заказ фурнитуры</label>
+                <select class="form-control"
+                        asp-for="FurnituresId"
+                        asp-items="ViewBag.Furniture">
+                    <option value="">Выберите заказ</option>
+                </select>
+            </p>
+
             <p>
-                <label>Номер фурнитуры</label><br />
+                <label class="form-label" asp-for="OrderCreationDateTime"></label>
+                <br />
+                <input class="form-control" asp-for="OrderCreationDateTime" />
+                <span asp-validation-for="OrderCreationDateTime"></span>
+            </p>
+@*             <p>
+                <label class="form-label" asp-for="OrderCreationDateTime.Date"></label>
+                <br />
+                <input class="form-control" asp-for="OrderCreationDateTime.Date" />
+                <span asp-validation-for="OrderCreationDateTime.Date"></span>
+            </p> *@
+
+            <p>
+                <label>Цена</label><br />
                 <textarea class="form-control" asp-for="Price"></textarea>
                 <span asp-validation-for="Price"></span>
             </p>
             <p>
-                <label>Наименование</label><br />
+                <label>Место заказа</label><br />
                 <textarea class="form-control" asp-for="OrderPlace"></textarea>
                 <span asp-validation-for="OrderPlace"></span>
             </p>
@@ -33,19 +51,14 @@
                 <span asp-validation-for="Description"></span>
             </p>
             <p>
-                <label>Где заказано</label><br />
-                <textarea class="form-control" asp-for="OrderPlace"></textarea>
-                <span asp-validation-for="OrderPlace"></span>
-            </p>
-            <p>
-                <label>Последняя цена</label><br />
-                <textarea class="form-control" asp-for="Provider"></textarea>
-                <span asp-validation-for="Provider"></span>
-            </p>
-            <p>
                 <label>Кол-во в заказе</label><br />
                 <textarea class="form-control" asp-for="Volume"></textarea>
                 <span asp-validation-for="Volume"></span>
+            </p>
+            <p>
+                <label>Произвоитель</label><br />
+                    <textarea class="form-control" asp-for="Provider"></textarea>
+                    <span asp-validation-for="Provider"></span>
             </p>
 
         </div>

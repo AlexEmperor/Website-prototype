@@ -68,7 +68,7 @@ namespace WEBtest.Controllers
             };
 
             orderDb.Items[0].Product.Storage_FBS1 = orderDb.Items[0].Product.Storage_FBS1 - orderDb.Items[0].Quantity;
-
+            //orderDb.Items[0].Product.Wasordered = orderDb.Items[0].Product.Wasordered + orderDb.Items[0].Quantity;
 
             _orderRepository.Add(orderDb);
 
