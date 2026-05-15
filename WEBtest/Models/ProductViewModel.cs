@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using WEBtest.Db.Models;
 
 namespace WEBtest.Models
@@ -74,9 +76,13 @@ namespace WEBtest.Models
 
 
 
+        [ValidateNever]
+        [AllowNull]
+        //public List<CartItemViewModel> Items { get; set; }
+        //public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
+       
+        public List<Furniture> FurnituraList { get; set; } = new List<Furniture>();
 
-
-        public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
 
 
 

@@ -37,24 +37,48 @@ namespace WEBtest.Areas.Admin.Controllers
 
         public IActionResult Add()
         {
-
-                ViewBag.Categories = _productsRepository.GetAllCategories()
+            ViewBag.Categories = _productsRepository.GetAllCategories()
         .Select(c => new SelectListItem
         {
             Value = c.Id.ToString(),
             Text = c.CategoryName
         }).ToList();
-                ViewBag.FurnitureOrders = _productsRepository.GetAllFurnitureOrders()
-        .Select(fo => new SelectListItem
-        {
-            Value = fo.Id.ToString(),
-            Text = $"{fo.Provider} ({fo.OrderCreationDateTime:dd.MM.yyyy})"
-        }).ToList();
-            
+            ViewBag.FurnitureOrders = _productsRepository.GetAllFurnitureOrders()
+    .Select(fo => new SelectListItem
+    {
+        Value = fo.Id.ToString(),
+        Text = $"{fo.Provider} ({fo.OrderCreationDateTime:dd.MM.yyyy})"
+    }).ToList();
             return View();
-            
         }
-        
+
+
+        [HttpPost]
+        public async Task<IActionResult> Add(ProductViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            /*
+            // Фото ОБЯЗАТЕЛЬНО при создании
+            if (model.PhotoFile == null)
+            {
+                ModelState.AddModelError("PhotoFile", "Необходимо загрузить фото товара");
+                return View(model);
+            }
+            */
+            model.PhotoPath = await FileSaver.SaveFileAsync(
+                model.PhotoFile,
+                "img",
+                _environment,
+                model.Name);
+
+            _productsRepository.Add(model.ToProductDb());
+
+            return RedirectToAction(nameof(Index));
+        }
+
 
 
         public IActionResult Delete(int id)

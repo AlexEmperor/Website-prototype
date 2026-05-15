@@ -29,7 +29,7 @@
                                 <th scope="col">FBS1, кол-во.</th>
                                 <th scope="col">Заказано</th>
                                 <th scope="col">Отменено</th>
-                                <th scope="col"></th>
+                                <th scope="col">%</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,6 +46,13 @@
                                         <td>@Model[i].Storage_FBS1</td>
                                         <td>@Model[i].Wasordered</td>
                                         <td>@Model[i].Cancelled</td>
+                                        <td>
+                                        @{
+                                            var total = Model[i].Cancelled + Model[i].Wasordered;
+                                                var percent = ( ((decimal)Model[i].Wasordered - (decimal)Model[i].Cancelled) / total) * 100;
+                                        }
+                                        @($"{percent:F0}%")
+                                       
                                     </tr>
                                 }
                             }

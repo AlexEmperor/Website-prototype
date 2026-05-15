@@ -65,7 +65,8 @@ namespace WEBtest.Db.Repositories
                 excitingProduct.Costs_Ozon = product.Costs_Ozon;
                 excitingProduct.Margin_FBO1 = product.Margin_FBO1;
                 excitingProduct.Margin_FBS1 = product.Margin_FBS1;
-                excitingProduct.Wasordered=product.Wasordered;
+              //  excitingProduct.Wasordered=product.Wasordered;
+              //  excitingProduct.Cancelled = product.Cancelled;
                 excitingProduct.BarcodeWB = product.BarcodeWB;
 
 

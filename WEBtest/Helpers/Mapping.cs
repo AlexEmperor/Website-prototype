@@ -78,6 +78,7 @@ namespace WEBtest.Helpers
                 Wasordered=productDb.Wasordered,
                 Cancelled=productDb.Cancelled,
                 BarcodeWB=productDb.BarcodeWB,
+                FurnituraList = productDb.FurnituraList,
             };
         }
 
@@ -101,7 +102,10 @@ namespace WEBtest.Helpers
                 Costs_Ozon = product.Costs_Ozon,
                 Margin_FBO1 = product.Margin_FBO1,
                 Margin_FBS1 = product.Margin_FBS1,
+                Wasordered = product.Wasordered,
+                Cancelled = product.Cancelled,
                 BarcodeWB = product.BarcodeWB,
+                FurnituraList = product.FurnituraList,
             };
         }
         #endregion
