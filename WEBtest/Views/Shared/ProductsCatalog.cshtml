@@ -6,8 +6,8 @@
    <div class="row g-4">
      @foreach (var product in Model)
         {
-            if (@product.Storage_FBS1 != 0 | @product.Storage_Ozon != 0)
-            {
+@*             if (@product.Storage_FBS1 != 0 | @product.Storage_Ozon != 0)
+            { *@
                 if ((product.Jpeg) != null)
                 {
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 }
-            }
+            @* } *@
      }
    </div>
 

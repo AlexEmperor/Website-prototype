@@ -25,6 +25,8 @@
 
         public string? Barcode { get; set; } = "0";
 
+        public string? BarcodeWB { get; set; } = "0";
+
         public int? Storage_Ozon { get; set; }
 
         public int? Storage_FBS1 { get; set; }

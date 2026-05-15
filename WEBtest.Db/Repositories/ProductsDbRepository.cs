@@ -66,8 +66,10 @@ namespace WEBtest.Db.Repositories
                 excitingProduct.Margin_FBO1 = product.Margin_FBO1;
                 excitingProduct.Margin_FBS1 = product.Margin_FBS1;
                 excitingProduct.Wasordered=product.Wasordered;
+                excitingProduct.BarcodeWB = product.BarcodeWB;
 
-               // excitingProduct.Jpeg = product.Jpeg;  // !!
+
+                // excitingProduct.Jpeg = product.Jpeg;  // !!
 
                 _databaseContext.SaveChanges();  // Сохраняем изменения в БД
             }

@@ -47,6 +47,7 @@ namespace WEBtest.Models
         public string Article { get; set; }
        
         public string Barcode { get; set; }
+        public string? BarcodeWB { get; set; }
 
         [Required]
         public int? Storage_Ozon { get; set; }
@@ -69,6 +70,8 @@ namespace WEBtest.Models
         public int? Wasordered { get; set; } = 0;
 
         public int? Cancelled { get; set; } = 0;
+
+
 
 
 

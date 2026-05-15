@@ -21,6 +21,12 @@
                 <textarea class="form-control" asp-for="Barcode"></textarea>
                 <span asp-validation-for="Barcode"></span>
             </p>
+             <p>
+                <label class="form-label" asp-for="BarcodeWB"></label><br />
+                <textarea class="form-control" asp-for="BarcodeWB"></textarea>
+                <span asp-validation-for="BarcodeWB"></span>
+            </p> 
+
 
             <p>
                 <label class="form-label" asp-for="Name"></label><br />
@@ -53,13 +59,6 @@
                     <option value="">Выберите заказ</option>
                 </select>
             </p>
-@*             <p>
-                <label>Фото2</label>
-                <input type="file" class="form-control" asp-for="Jpeg" />
-                <small class="text-muted">Допустимые форматы: JPG</small>
-            </p> *@
-
-
             <p>
                 <label>Склад Озон кол-во</label><br />
                 <textarea class="form-control" asp-for="Storage_Ozon"></textarea>

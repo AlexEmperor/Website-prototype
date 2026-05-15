@@ -76,6 +76,20 @@ namespace WEBtest.Db.Repositories
             }
         }
 
+        public void СhangeTimeСreations(Guid orderId, Order stolbec)
+        {
+            var existingOrder = TryGetById(orderId);
+
+            if (existingOrder != null)
+            {
+                existingOrder.CreationDateTime = stolbec.CreationDateTime;
+
+                _databaseContext.SaveChanges();
+            }
+        }
+
+
+
         public void Delete(Guid orderId)
         {
             var existingOrder = TryGetById(orderId);

@@ -77,6 +77,7 @@ namespace WEBtest.Helpers
                 Margin_FBS1 = productDb.Margin_FBS1,
                 Wasordered=productDb.Wasordered,
                 Cancelled=productDb.Cancelled,
+                BarcodeWB=productDb.BarcodeWB,
             };
         }
 
@@ -100,6 +101,7 @@ namespace WEBtest.Helpers
                 Costs_Ozon = product.Costs_Ozon,
                 Margin_FBO1 = product.Margin_FBO1,
                 Margin_FBS1 = product.Margin_FBS1,
+                BarcodeWB = product.BarcodeWB,
             };
         }
         #endregion

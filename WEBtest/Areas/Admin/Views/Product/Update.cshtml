@@ -39,11 +39,12 @@
                 <textarea class="form-control" asp-for="Barcode"></textarea>
                 <span asp-validation-for="Barcode"></span>
             </p>
+            <p>
+                <label class="form-label" asp-for="BarcodeWB"></label><br />
+                <textarea class="form-control" asp-for="BarcodeWB"></textarea>
+                <span asp-validation-for="BarcodeWB"></span>
+            </p>
 
-@*             <p>
-                <label>Фото</label>
-                <input type="file" class="form-control" asp-for="PhotoFile" />
-            </p> *@
             <p>
                 <label asp-for="CategoryId">Категория</label>
                 <select class="form-control"

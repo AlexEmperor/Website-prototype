@@ -32,6 +32,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Артикул</th>
                                 <th scope="col">Штрихкод</th>
+                                <th scope="col">ШтрихкодWB</th>
                                 <th scope="col">Категория</th>
                                 <th scope="col">Наименование товара</th>
                                 <th scope="col">Цена, руб.</th>
@@ -52,6 +53,7 @@
                                     <td class="fw-bold">@Model[i].Id</td>
                                     <td style ="white-space: nowrap;">@Model[i].Article</td>
                                     <td>@Model[i].Barcode</td>
+                                    <td>@Model[i].BarcodeWB</td>
                                     <td>@Model[i].Category?.CategoryName</td>
                                     <td align="left">
                                         <a class="text-success"

@@ -76,6 +76,20 @@
                                 <tr>
                                     <td class="w-25"><span>Время создания заказа</span></td>
                                     <td class="w-auto">@Model.CreationDateTime</td>
+
+                                    <div class="d-flex align-items-center gap-2">
+                                        <label class="form-label" asp-for="@Model.CreationDateTime">Дата</label><br />
+                                        <input class="form-control" asp-for="@Model.CreationDateTime" />
+                                        <span asp-validation-for="@Model.CreationDateTime"></span>
+
+                                    <button class="btn btn-outline-success" type="submit"
+                                            asp-area="Admin"
+                                            asp-controller="Order"
+                                            asp-action="СhangeTimeСreations"
+                                            asp-route-orderId=@Model.Id>
+                                        Изменить
+                                    </button>
+                                    </div>
                                 </tr>
                             </table>
                         </td>

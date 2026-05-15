@@ -39,6 +39,12 @@ namespace WEBtest.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult СhangeTimeСreations(Guid orderId, Order stolbec)
+        {
+            _ordersRepository.СhangeTimeСreations(orderId, stolbec);
+            return RedirectToAction(nameof(Index));
+        }
+
         public IActionResult Delete(Guid id)
         {
             _ordersRepository.Delete(id);
