@@ -69,6 +69,7 @@ namespace WEBtest.Db.Repositories
               //  excitingProduct.Cancelled = product.Cancelled;
                 excitingProduct.BarcodeWB = product.BarcodeWB;
 
+                excitingProduct.FurnituraItem = product.FurnituraItem;
 
                 // excitingProduct.Jpeg = product.Jpeg;  // !!
 

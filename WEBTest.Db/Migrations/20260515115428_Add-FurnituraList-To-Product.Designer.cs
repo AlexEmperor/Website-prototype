@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WEBTest.Db;
@@ -11,9 +12,11 @@ using WEBTest.Db;
 namespace WEBtest.Db.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20260515115428_Add-FurnituraList-To-Product")]
+    partial class AddFurnituraListToProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -342,9 +345,6 @@ namespace WEBtest.Db.Migrations
                     b.Property<Guid?>("FavouriteId")
                         .HasColumnType("uuid");
 
-                    b.Property<int?>("FurnitureId")
-                        .HasColumnType("integer");
-
                     b.Property<int?>("FurnitureOrderId")
                         .HasColumnType("integer");
 
@@ -447,7 +447,7 @@ namespace WEBtest.Db.Migrations
             modelBuilder.Entity("WEBtest.Db.Models.Furniture", b =>
                 {
                     b.HasOne("WEBtest.Db.Models.Product", null)
-                        .WithMany("FurnituraItem")
+                        .WithMany("FurnituraList")
                         .HasForeignKey("ProductId");
                 });
 
@@ -538,7 +538,7 @@ namespace WEBtest.Db.Migrations
 
             modelBuilder.Entity("WEBtest.Db.Models.Product", b =>
                 {
-                    b.Navigation("FurnituraItem");
+                    b.Navigation("FurnituraList");
                 });
 #pragma warning restore 612, 618
         }

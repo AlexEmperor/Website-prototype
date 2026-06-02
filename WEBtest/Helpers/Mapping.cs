@@ -78,7 +78,7 @@ namespace WEBtest.Helpers
                 Wasordered=productDb.Wasordered,
                 Cancelled=productDb.Cancelled,
                 BarcodeWB=productDb.BarcodeWB,
-                FurnituraList = productDb.FurnituraList,
+                FurnituraItem = productDb.FurnituraItem,
             };
         }
 
@@ -105,7 +105,7 @@ namespace WEBtest.Helpers
                 Wasordered = product.Wasordered,
                 Cancelled = product.Cancelled,
                 BarcodeWB = product.BarcodeWB,
-                FurnituraList = product.FurnituraList,
+                FurnituraItem = product.FurnituraItem,
             };
         }
         #endregion

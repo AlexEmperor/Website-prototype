@@ -47,7 +47,8 @@
         public int? Wasordered { get; set; } = 0;
         public int? Cancelled { get; set; } = 0;
 
-        public List<Furniture> FurnituraList { get; set; } = new List<Furniture>();
+        public int? FurnitureId { get; set; }
+        public ICollection<Furniture> FurnituraItem { get; set; } = new List<Furniture>();
 
     }
 }

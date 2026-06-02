@@ -7,7 +7,7 @@ namespace WEBtest.Models
 {
     public class ProductViewModel
     {
-
+        internal ICollection<Furniture> FurnituraItem;
 
         public int Id { get; set; }
 
@@ -79,11 +79,10 @@ namespace WEBtest.Models
         [ValidateNever]
         [AllowNull]
         //public List<CartItemViewModel> Items { get; set; }
-        //public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
-       
-        public List<Furniture> FurnituraList { get; set; } = new List<Furniture>();
+        //public <Furniture> FurnituraList { get; set; } = new List<Furniture>();
 
-
+        public int? FurnitureId { get; set; }
+        public ICollection<Furniture> FurnituraList { get; set; } = new List<Furniture>();
 
 
 
