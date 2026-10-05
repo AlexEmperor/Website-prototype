@@ -32,7 +32,7 @@ namespace WEBtest.Models
 
 
         // [Required]
-        public string? PhotoPath { get; set; } = "/img/product.png";
+        public string? PhotoPath { get; set; } = "/img/mag/emblema44.jpg";
         public IFormFile? PhotoFile { get; set; }
 
         public int? CategoryId { get; set; }
