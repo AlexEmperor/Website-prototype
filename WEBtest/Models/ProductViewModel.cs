@@ -28,7 +28,7 @@ namespace WEBtest.Models
         public string? Description { get; set; }
 
 
-        public byte[]? Jpeg { get; set; }   //Jpeg
+        //public byte[]? Jpeg { get; set; }   //Jpeg
 
 
         // [Required]

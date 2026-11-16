@@ -8,8 +8,8 @@
         {
 @*             if (@product.Storage_FBS1 != 0 | @product.Storage_Ozon != 0)
             { *@
-                if ((product.Jpeg) != null)
-                {
+               // if ((product.Jpeg) != null)
+                //{
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
                         <div class="card shadow" style="height: 350px;">
                             <div class="product-image position-relative" style="display: inline-block;">
@@ -19,7 +19,7 @@
                                     asp-route-id="@product.Id"
                                     class="product-link">
 
-                                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Jpeg)"
+                                @*<img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Jpeg)"*@
                                         alt="Product Image"
                                         class="img-fluid"
                                         style="width: 180px; height: 180px; object-fit: cover;" /> 
@@ -87,7 +87,7 @@
 
                         </div>
                     </div>
-                }
+               // }
             @* } *@
      }
    </div>

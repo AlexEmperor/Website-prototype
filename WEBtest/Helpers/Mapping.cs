@@ -68,7 +68,7 @@ namespace WEBtest.Helpers
                 FurnitureOrderId = productDb.FurnitureOrderId,
                 FurnitureOrder = productDb.FurnitureOrder,           // ← добавляем объект
                 PhotoPath = productDb.PhotoPath,
-                Jpeg = productDb.Jpeg,
+                //Jpeg = productDb.Jpeg,
                 Storage_Ozon = productDb.Storage_Ozon,
                 Storage_FBS1 = productDb.Storage_FBS1,
                 Cost_price = productDb.Cost_price,

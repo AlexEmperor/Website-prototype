@@ -44,7 +44,7 @@ namespace WEBtest.Controllers
             //{
             //    return View();
             //}
-            var photo = _picturesRepository.GetAll().ToPicturesViewModels();
+            var pictur = _picturesRepository.GetAll().ToPicturesViewModels();
 
             var products = _productRepository
                 .GetAll()
@@ -52,7 +52,7 @@ namespace WEBtest.Controllers
             var homeView = new HomeViewModel
             {
                 Products = products,
-                Pictures = photo
+                Pictures = pictur
             };
             return View(homeView);
         }

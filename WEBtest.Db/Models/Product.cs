@@ -13,7 +13,7 @@
 
         public string? PhotoPath { get; set; } = "/img/anyProduct.png";
 
-        public byte[]? Jpeg { get; set; }   //set;
+        //public byte[]? Jpeg { get; set; }   //set;
 
 
         public int? CategoryId { get; set; }
